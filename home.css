@@ -3273,6 +3273,7 @@ html[dir="rtl"] .local-pros-primary-btn svg {
     background: rgba(15, 77, 74, 0.7);
     color: var(--secondary);
     backdrop-filter: blur(7px);
+    color:white;
 }
 
 .popular-task-icon svg {

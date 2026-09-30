@@ -277,7 +277,7 @@ body.dark .signup-card {
 .signup-logo a {
     display: inline-flex;
     align-items: center;
-    gap: 7px;
+    gap: 3px;
 }
 
 .signup-logo img {
@@ -288,8 +288,8 @@ body.dark .signup-card {
 
 .logo-text {
     color: var(--primary);
-    font-size: 23px;
-    font-weight: 800;
+    font-size: 20px;
+    font-weight: 700;
 }
 
 .logo-text span {

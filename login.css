@@ -351,7 +351,7 @@ body.dark .login-card {
     display: inline-flex;
     align-items: center;
 
-    gap: 7px;
+    gap: 3px;
 }
 
 .login-logo img {
@@ -364,8 +364,8 @@ body.dark .login-card {
 .logo-text {
     color: var(--primary);
 
-    font-size: 23px;
-    font-weight: 800;
+    font-size: 20px;
+    font-weight: 700;
 }
 
 .logo-text span {
