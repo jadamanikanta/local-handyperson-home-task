@@ -1,0 +1,1724 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>TaskLocal | Local Handyperson & Home Task Marketplace</title>
+
+    <link rel="icon" type="image/png" sizes="184x184" href="logo.jpeg">
+
+    <link rel="stylesheet" href="global.css">
+    <link rel="stylesheet" href="how-it-works.css">
+
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body>
+
+<header class="header">
+
+    <div class="navbar-container nav">
+
+        <div class="logo">
+
+            <a href="index.html">
+
+                <img src="logo.jpeg"
+                     alt="TaskLocal Logo">
+
+                <span class="logo-text">
+                    Task<span class="logo-header-secondary">Local</span>
+                </span>
+
+            </a>
+
+        </div>
+
+        <nav class="nav-links" id="navMenu">
+
+            <div class="dropdown">
+
+                <a href="index.html"
+                   class="nav-item nav-link"
+                   data-page="home">
+
+                    Home
+
+                    <i data-lucide="chevron-down"></i>
+
+                </a>
+
+                <div class="dropdown-menu">
+
+                    <a href="index.html"
+                       class="nav-link"
+                       data-page="home">
+                        Home 1
+                    </a>
+
+                    <a href="home-2.html"
+                       class="nav-link"
+                       data-page="home">
+                        Home 2
+                    </a>
+
+                </div>
+
+            </div>
+
+            <a href="post-task.html"
+               class="nav-link">
+                Post a Task
+            </a>
+
+            <a href="browse-pros.html"
+               class="nav-link">
+                Browse Pros
+            </a>
+
+            <a href="how-it-works.html"
+               class="nav-link">
+                How It Works
+            </a>
+
+            <a href="contact.html"
+               class="nav-link">
+                Contact
+            </a>
+
+            <a href="dashboard.html"
+               class="nav-link">
+                Dashboard
+            </a>
+
+            <button class="btn-primary mobile-login"
+                    id="mobileLoginBtn"
+                    type="button">
+                Login
+            </button>
+
+        </nav>
+
+        <div class="nav-actions">
+
+            <button id="rtlToggle"
+                    class="btn-secondary"
+                    type="button"
+                    aria-label="Toggle text direction">
+                RTL
+            </button>
+
+            <button id="themeToggle"
+                    class="icon-btn"
+                    type="button"
+                    aria-label="Toggle dark mode">
+                <i data-lucide="moon"></i>
+            </button>
+
+            <button class="btn-primary desktop-login"
+                    id="loginBtn"
+                    type="button">
+                Login
+            </button>
+
+            <button id="menuToggle" class="hamburger">☰</button>
+
+        </div>
+
+    </div>
+
+</header>
+
+<section class="how-works-hero">
+
+    <div class="how-works-hero-container">
+
+        <div class="how-works-hero-content">
+
+            <span class="how-works-hero-label">
+                SIMPLE. LOCAL. PRACTICAL.
+            </span>
+
+            <h1>
+                Getting help at home
+                <strong>should be simple.</strong>
+            </h1>
+
+            <p class="how-works-hero-tagline">
+                Post what you need, discover trusted local professionals,
+                compare your options, and get your home task moving.
+            </p>
+
+            <div class="how-works-hero-actions">
+
+                <a href="post-task.html" class="how-works-primary-action">
+                    Post a Task
+                    <i data-lucide="arrow-up-right"></i>
+                </a>
+
+                <a href="browse-pros.html" class="how-works-secondary-action">
+                    Browse Pros
+                    <i data-lucide="search"></i>
+                </a>
+
+            </div>
+
+            <div class="how-works-hero-points">
+
+                <span>
+                    <i data-lucide="check-circle-2"></i>
+                    Local professionals
+                </span>
+
+                <span>
+                    <i data-lucide="check-circle-2"></i>
+                    Compare profiles
+                </span>
+
+                <span>
+                    <i data-lucide="check-circle-2"></i>
+                    Direct connection
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <div class="how-works-hero-visual">
+
+            <img
+                src="kitchen-repairs.jpeg"
+                alt="Professional helping with a home task"
+            >
+
+            <div class="how-works-hero-overlay"></div>
+
+            <div class="how-works-task-card">
+
+                <div class="how-works-task-icon">
+                    <i data-lucide="wrench"></i>
+                </div>
+
+                <div>
+                    <span>Task posted</span>
+                    <strong>Kitchen repair</strong>
+                    <small>Finding local pros...</small>
+                </div>
+
+            </div>
+
+            <div class="how-works-hero-badge">
+
+                <i data-lucide="map-pin-check"></i>
+
+                <div>
+                    <strong>Local help</strong>
+                    <span>Available near you</span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="tasklocal-steps-section">
+
+    <div class="tasklocal-steps-container">
+
+        <div class="tasklocal-steps-heading">
+
+            <span>HOW TASKLOCAL WORKS</span>
+
+            <h2>
+                From a small task
+                <strong>to a completed job.</strong>
+            </h2>
+
+            <p>
+                Getting help doesn't need to be complicated.
+                TaskLocal keeps the process simple from start to finish.
+            </p>
+
+        </div>
+
+
+        <div class="tasklocal-steps-flow">
+
+            <div class="tasklocal-step">
+
+                <div class="tasklocal-step-top">
+
+                    <span>01</span>
+
+                    <div class="tasklocal-step-icon">
+                        <i data-lucide="clipboard-pen-line"></i>
+                    </div>
+
+                </div>
+
+                <h3>Post your task</h3>
+
+                <p>
+                    Tell us what needs to be done, where you need
+                    help and when you would like the task completed.
+                </p>
+
+                <a href="post-task.html">
+                    Create a task
+                    <i data-lucide="arrow-up-right"></i>
+                </a>
+
+            </div>
+
+
+            <div class="tasklocal-step-line">
+                <i data-lucide="arrow-right"></i>
+            </div>
+
+
+            <div class="tasklocal-step">
+
+                <div class="tasklocal-step-top">
+
+                    <span>02</span>
+
+                    <div class="tasklocal-step-icon">
+                        <i data-lucide="search-check"></i>
+                    </div>
+
+                </div>
+
+                <h3>Discover local pros</h3>
+
+                <p>
+                    Explore professionals who offer the service
+                    you need in your local area.
+                </p>
+
+                <a href="browse-pros.html">
+                    Explore pros
+                    <i data-lucide="arrow-up-right"></i>
+                </a>
+
+            </div>
+
+
+            <div class="tasklocal-step-line">
+                <i data-lucide="arrow-right"></i>
+            </div>
+
+
+            <div class="tasklocal-step">
+
+                <div class="tasklocal-step-top">
+
+                    <span>03</span>
+
+                    <div class="tasklocal-step-icon">
+                        <i data-lucide="sliders-horizontal"></i>
+                    </div>
+
+                </div>
+
+                <h3>Compare your options</h3>
+
+                <p>
+                    Review profiles, ratings, experience,
+                    availability and other useful details.
+                </p>
+
+                <a href="browse-pros.html">
+                    Compare profiles
+                    <i data-lucide="arrow-up-right"></i>
+                </a>
+
+            </div>
+
+
+            <div class="tasklocal-step-line">
+                <i data-lucide="arrow-right"></i>
+            </div>
+
+
+            <div class="tasklocal-step">
+
+                <div class="tasklocal-step-top">
+
+                    <span>04</span>
+
+                    <div class="tasklocal-step-icon">
+                        <i data-lucide="handshake"></i>
+                    </div>
+
+                </div>
+
+                <h3>Connect & get it done</h3>
+
+                <p>
+                    Discuss the details directly and arrange the
+                    work with the professional you choose.
+                </p>
+
+                <a href="post-task.html">
+                    Get started
+                    <i data-lucide="arrow-up-right"></i>
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="customer-journey-section">
+
+    <div class="customer-journey-container">
+
+        <div class="customer-journey-visual">
+
+            <img
+                src="Customer-managing.jpeg"
+                alt="Customer managing a home task"
+            >
+
+            <div class="customer-journey-overlay"></div>
+
+            <div class="customer-journey-card">
+
+                <div class="customer-journey-card-icon">
+                    <i data-lucide="clipboard-check"></i>
+                </div>
+
+                <div>
+                    <span>Your task</span>
+                    <strong>Ready for local help</strong>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="customer-journey-content">
+
+            <span class="customer-journey-label">
+                FOR CUSTOMERS
+            </span>
+
+            <h2>
+                Your task.
+                <strong>Your choice.</strong>
+            </h2>
+
+            <p class="customer-journey-intro">
+                Whether it is a quick repair, cleaning job or something
+                bigger around the house, TaskLocal gives you a simple
+                way to find and connect with local help.
+            </p>
+
+
+            <div class="customer-journey-list">
+
+                <div class="customer-journey-item">
+
+                    <div class="customer-journey-number">
+                        01
+                    </div>
+
+                    <div>
+                        <h3>Tell us what you need</h3>
+                        <p>
+                            Add the task details, location and preferred
+                            timing so professionals understand the job.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="customer-journey-item">
+
+                    <div class="customer-journey-number">
+                        02
+                    </div>
+
+                    <div>
+                        <h3>See relevant professionals</h3>
+                        <p>
+                            Explore local professionals offering the
+                            service you are looking for.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="customer-journey-item">
+
+                    <div class="customer-journey-number">
+                        03
+                    </div>
+
+                    <div>
+                        <h3>Review the details</h3>
+                        <p>
+                            Check experience, ratings, availability,
+                            location and other profile information.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="customer-journey-item">
+
+                    <div class="customer-journey-number">
+                        04
+                    </div>
+
+                    <div>
+                        <h3>Connect and arrange the work</h3>
+                        <p>
+                            Contact the professional and discuss the
+                            details before arranging the task.
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="pro-journey-section">
+
+    <div class="pro-journey-container">
+
+        <div class="pro-journey-heading">
+
+            <span>FOR LOCAL PROS</span>
+
+            <h2>
+                Turn your skills into
+                <strong>local opportunities.</strong>
+            </h2>
+
+            <p>
+                Connect with people nearby who are looking for
+                the services you provide.
+            </p>
+
+        </div>
+
+
+        <div class="pro-journey-grid">
+
+            <div class="pro-journey-card">
+
+                <div class="pro-journey-card-top">
+                    <span>01</span>
+
+                    <div class="pro-journey-icon">
+                        <i data-lucide="user-plus"></i>
+                    </div>
+                </div>
+
+                <h3>Create your profile</h3>
+
+                <p>
+                    Add your services, experience, location and
+                    other information customers need to know.
+                </p>
+
+                <div class="pro-journey-line"></div>
+
+                <strong>Build your presence</strong>
+
+            </div>
+
+
+            <div class="pro-journey-card">
+
+                <div class="pro-journey-card-top">
+                    <span>02</span>
+
+                    <div class="pro-journey-icon">
+                        <i data-lucide="briefcase-business"></i>
+                    </div>
+                </div>
+
+                <h3>Discover relevant tasks</h3>
+
+                <p>
+                    Find tasks that match your skills and are
+                    available in the areas you serve.
+                </p>
+
+                <div class="pro-journey-line"></div>
+
+                <strong>Find suitable work</strong>
+
+            </div>
+
+
+            <div class="pro-journey-card">
+
+                <div class="pro-journey-card-top">
+                    <span>03</span>
+
+                    <div class="pro-journey-icon">
+                        <i data-lucide="messages-square"></i>
+                    </div>
+                </div>
+
+                <h3>Connect with customers</h3>
+
+                <p>
+                    Discuss the task, timing and requirements
+                    directly with the customer.
+                </p>
+
+                <div class="pro-journey-line"></div>
+
+                <strong>Discuss the details</strong>
+
+            </div>
+
+
+            <div class="pro-journey-card">
+
+                <div class="pro-journey-card-top">
+                    <span>04</span>
+
+                    <div class="pro-journey-icon">
+                        <i data-lucide="trending-up"></i>
+                    </div>
+                </div>
+
+                <h3>Grow through your work</h3>
+
+                <p>
+                    Complete tasks, build your reputation and
+                    become easier for local customers to discover.
+                </p>
+
+                <div class="pro-journey-line"></div>
+
+                <strong>Grow your local network</strong>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="task-status-section">
+
+    <div class="task-status-container">
+
+        <div class="task-status-heading">
+
+            <span>AFTER YOU POST</span>
+
+            <h2>
+                Watch your task move
+                <strong>from request to action.</strong>
+            </h2>
+
+            <p>
+                Once your task is posted, the important details stay
+                clear so you can review your options and decide how
+                you want to proceed.
+            </p>
+
+        </div>
+
+
+        <div class="task-status-board">
+
+            <div class="task-status-request">
+
+                <div class="task-status-request-top">
+
+                    <div class="task-status-request-title">
+                        <div class="task-status-request-icon">
+                            <i data-lucide="droplets"></i>
+                        </div>
+
+                        <div>
+                            <span>YOUR TASK</span>
+                            <h3>Leaking kitchen tap</h3>
+                        </div>
+                    </div>
+
+                    <span class="task-status-open">
+                        Open
+                    </span>
+
+                </div>
+
+
+                <div class="task-status-details">
+
+                    <div>
+                        <i data-lucide="map-pin"></i>
+                        <span>2.8 km nearby</span>
+                    </div>
+
+                    <div>
+                        <i data-lucide="calendar-days"></i>
+                        <span>This week</span>
+                    </div>
+
+                    <div>
+                        <i data-lucide="clock-3"></i>
+                        <span>Flexible timing</span>
+                    </div>
+
+                </div>
+
+
+                <p>
+                    Need help fixing a leaking tap in the kitchen.
+                    Looking for an experienced local professional.
+                </p>
+
+            </div>
+
+
+            <div class="task-status-progress">
+
+                <div class="task-status-progress-line"></div>
+
+                <div class="task-status-progress-item active">
+
+                    <div class="task-status-progress-icon">
+                        <i data-lucide="send"></i>
+                    </div>
+
+                    <div>
+                        <span>Step 01</span>
+                        <strong>Task posted</strong>
+                    </div>
+
+                </div>
+
+
+                <div class="task-status-progress-item active">
+
+                    <div class="task-status-progress-icon">
+                        <i data-lucide="users-round"></i>
+                    </div>
+
+                    <div>
+                        <span>Step 02</span>
+                        <strong>Pros discovered</strong>
+                    </div>
+
+                </div>
+
+
+                <div class="task-status-progress-item active">
+
+                    <div class="task-status-progress-icon">
+                        <i data-lucide="list-checks"></i>
+                    </div>
+
+                    <div>
+                        <span>Step 03</span>
+                        <strong>Options compared</strong>
+                    </div>
+
+                </div>
+
+
+                <div class="task-status-progress-item">
+
+                    <div class="task-status-progress-icon">
+                        <i data-lucide="handshake"></i>
+                    </div>
+
+                    <div>
+                        <span>Step 04</span>
+                        <strong>Connect & arrange</strong>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="task-status-pros">
+
+                <div class="task-status-pros-heading">
+
+                    <div>
+                        <span>MATCHED PROFESSIONALS</span>
+                        <h3>Local pros for your task</h3>
+                    </div>
+
+                    <a href="browse-pros.html">
+                        View all
+                        <i data-lucide="arrow-up-right"></i>
+                    </a>
+
+                </div>
+
+
+                <div class="task-status-pro-list">
+
+                    <div class="task-status-pro">
+
+                        <div class="task-status-pro-avatar">
+                            <i data-lucide="user-round"></i>
+                        </div>
+
+                        <div class="task-status-pro-info">
+                            <strong>FixRight Services</strong>
+
+                            <span>
+                                Plumbing · 4.8 rating
+                            </span>
+                        </div>
+
+                        <div class="task-status-pro-distance">
+                            2.1 km
+                        </div>
+
+                    </div>
+
+
+                    <div class="task-status-pro">
+
+                        <div class="task-status-pro-avatar">
+                            <i data-lucide="user-round"></i>
+                        </div>
+
+                        <div class="task-status-pro-info">
+                            <strong>HomeCare Pro</strong>
+
+                            <span>
+                                Plumbing · 4.7 rating
+                            </span>
+                        </div>
+
+                        <div class="task-status-pro-distance">
+                            3.4 km
+                        </div>
+
+                    </div>
+
+
+                    <div class="task-status-pro">
+
+                        <div class="task-status-pro-avatar">
+                            <i data-lucide="user-round"></i>
+                        </div>
+
+                        <div class="task-status-pro-info">
+                            <strong>QuickFix Local</strong>
+
+                            <span>
+                                Repairs · 4.9 rating
+                            </span>
+                        </div>
+
+                        <div class="task-status-pro-distance">
+                            4.2 km
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="compare-pro-section">
+
+    <div class="compare-pro-container">
+
+        <div class="compare-pro-heading">
+
+            <span>MAKE AN INFORMED CHOICE</span>
+
+            <h2>
+                See the details
+                <strong>before you connect.</strong>
+            </h2>
+
+            <p>
+                Compare the information that matters and choose
+                a professional based on what fits your task.
+            </p>
+
+        </div>
+
+
+        <div class="compare-pro-layout">
+
+            <div class="compare-pro-intro">
+
+                <div class="compare-pro-intro-image">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1521791055366-0d553872125f?auto=format&fit=crop&w=900&q=85"
+                        alt="Customer and professional discussing a home task"
+                    >
+
+                    <div class="compare-pro-image-overlay"></div>
+
+                    <div class="compare-pro-image-label">
+                        <i data-lucide="badge-check"></i>
+                        Review before connecting
+                    </div>
+
+                </div>
+
+                <div class="compare-pro-intro-text">
+
+                    <span>YOUR OPTIONS</span>
+
+                    <h3>
+                        Find the details that
+                        matter to your task.
+                    </h3>
+
+                    <p>
+                        Every task can have different requirements.
+                        Use available profile information to understand
+                        which professionals may suit your needs.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="compare-pro-table">
+
+                <div class="compare-pro-table-head">
+
+                    <div class="compare-pro-feature-title">
+                        Compare
+                    </div>
+
+                    <div class="compare-pro-person">
+                        <div class="compare-pro-avatar">
+                            <i data-lucide="user-round"></i>
+                        </div>
+
+                        <strong>FixRight</strong>
+                    </div>
+
+                    <div class="compare-pro-person">
+                        <div class="compare-pro-avatar">
+                            <i data-lucide="user-round"></i>
+                        </div>
+
+                        <strong>HomeCare</strong>
+                    </div>
+
+                    <div class="compare-pro-person">
+                        <div class="compare-pro-avatar">
+                            <i data-lucide="user-round"></i>
+                        </div>
+
+                        <strong>QuickFix</strong>
+                    </div>
+
+                </div>
+
+
+                <div class="compare-pro-row">
+
+                    <span>Rating</span>
+
+                    <strong>
+                        <i data-lucide="star"></i>
+                        4.8
+                    </strong>
+
+                    <strong>
+                        <i data-lucide="star"></i>
+                        4.7
+                    </strong>
+
+                    <strong>
+                        <i data-lucide="star"></i>
+                        4.9
+                    </strong>
+
+                </div>
+
+
+                <div class="compare-pro-row">
+
+                    <span>Experience</span>
+
+                    <strong>8 years</strong>
+                    <strong>6 years</strong>
+                    <strong>10 years</strong>
+
+                </div>
+
+
+                <div class="compare-pro-row">
+
+                    <span>Distance</span>
+
+                    <strong>2.1 km</strong>
+                    <strong>3.4 km</strong>
+                    <strong>4.2 km</strong>
+
+                </div>
+
+
+                <div class="compare-pro-row">
+
+                    <span>Availability</span>
+
+                    <strong class="available">
+                        This week
+                    </strong>
+
+                    <strong class="available">
+                        Tomorrow
+                    </strong>
+
+                    <strong class="available">
+                        This week
+                    </strong>
+
+                </div>
+
+
+                <div class="compare-pro-row">
+
+                    <span>Service</span>
+
+                    <strong>Plumbing</strong>
+                    <strong>Plumbing</strong>
+                    <strong>Repairs</strong>
+
+                </div>
+
+
+                <div class="compare-pro-row">
+
+                    <span>Response</span>
+
+                    <strong>90 min</strong>
+                    <strong>2 hrs</strong>
+                    <strong>60 min</strong>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="trust-community-section">
+
+    <div class="trust-community-container">
+
+        <div class="trust-community-heading">
+
+            <span>BUILT AROUND LOCAL CONNECTIONS</span>
+
+            <h2>
+                A better way to handle
+                <strong>everyday home tasks.</strong>
+            </h2>
+
+            <p>
+                TaskLocal brings customers and local professionals
+                together with useful information, clear communication
+                and a community-focused approach.
+            </p>
+
+        </div>
+
+
+        <div class="trust-community-grid">
+
+            <div class="trust-community-card">
+
+                <div class="trust-community-image">
+
+                    <img
+                        src="profile-info.jpeg"
+                        alt="People working together"
+                    >
+
+                    <div class="trust-community-image-overlay"></div>
+
+                    <span>01</span>
+
+                </div>
+
+                <div class="trust-community-content">
+
+                    <div class="trust-community-icon">
+                        <i data-lucide="badge-check"></i>
+                    </div>
+
+                    <h3>Useful profile information</h3>
+
+                    <p>
+                        Understand a professional's services, experience,
+                        ratings and availability before starting a conversation.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="trust-community-card">
+
+                <div class="trust-community-image">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=900&q=85"
+                        alt="Professionals communicating"
+                    >
+
+                    <div class="trust-community-image-overlay"></div>
+
+                    <span>02</span>
+
+                </div>
+
+                <div class="trust-community-content">
+
+                    <div class="trust-community-icon">
+                        <i data-lucide="messages-square"></i>
+                    </div>
+
+                    <h3>Clear communication</h3>
+
+                    <p>
+                        Discuss your requirements directly so expectations,
+                        timing and task details are easier to understand.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="trust-community-card">
+
+                <div class="trust-community-image">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=900&q=85"
+                        alt="Local community collaboration"
+                    >
+
+                    <div class="trust-community-image-overlay"></div>
+
+                    <span>03</span>
+
+                </div>
+
+                <div class="trust-community-content">
+
+                    <div class="trust-community-icon">
+                        <i data-lucide="heart-handshake"></i>
+                    </div>
+
+                    <h3>Local community</h3>
+
+                    <p>
+                        Keep everyday work connected to professionals
+                        and customers within the communities they serve.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="trust-community-note">
+
+            <i data-lucide="info"></i>
+
+            <p>
+                TaskLocal helps people discover and connect with local
+                professionals. Always discuss the work details, pricing,
+                timing and expectations before arranging a task.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="how-works-cta">
+
+    <div class="how-works-cta-container">
+
+        <div class="how-works-cta-content">
+
+            <span>READY WHEN YOU ARE</span>
+
+            <h2>
+                Your next task
+                <strong>starts here.</strong>
+            </h2>
+
+            <p>
+                Post your task, explore local professionals and find
+                the right help for your home.
+            </p>
+
+            <div class="how-works-cta-actions">
+
+                <a href="post-task.html" class="how-works-cta-primary">
+                    Post a Task
+                    <i data-lucide="arrow-up-right"></i>
+                </a>
+
+                <a href="browse-pros.html" class="how-works-cta-secondary">
+                    Browse Pros
+                    <i data-lucide="search"></i>
+                </a>
+
+            </div>
+
+        </div>
+
+        <div class="how-works-cta-mark">
+            <i data-lucide="home"></i>
+        </div>
+
+    </div>
+
+</section>
+
+
+<footer class="footer">
+
+    <div class="footer-container footer-grid">
+
+        <div class="footer-col">
+
+            <h3 class="footer-title"
+                id="homepage-redirect">
+
+                <picture class="footer-logo-wrap">
+
+                    <img src="logo.jpeg"
+                         alt="TaskLocal - Local Handyperson & Home Task Marketplace"
+                         class="footer-logo ">
+
+                 
+
+                </picture>
+
+                <span class="footer-brand">
+
+                    <span class="brand-primary">
+                        Task
+                    </span>
+
+                    <span class="brand-secondary">
+                        Local
+                    </span>
+
+                </span>
+
+            </h3>
+
+            <p>
+                Connecting homeowners with trusted local handypersons
+                for everyday home tasks, repairs, maintenance, moving,
+                assembly, and more.
+            </p>
+
+            <div class="footer-social">
+
+                <a href="#"
+                   class="social-icon"
+                   aria-label="Facebook">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+
+                <a href="#"
+                   class="social-icon"
+                   aria-label="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+
+                <a href="#"
+                   class="social-icon"
+                   aria-label="Twitter">
+                    <i class="fab fa-twitter"></i>
+                </a>
+
+                <a href="#"
+                   class="social-icon"
+                   aria-label="LinkedIn">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-col">
+
+            <h4 class="footer-subtitle">
+                Quick Links
+            </h4>
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="about.html">
+                About Us
+            </a>
+
+            <a href="post-task.html">
+                Post a Task
+            </a>
+
+            <a href="browse-pros.html">
+                Browse Pros
+            </a>
+
+            <a href="how-it-works.html">
+                How It Works
+            </a>
+
+        </div>
+
+
+        <div class="footer-col">
+
+            <h4 class="footer-subtitle">
+                Popular Tasks
+            </h4>
+
+            <a href="browse-pros.html">
+                Home Repairs
+            </a>
+
+            <a href="browse-pros.html">
+                Furniture Assembly
+            </a>
+
+            <a href="browse-pros.html">
+                Cleaning
+            </a>
+
+            <a href="browse-pros.html">
+                Moving & Lifting
+            </a>
+
+            <a href="browse-pros.html">
+                Yard & Outdoor Work
+            </a>
+
+        </div>
+
+
+        <div class="footer-col">
+
+            <h4 class="footer-subtitle">
+                Resources
+            </h4>
+
+            <a href="dashboard.html">
+                My Dashboard
+            </a>
+
+            <a href="how-it-works.html">
+                How It Works
+            </a>
+
+            <a href="post-task.html">
+                Post a Task
+            </a>
+
+            <a href="404page.html">
+                404 Page
+            </a>
+
+            <a href="coming-soon.html">
+                Coming Soon
+            </a>
+
+        </div>
+
+
+        <div class="footer-col">
+
+            <h4 class="footer-subtitle">
+                Contact Us
+            </h4>
+
+            <p>
+                Email: hello@tasklocal.com
+            </p>
+
+            <p>
+                Phone: +91 0000000000
+            </p>
+
+            <p>
+                Location: India
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+        <div class="footer-container footer-bottom-content">
+
+            <p>
+                © 2026 TaskLocal. All rights reserved.
+            </p>
+
+            <div class="footer-links">
+
+                <a href="terms&conditions.html">
+                    Terms & Conditions
+                </a>
+
+                <a href="privacy-policy.html">
+                    Privacy Policy
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<script>
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    const loginBtn =
+        document.getElementById("loginBtn");
+
+    if (loginBtn) {
+
+        loginBtn.addEventListener("click", () => {
+
+            window.location.href = "login.html";
+
+        });
+
+    }
+
+
+    const mobileLoginBtn =
+        document.getElementById("mobileLoginBtn");
+
+    if (mobileLoginBtn) {
+
+        mobileLoginBtn.addEventListener("click", () => {
+
+            window.location.href = "login.html";
+
+        });
+
+    }
+
+
+    const links =
+        document.querySelectorAll(".nav-link");
+
+    const currentPage =
+        window.location.pathname.split("/").pop()
+        || "index.html";
+
+
+    links.forEach(link => {
+
+        const href =
+            link.getAttribute("href");
+
+        if (!href) return;
+
+        const page =
+            href.split("/").pop();
+
+        if (page === currentPage) {
+
+            link.classList.add("active");
+
+        }
+
+    });
+
+
+    const homePages = [
+        "index.html",
+        "home-1.html",
+        "home-2.html"
+    ];
+
+
+    if (homePages.includes(currentPage)) {
+
+        const homeLink =
+            document.querySelector(
+                '.nav-link[href="index.html"]'
+            );
+
+        if (homeLink) {
+
+            homeLink.classList.add("active");
+
+        }
+
+    }
+
+
+    const themeToggle =
+        document.getElementById("themeToggle");
+
+
+    if (
+        localStorage.getItem("tasklocal-theme")
+        === "dark"
+    ) {
+
+        document.body.classList.add("dark");
+
+    }
+
+
+    function updateThemeIcon() {
+
+        if (!themeToggle) return;
+
+        themeToggle.innerHTML =
+            document.body.classList.contains("dark")
+                ? '<i data-lucide="sun"></i>'
+                : '<i data-lucide="moon"></i>';
+
+        lucide.createIcons();
+
+    }
+
+
+    updateThemeIcon();
+
+
+    if (themeToggle) {
+
+        themeToggle.addEventListener("click", () => {
+
+            document.body.classList.toggle("dark");
+
+            if (
+                document.body.classList.contains("dark")
+            ) {
+
+                localStorage.setItem(
+                    "tasklocal-theme",
+                    "dark"
+                );
+
+            } else {
+
+                localStorage.setItem(
+                    "tasklocal-theme",
+                    "light"
+                );
+
+            }
+
+            updateThemeIcon();
+
+        });
+
+    }
+
+
+    const rtlToggle =
+        document.getElementById("rtlToggle");
+
+
+    const savedDir =
+        localStorage.getItem("tasklocal-direction")
+        || "ltr";
+
+
+    document.documentElement.setAttribute(
+        "dir",
+        savedDir
+    );
+
+
+    if (rtlToggle) {
+
+        rtlToggle.textContent =
+            savedDir === "rtl"
+                ? "LTR"
+                : "RTL";
+
+
+        rtlToggle.addEventListener("click", () => {
+
+            const currentDir =
+                document.documentElement
+                    .getAttribute("dir");
+
+
+            if (currentDir === "rtl") {
+
+                document.documentElement
+                    .setAttribute("dir", "ltr");
+
+                localStorage.setItem(
+                    "tasklocal-direction",
+                    "ltr"
+                );
+
+                rtlToggle.textContent = "RTL";
+
+            } else {
+
+                document.documentElement
+                    .setAttribute("dir", "rtl");
+
+                localStorage.setItem(
+                    "tasklocal-direction",
+                    "rtl"
+                );
+
+                rtlToggle.textContent = "LTR";
+
+            }
+
+        });
+
+    }
+
+
+    const menuToggle = document.getElementById("menuToggle");
+    const navMenu = document.getElementById("navMenu");
+
+    if (menuToggle && navMenu) {
+        menuToggle.addEventListener("click", () => {
+            navMenu.classList.toggle("active");
+        });
+
+        document.addEventListener("click", (e) => {
+            if (!navMenu.contains(e.target) && !menuToggle.contains(e.target)) {
+                navMenu.classList.remove("active");
+                document.querySelectorAll(".dropdown-menu").forEach(menu => {
+                    menu.classList.remove("show");
+                });
+            }
+        });
+    }
+
+    document
+        .querySelectorAll(".dropdown")
+        .forEach(drop => {
+
+            const toggle =
+                drop.querySelector(".nav-item");
+
+            const menu =
+                drop.querySelector(".dropdown-menu");
+
+
+            if (toggle && menu) {
+
+                toggle.addEventListener(
+                    "click",
+                    (e) => {
+
+                        if (window.innerWidth <= 1025) {
+
+                            e.preventDefault();
+
+                            menu.classList.toggle("show");
+
+                        }
+
+                    }
+                );
+
+            }
+
+        });
+
+
+    const homepageRedirect =
+        document.getElementById(
+            "homepage-redirect"
+        );
+
+
+    if (homepageRedirect) {
+
+        homepageRedirect.addEventListener(
+            "click",
+            () => {
+
+                window.location.href =
+                    "index.html";
+
+            }
+        );
+
+    }
+
+
+    lucide.createIcons();
+
+});
+
+</script>
+
+</body>
+</html>

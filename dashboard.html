@@ -1,0 +1,2989 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>TaskLocal - Customer Dashboard</title>
+
+    <link rel="icon" type="image/png" href="logo.jpeg">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="dashboard.css">
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+</head>
+
+<body>
+
+    <div class="mobile-overlay" id="mobileOverlay"></div>
+
+    <aside class="dashboard-sidebar" id="dashboardSidebar">
+
+        <div class="sidebar-top">
+
+            <div class="sidebar-header">
+
+                <div class="logo">
+
+                    <a href="index.html">
+
+                        <img
+                            src="logo.jpeg"
+                            alt="TaskLocal Logo"
+                        >
+
+                        <span class="logo-text">
+                            Task<span class="logo-header-secondary">Local</span>
+                        </span>
+
+                    </a>
+
+                </div>
+
+                <button
+                    class="sidebar-close"
+                    id="sidebarClose"
+                    type="button"
+                    aria-label="Close navigation">
+
+                    <i data-lucide="x"></i>
+
+                </button>
+
+            </div>
+
+
+            <nav class="sidebar-menu">
+
+                <div class="sidebar-section-title">
+                    MAIN
+                </div>
+
+                <button
+                    class="sidebar-link active"
+                    data-section="dashboard"
+                    type="button">
+
+                    <i data-lucide="layout-dashboard"></i>
+
+                    <span>Dashboard</span>
+
+                </button>
+
+
+                <button
+                    class="sidebar-link"
+                    data-section="tasks"
+                    type="button">
+
+                    <i data-lucide="clipboard-list"></i>
+
+                    <span>My Tasks</span>
+
+                    <span class="sidebar-count">
+                        3
+                    </span>
+
+                </button>
+
+
+                <button
+                    class="sidebar-link"
+                    data-section="browse"
+                    type="button">
+
+                    <i data-lucide="users"></i>
+
+                    <span>Browse Pros</span>
+
+                </button>
+
+
+                <button
+                    class="sidebar-link"
+                    data-section="bids"
+                    type="button">
+
+                    <i data-lucide="gavel"></i>
+
+                    <span>My Bids</span>
+
+                    <span class="sidebar-count">
+                        5
+                    </span>
+
+                </button>
+
+
+                <button
+                    class="sidebar-link"
+                    data-section="messages"
+                    type="button">
+
+                    <i data-lucide="message-square"></i>
+
+                    <span>Messages</span>
+
+                    <span class="sidebar-count">
+                        3
+                    </span>
+
+                </button>
+
+
+                <div class="sidebar-section-title">
+                    ACTIVITY
+                </div>
+
+
+                <button
+                    class="sidebar-link"
+                    data-section="payments"
+                    type="button">
+
+                    <i data-lucide="credit-card"></i>
+
+                    <span>Payments</span>
+
+                </button>
+
+
+                <button
+                    class="sidebar-link"
+                    data-section="reviews"
+                    type="button">
+
+                    <i data-lucide="star"></i>
+
+                    <span>Reviews</span>
+
+                </button>
+
+
+                <button
+                    class="sidebar-link"
+                    data-section="notifications"
+                    type="button">
+
+                    <i data-lucide="bell"></i>
+
+                    <span>Notifications</span>
+
+                    <span class="notification-dot"></span>
+
+                </button>
+
+
+                <div class="sidebar-section-title">
+                    ACCOUNT
+                </div>
+
+
+                <button
+                    class="sidebar-link"
+                    data-section="profile"
+                    type="button">
+
+                    <i data-lucide="user-round"></i>
+
+                    <span>Profile</span>
+
+                </button>
+
+
+                <button
+                    class="sidebar-link"
+                    data-section="settings"
+                    type="button">
+
+                    <i data-lucide="settings"></i>
+
+                    <span>Settings</span>
+
+                </button>
+
+            </nav>
+
+        </div>
+
+
+        <div class="sidebar-bottom">
+
+           
+
+
+            <button
+                class="sidebar-logout"
+                id="sidebarLogout"
+                type="button">
+
+                <i data-lucide="log-out"></i>
+
+                <span>
+                    Logout
+                </span>
+
+            </button>
+
+        </div>
+
+    </aside>
+
+
+    <main class="dashboard-main">
+
+        <header class="dashboard-topbar">
+
+            <div class="topbar-left">
+
+                <button
+                    class="mobile-menu-btn"
+                    id="mobileMenuBtn"
+                    type="button"
+                    aria-label="Open navigation">
+
+                    <i data-lucide="menu"></i>
+
+                </button>
+
+
+                <div class="page-heading">
+
+                    <span id="pageEyebrow">
+                        CUSTOMER PORTAL
+                    </span>
+
+                    <h1 id="pageTitle">
+                        User Dashboard
+                    </h1>
+
+                </div>
+
+            </div>
+
+
+            <div class="topbar-actions">
+
+                <button
+                    class="topbar-btn"
+                    id="rtlToggle"
+                    type="button"
+                    aria-label="Toggle text direction">
+
+                    RTL
+
+                </button>
+
+
+                <button
+                    class="topbar-btn icon-top-btn"
+                    id="themeToggle"
+                    type="button"
+                    aria-label="Toggle dark mode">
+
+                    <i data-lucide="moon"></i>
+
+                </button>
+
+
+                <button
+                    class="topbar-btn icon-top-btn notification-btn"
+                    id="notificationTopBtn"
+                    type="button"
+                    aria-label="Notifications">
+
+                    <i data-lucide="bell"></i>
+
+                    <span></span>
+
+                </button>
+
+
+                <div class="profile-wrapper">
+
+                    <button
+                        class="profile-button"
+                        id="profileButton"
+                        type="button"
+                        aria-expanded="false">
+
+                        <span class="profile-avatar">
+                            SA
+                        </span>
+
+                        <span class="profile-details">
+
+                            <strong>
+                                sarah
+                            </strong>
+
+                            <small>
+                                Customer
+                            </small>
+
+                        </span>
+
+                        <i data-lucide="chevron-down"></i>
+
+                    </button>
+
+
+                    <div
+                        class="profile-dropdown"
+                        id="profileDropdown">
+
+                        <div class="dropdown-profile">
+
+                            <div class="dropdown-avatar">
+                                SA
+                            </div>
+
+                            <div>
+
+                                <strong>
+                                    sarah
+                                </strong>
+
+                                <span>
+                                    sarah@example.com
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="dropdown-divider"></div>
+
+
+                        <button
+                            class="dropdown-item"
+                            data-profile-action="profile"
+                            type="button">
+
+                            <i data-lucide="user-round"></i>
+
+                            <span>
+                                Profile
+                            </span>
+
+                        </button>
+
+
+                        <button
+                            class="dropdown-item"
+                            data-profile-action="notifications"
+                            type="button">
+
+                            <i data-lucide="bell"></i>
+
+                            <span>
+                                Notifications
+                            </span>
+
+                            <b>
+                                3
+                            </b>
+
+                        </button>
+
+
+                        <div class="dropdown-divider"></div>
+
+
+                        <button
+                            class="dropdown-item logout-item"
+                            id="profileLogout"
+                            type="button">
+
+                            <i data-lucide="log-out"></i>
+
+                            <span>
+                                Logout
+                            </span>
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <div id="dashboardContent"></div>
+
+    </main>
+
+
+    <div
+        class="toast"
+        id="toast">
+
+        <i data-lucide="check-circle-2"></i>
+
+        <span id="toastMessage">
+            Action completed
+        </span>
+
+    </div>
+
+
+    <script>
+
+        const content = document.getElementById("dashboardContent");
+
+const sidebar = document.getElementById("dashboardSidebar");
+
+const mobileMenuBtn = document.getElementById("mobileMenuBtn");
+
+const sidebarClose = document.getElementById("sidebarClose");
+
+const mobileOverlay = document.getElementById("mobileOverlay");
+
+const themeToggle = document.getElementById("themeToggle");
+
+const rtlToggle = document.getElementById("rtlToggle");
+
+const profileButton = document.getElementById("profileButton");
+
+const profileDropdown = document.getElementById("profileDropdown");
+
+const notificationTopBtn = document.getElementById("notificationTopBtn");
+
+const sidebarLogout = document.getElementById("sidebarLogout");
+
+const profileLogout = document.getElementById("profileLogout");
+
+const pageTitle = document.getElementById("pageTitle");
+
+const pageEyebrow = document.getElementById("pageEyebrow");
+
+const toast = document.getElementById("toast");
+
+const toastMessage = document.getElementById("toastMessage");
+
+
+const dashboardData = {
+
+    dashboard: {
+
+        eyebrow: "CUSTOMER PORTAL",
+
+        title: "User Dashboard",
+
+        html: `
+
+            <section class="welcome-card">
+
+                <div class="welcome-content">
+
+                    <span>WELCOME BACK</span>
+
+                    <h2>Hello, Jada!</h2>
+
+                    <p>
+                        Keep track of your home tasks, compare local
+                        professionals and manage everything from one place.
+                    </p>
+
+                </div>
+
+                <a href="post-task.html" class="welcome-action">
+
+                    <i data-lucide="plus"></i>
+
+                    Post a New Task
+
+                </a>
+
+                <div class="welcome-decoration"></div>
+
+            </section>
+
+
+            <section class="metrics-grid">
+
+                <div class="metric-card">
+
+                    <div class="metric-top">
+
+                        <div class="metric-icon">
+                            <i data-lucide="clipboard-list"></i>
+                        </div>
+
+                        <span class="metric-change">
+                            +2 this month
+                        </span>
+
+                    </div>
+
+                    <div class="metric-value">08</div>
+
+                    <div class="metric-label">
+                        Total Tasks
+                    </div>
+
+                </div>
+
+
+                <div class="metric-card">
+
+                    <div class="metric-top">
+
+                        <div class="metric-icon">
+                            <i data-lucide="loader-circle"></i>
+                        </div>
+
+                        <span class="metric-change">
+                            Active
+                        </span>
+
+                    </div>
+
+                    <div class="metric-value">03</div>
+
+                    <div class="metric-label">
+                        Active Tasks
+                    </div>
+
+                </div>
+
+
+                <div class="metric-card">
+
+                    <div class="metric-top">
+
+                        <div class="metric-icon">
+                            <i data-lucide="gavel"></i>
+                        </div>
+
+                        <span class="metric-change">
+                            5 new
+                        </span>
+
+                    </div>
+
+                    <div class="metric-value">12</div>
+
+                    <div class="metric-label">
+                        Bids Received
+                    </div>
+
+                </div>
+
+
+                <div class="metric-card">
+
+                    <div class="metric-top">
+
+                        <div class="metric-icon">
+                            <i data-lucide="wallet-cards"></i>
+                        </div>
+
+                        <span class="metric-change">
+                            This month
+                        </span>
+
+                    </div>
+
+                    <div class="metric-value">
+                        ₹7,850
+                    </div>
+
+                    <div class="metric-label">
+                        Total Spent
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <section class="content-grid">
+
+                <div>
+
+                    <div class="dashboard-card">
+
+                        <div class="card-header">
+
+                            <div>
+
+                                <h3>
+                                    My Active Tasks
+                                </h3>
+
+                                <p>
+                                    Track your current requests
+                                </p>
+
+                            </div>
+
+                            <a class="view-link" href="#">
+                                View All
+                            </a>
+
+                        </div>
+
+
+                        <div class="data-list">
+
+                            <div class="data-row">
+
+                                <div class="data-image">
+
+                                    <img
+                                        src="kitchen-repairs.jpeg"
+                                        alt="Home repair"
+                                    >
+
+                                </div>
+
+                                <div class="data-info">
+
+                                    <strong>
+                                        Bathroom Plumbing Repair
+                                    </strong>
+
+                                    <span>
+                                        Indiranagar · Tomorrow · 3 bids
+                                    </span>
+
+                                </div>
+
+                                <span class="status status-pending">
+                                    Bids Open
+                                </span>
+
+                            </div>
+
+
+                            <div class="data-row">
+
+                                <div class="data-image">
+
+                                    <img
+                                        src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?auto=format&fit=crop&w=300&q=80"
+                                        alt="Electrical work"
+                                    >
+
+                                </div>
+
+                                <div class="data-info">
+
+                                    <strong>
+                                        Ceiling Fan Installation
+                                    </strong>
+
+                                    <span>
+                                        Koramangala · In progress
+                                    </span>
+
+                                </div>
+
+                                <span class="status status-progress">
+                                    In Progress
+                                </span>
+
+                            </div>
+
+
+                            <div class="data-row">
+
+                                <div class="data-image">
+
+                                    <img
+                                        src="Cleaning&Home-Help.jpeg"
+                                        alt="Painting service"
+                                    >
+
+                                </div>
+
+                                <div class="data-info">
+
+                                    <strong>
+                                        Living Room Painting
+                                    </strong>
+
+                                    <span>
+                                        HSR Layout · ₹3,200
+                                    </span>
+
+                                </div>
+
+                                <span class="status status-complete">
+                                    Completed
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="dashboard-card extra-card">
+
+                        <div class="card-header">
+
+                            <div>
+
+                                <h3>
+                                    Recent Bids
+                                </h3>
+
+                                <p>
+                                    Latest professional responses
+                                </p>
+
+                            </div>
+
+                            <a class="view-link" href="#">
+                                View All
+                            </a>
+
+                        </div>
+
+
+                        <div class="data-list">
+
+                            <div class="data-row">
+
+                                <div class="data-image">
+
+                                    <img
+                                        src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=150&q=80"
+                                        alt="Professional"
+                                    >
+
+                                </div>
+
+                                <div class="data-info">
+
+                                    <strong>
+                                        Arun Kumar
+                                    </strong>
+
+                                    <span>
+                                        Plumbing · ★ 4.9 · 86 reviews
+                                    </span>
+
+                                </div>
+
+                                <strong class="view-link">
+                                    ₹850
+                                </strong>
+
+                            </div>
+
+
+                            <div class="data-row">
+
+                                <div class="data-image">
+
+                                    <img
+                                        src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=150&q=80"
+                                        alt="Professional"
+                                    >
+
+                                </div>
+
+                                <div class="data-info">
+
+                                    <strong>
+                                        Ravi Electricals
+                                    </strong>
+
+                                    <span>
+                                        Electrical · ★ 4.8 · 64 reviews
+                                    </span>
+
+                                </div>
+
+                                <strong class="view-link">
+                                    ₹700
+                                </strong>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div>
+
+                    <div class="dashboard-card">
+
+                        <div class="card-header">
+
+                            <div>
+
+                                <h3>
+                                    Recent Activity
+                                </h3>
+
+                                <p>
+                                    Latest account updates
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="activity-list">
+
+                            <div class="activity-row">
+
+                                <div class="activity-icon">
+                                    <i data-lucide="gavel"></i>
+                                </div>
+
+                                <div class="activity-info">
+
+                                    <strong>
+                                        New bid received
+                                    </strong>
+
+                                    <span>
+                                        Arun Kumar submitted a ₹850 bid.
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="activity-row">
+
+                                <div class="activity-icon">
+                                    <i data-lucide="check-circle-2"></i>
+                                </div>
+
+                                <div class="activity-info">
+
+                                    <strong>
+                                        Task completed
+                                    </strong>
+
+                                    <span>
+                                        Living Room Painting was completed.
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="activity-row">
+
+                                <div class="activity-icon">
+                                    <i data-lucide="credit-card"></i>
+                                </div>
+
+                                <div class="activity-info">
+
+                                    <strong>
+                                        Payment completed
+                                    </strong>
+
+                                    <span>
+                                        ₹3,200 payment was processed.
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="dashboard-card extra-card">
+
+                        <div class="card-header">
+
+                            <div>
+
+                                <h3>
+                                    Spending Overview
+                                </h3>
+
+                                <p>
+                                    Your payment summary
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="stats-box">
+
+                            <div class="small-stat">
+
+                                <span>
+                                    TOTAL SPENT
+                                </span>
+
+                                <strong>
+                                    ₹7,850
+                                </strong>
+
+                            </div>
+
+                            <div class="small-stat">
+
+                                <span>
+                                    THIS MONTH
+                                </span>
+
+                                <strong>
+                                    ₹4,250
+                                </strong>
+
+                            </div>
+
+                            <div class="small-stat">
+
+                                <span>
+                                    PENDING
+                                </span>
+
+                                <strong>
+                                    ₹850
+                                </strong>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+        `
+
+    },
+
+
+    tasks: {
+
+        eyebrow: "TASK MANAGEMENT",
+
+        title: "My Tasks",
+
+        html: `
+
+            <section class="metrics-grid">
+
+                <div class="metric-card">
+
+                    <div class="metric-top">
+
+                        <div class="metric-icon">
+                            <i data-lucide="clipboard-list"></i>
+                        </div>
+
+                    </div>
+
+                    <div class="metric-value">08</div>
+
+                    <div class="metric-label">
+                        Total Tasks
+                    </div>
+
+                </div>
+
+
+                <div class="metric-card">
+
+                    <div class="metric-top">
+
+                        <div class="metric-icon">
+                            <i data-lucide="loader-circle"></i>
+                        </div>
+
+                    </div>
+
+                    <div class="metric-value">03</div>
+
+                    <div class="metric-label">
+                        Active
+                    </div>
+
+                </div>
+
+
+                <div class="metric-card">
+
+                    <div class="metric-top">
+
+                        <div class="metric-icon">
+                            <i data-lucide="check-circle-2"></i>
+                        </div>
+
+                    </div>
+
+                    <div class="metric-value">05</div>
+
+                    <div class="metric-label">
+                        Completed
+                    </div>
+
+                </div>
+
+
+                <div class="metric-card">
+
+                    <div class="metric-top">
+
+                        <div class="metric-icon">
+                            <i data-lucide="clock-3"></i>
+                        </div>
+
+                    </div>
+
+                    <div class="metric-value">01</div>
+
+                    <div class="metric-label">
+                        Awaiting Pro
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <section class="dashboard-card extra-card">
+
+                <div class="card-header">
+
+                    <div>
+
+                        <h3>
+                            All My Tasks
+                        </h3>
+
+                        <p>
+                            Manage your posted home service requests
+                        </p>
+
+                    </div>
+
+                    <button
+                        class="primary-button"
+                        onclick="showToast('Post task page opened')">
+
+                        <i data-lucide="plus"></i>
+
+                        Post Task
+
+                    </button>
+
+                </div>
+
+
+                <div class="data-list">
+
+                    <div class="data-row">
+
+                        <div class="data-image">
+
+                            <img
+                                src="kitchen-repairs.jpeg"
+                                alt="Plumbing"
+                            >
+
+                        </div>
+
+                        <div class="data-info">
+
+                            <strong>
+                                Bathroom Plumbing Repair
+                            </strong>
+
+                            <span>
+                                Indiranagar · Posted Sep 28 · 3 bids
+                            </span>
+
+                        </div>
+
+                        <span class="status status-pending">
+                            Bids Open
+                        </span>
+
+                    </div>
+
+
+                    <div class="data-row">
+
+                        <div class="data-image">
+
+                            <img
+                                src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?auto=format&fit=crop&w=300&q=80"
+                                alt="Fan installation"
+                            >
+
+                        </div>
+
+                        <div class="data-info">
+
+                            <strong>
+                                Ceiling Fan Installation
+                            </strong>
+
+                            <span>
+                                Koramangala · Started Sep 27
+                            </span>
+
+                        </div>
+
+                        <span class="status status-progress">
+                            In Progress
+                        </span>
+
+                    </div>
+
+
+                    <div class="data-row">
+
+                        <div class="data-image">
+
+                            <img
+                                src="https://images.unsplash.com/photo-1562259949-e8e7689d7828?auto=format&fit=crop&w=700&q=85"
+                                alt="Painting"
+                            >
+
+                        </div>
+
+                        <div class="data-info">
+
+                            <strong>
+                                Living Room Painting
+                            </strong>
+
+                            <span>
+                                HSR Layout · Completed Sep 25
+                            </span>
+
+                        </div>
+
+                        <span class="status status-complete">
+                            Completed
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+        `
+
+    },
+
+
+    browse: {
+
+        eyebrow: "LOCAL PROFESSIONALS",
+
+        title: "Browse Pros",
+
+        html: `
+
+            <section class="welcome-card">
+
+                <div class="welcome-content">
+
+                    <span>
+                        FIND LOCAL HELP
+                    </span>
+
+                    <h2>
+                        Browse trusted professionals
+                    </h2>
+
+                    <p>
+                        Compare ratings, experience, availability and
+                        pricing before choosing the right professional.
+                    </p>
+
+                </div>
+
+                <button
+                    class="welcome-action"
+                    onclick="showToast('Browse professionals opened')">
+
+                    <i data-lucide="search"></i>
+
+                    Find a Pro
+
+                </button>
+
+            </section>
+
+
+            <section class="metrics-grid">
+
+                <div class="metric-card">
+
+                    <div class="metric-icon">
+                        <i data-lucide="users"></i>
+                    </div>
+
+                    <div class="metric-value">
+                        126
+                    </div>
+
+                    <div class="metric-label">
+                        Local Pros
+                    </div>
+
+                </div>
+
+
+                <div class="metric-card">
+
+                    <div class="metric-icon">
+                        <i data-lucide="star"></i>
+                    </div>
+
+                    <div class="metric-value">
+                        4.8
+                    </div>
+
+                    <div class="metric-label">
+                        Average Rating
+                    </div>
+
+                </div>
+
+
+                <div class="metric-card">
+
+                    <div class="metric-icon">
+                        <i data-lucide="map-pin"></i>
+                    </div>
+
+                    <div class="metric-value">
+                        12
+                    </div>
+
+                    <div class="metric-label">
+                        Nearby Areas
+                    </div>
+
+                </div>
+
+
+                <div class="metric-card">
+
+                    <div class="metric-icon">
+                        <i data-lucide="badge-check"></i>
+                    </div>
+
+                    <div class="metric-value">
+                        94%
+                    </div>
+
+                    <div class="metric-label">
+                        Verified Pros
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <section class="dashboard-card extra-card">
+
+                <div class="card-header">
+
+                    <div>
+
+                        <h3>
+                            Recommended Professionals
+                        </h3>
+
+                        <p>
+                            Professionals matching your recent tasks
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="data-list">
+
+                    <div class="data-row">
+
+                        <div class="data-image">
+
+                            <img
+                                src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=150&q=80"
+                                alt="Professional"
+                            >
+
+                        </div>
+
+                        <div class="data-info">
+
+                            <strong>
+                                Arun Kumar
+                            </strong>
+
+                            <span>
+                                Plumbing · ★ 4.9 · 86 reviews · 8 years
+                            </span>
+
+                        </div>
+
+                        <strong class="view-link">
+                            ₹850+
+                        </strong>
+
+                    </div>
+
+
+                    <div class="data-row">
+
+                        <div class="data-image">
+
+                            <img
+                                src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=150&q=80"
+                                alt="Professional"
+                            >
+
+                        </div>
+
+                        <div class="data-info">
+
+                            <strong>
+                                Ravi Electricals
+                            </strong>
+
+                            <span>
+                                Electrical · ★ 4.8 · 64 reviews · 6 years
+                            </span>
+
+                        </div>
+
+                        <strong class="view-link">
+                            ₹700+
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+        `
+
+    },
+
+
+    bids: {
+
+        eyebrow: "BIDDING",
+
+        title: "My Bids",
+
+        html: `
+
+            <section class="metrics-grid">
+
+                <div class="metric-card">
+
+                    <div class="metric-icon">
+                        <i data-lucide="gavel"></i>
+                    </div>
+
+                    <div class="metric-value">
+                        12
+                    </div>
+
+                    <div class="metric-label">
+                        Total Bids
+                    </div>
+
+                </div>
+
+
+                <div class="metric-card">
+
+                    <div class="metric-icon">
+                        <i data-lucide="clock-3"></i>
+                    </div>
+
+                    <div class="metric-value">
+                        05
+                    </div>
+
+                    <div class="metric-label">
+                        New Bids
+                    </div>
+
+                </div>
+
+
+                <div class="metric-card">
+
+                    <div class="metric-icon">
+                        <i data-lucide="check-circle-2"></i>
+                    </div>
+
+                    <div class="metric-value">
+                        04
+                    </div>
+
+                    <div class="metric-label">
+                        Accepted
+                    </div>
+
+                </div>
+
+
+                <div class="metric-card">
+
+                    <div class="metric-icon">
+                        <i data-lucide="x-circle"></i>
+                    </div>
+
+                    <div class="metric-value">
+                        03
+                    </div>
+
+                    <div class="metric-label">
+                        Closed
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <section class="dashboard-card extra-card">
+
+                <div class="card-header">
+
+                    <div>
+
+                        <h3>
+                            Recent Bids
+                        </h3>
+
+                        <p>
+                            Compare professionals who responded
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="data-list">
+
+                    <div class="data-row">
+
+                        <div class="data-image">
+
+                            <img
+                                src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=150&q=80"
+                                alt="Arun Kumar"
+                            >
+
+                        </div>
+
+                        <div class="data-info">
+
+                            <strong>
+                                Arun Kumar · Bathroom Plumbing
+                            </strong>
+
+                            <span>
+                                ★ 4.9 · 86 reviews · Responded 25 min ago
+                            </span>
+
+                        </div>
+
+                        <strong class="view-link">
+                            ₹850
+                        </strong>
+
+                    </div>
+
+
+                    <div class="data-row">
+
+                        <div class="data-image">
+
+                            <img
+                                src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=150&q=80"
+                                alt="Ravi Electricals"
+                            >
+
+                        </div>
+
+                        <div class="data-info">
+
+                            <strong>
+                                Ravi Electricals · Fan Installation
+                            </strong>
+
+                            <span>
+                                ★ 4.8 · 64 reviews · Responded 2 hrs ago
+                            </span>
+
+                        </div>
+
+                        <strong class="view-link">
+                            ₹700
+                        </strong>
+
+                    </div>
+
+
+                    <div class="data-row">
+
+                        <div class="data-image">
+
+                            <img
+                                src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=150&q=80"
+                                alt="Manoj Home Care"
+                            >
+
+                        </div>
+
+                        <div class="data-info">
+
+                            <strong>
+                                Manoj Home Care · Plumbing
+                            </strong>
+
+                            <span>
+                                ★ 4.7 · 51 reviews · Responded 4 hrs ago
+                            </span>
+
+                        </div>
+
+                        <strong class="view-link">
+                            ₹950
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+        `
+
+    },
+
+
+    messages: {
+
+        eyebrow: "COMMUNICATION",
+
+        title: "Messages",
+
+        html: `
+
+            <section class="metrics-grid">
+
+                <div class="metric-card">
+
+                    <div class="metric-icon">
+                        <i data-lucide="message-square"></i>
+                    </div>
+
+                    <div class="metric-value">
+                        14
+                    </div>
+
+                    <div class="metric-label">
+                        Total Conversations
+                    </div>
+
+                </div>
+
+
+                <div class="metric-card">
+
+                    <div class="metric-icon">
+                        <i data-lucide="mail"></i>
+                    </div>
+
+                    <div class="metric-value">
+                        03
+                    </div>
+
+                    <div class="metric-label">
+                        Unread
+                    </div>
+
+                </div>
+
+
+                <div class="metric-card">
+
+                    <div class="metric-icon">
+                        <i data-lucide="messages-square"></i>
+                    </div>
+
+                    <div class="metric-value">
+                        06
+                    </div>
+
+                    <div class="metric-label">
+                        Active Chats
+                    </div>
+
+                </div>
+
+
+                <div class="metric-card">
+
+                    <div class="metric-icon">
+                        <i data-lucide="clock-3"></i>
+                    </div>
+
+                    <div class="metric-value">
+                        18m
+                    </div>
+
+                    <div class="metric-label">
+                        Avg Response
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <section class="dashboard-card extra-card">
+
+                <div class="card-header">
+
+                    <div>
+
+                        <h3>
+                            Recent Conversations
+                        </h3>
+
+                        <p>
+                            Messages from your selected professionals
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="data-list">
+
+                    <div class="data-row">
+
+                        <div class="data-image">
+
+                            <img
+                                src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=150&q=80"
+                                alt="Arun Kumar"
+                            >
+
+                        </div>
+
+                        <div class="data-info">
+
+                            <strong>
+                                Arun Kumar
+                            </strong>
+
+                            <span>
+                                I can visit tomorrow morning at 10 AM.
+                            </span>
+
+                        </div>
+
+                        <span class="status status-pending">
+                            2 New
+                        </span>
+
+                    </div>
+
+
+                    <div class="data-row">
+
+                        <div class="data-image">
+
+                            <img
+                                src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=150&q=80"
+                                alt="Ravi Electricals"
+                            >
+
+                        </div>
+
+                        <div class="data-info">
+
+                            <strong>
+                                Ravi Electricals
+                            </strong>
+
+                            <span>
+                                The installation should take about one hour.
+                            </span>
+
+                        </div>
+
+                        <span class="status status-complete">
+                            Read
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+        `
+
+    },
+
+
+    payments: {
+
+        eyebrow: "PAYMENTS",
+
+        title: "Payments",
+
+        html: `
+
+            <section class="metrics-grid">
+
+                <div class="metric-card">
+
+                    <div class="metric-icon">
+                        <i data-lucide="wallet-cards"></i>
+                    </div>
+
+                    <div class="metric-value">
+                        ₹7,850
+                    </div>
+
+                    <div class="metric-label">
+                        Total Spent
+                    </div>
+
+                </div>
+
+
+                <div class="metric-card">
+
+                    <div class="metric-icon">
+                        <i data-lucide="calendar-days"></i>
+                    </div>
+
+                    <div class="metric-value">
+                        ₹4,250
+                    </div>
+
+                    <div class="metric-label">
+                        This Month
+                    </div>
+
+                </div>
+
+
+                <div class="metric-card">
+
+                    <div class="metric-icon">
+                        <i data-lucide="clock-3"></i>
+                    </div>
+
+                    <div class="metric-value">
+                        ₹850
+                    </div>
+
+                    <div class="metric-label">
+                        Pending
+                    </div>
+
+                </div>
+
+
+                <div class="metric-card">
+
+                    <div class="metric-icon">
+                        <i data-lucide="receipt"></i>
+                    </div>
+
+                    <div class="metric-value">
+                        05
+                    </div>
+
+                    <div class="metric-label">
+                        Completed Payments
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <section class="dashboard-card extra-card">
+
+                <div class="card-header">
+
+                    <div>
+
+                        <h3>
+                            Payment History
+                        </h3>
+
+                        <p>
+                            Recent transactions from your tasks
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="data-list">
+
+                    <div class="data-row">
+
+                        <div class="activity-icon">
+                            <i data-lucide="check-circle-2"></i>
+                        </div>
+
+                        <div class="data-info">
+
+                            <strong>
+                                Living Room Painting
+                            </strong>
+
+                            <span>
+                                Sep 25, 2026 · Completed
+                            </span>
+
+                        </div>
+
+                        <strong class="view-link">
+                            ₹3,200
+                        </strong>
+
+                    </div>
+
+
+                    <div class="data-row">
+
+                        <div class="activity-icon">
+                            <i data-lucide="check-circle-2"></i>
+                        </div>
+
+                        <div class="data-info">
+
+                            <strong>
+                                Kitchen Cleaning
+                            </strong>
+
+                            <span>
+                                Sep 21, 2026 · Completed
+                            </span>
+
+                        </div>
+
+                        <strong class="view-link">
+                            ₹1,050
+                        </strong>
+
+                    </div>
+
+
+                    <div class="data-row">
+
+                        <div class="activity-icon">
+                            <i data-lucide="clock-3"></i>
+                        </div>
+
+                        <div class="data-info">
+
+                            <strong>
+                                Bathroom Plumbing
+                            </strong>
+
+                            <span>
+                                Pending professional completion
+                            </span>
+
+                        </div>
+
+                        <strong class="view-link">
+                            ₹850
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+        `
+
+    },
+
+
+    reviews: {
+
+        eyebrow: "REVIEWS",
+
+        title: "Reviews & Ratings",
+
+        html: `
+
+            <section class="metrics-grid">
+
+                <div class="metric-card">
+
+                    <div class="metric-icon">
+                        <i data-lucide="star"></i>
+                    </div>
+
+                    <div class="metric-value">
+                        4.8
+                    </div>
+
+                    <div class="metric-label">
+                        Average Rating Given
+                    </div>
+
+                </div>
+
+
+                <div class="metric-card">
+
+                    <div class="metric-icon">
+                        <i data-lucide="message-square"></i>
+                    </div>
+
+                    <div class="metric-value">
+                        05
+                    </div>
+
+                    <div class="metric-label">
+                        Reviews Written
+                    </div>
+
+                </div>
+
+
+                <div class="metric-card">
+
+                    <div class="metric-icon">
+                        <i data-lucide="clock-3"></i>
+                    </div>
+
+                    <div class="metric-value">
+                        01
+                    </div>
+
+                    <div class="metric-label">
+                        Awaiting Review
+                    </div>
+
+                </div>
+
+
+                <div class="metric-card">
+
+                    <div class="metric-icon">
+                        <i data-lucide="award"></i>
+                    </div>
+
+                    <div class="metric-value">
+                        05
+                    </div>
+
+                    <div class="metric-label">
+                        Jobs Rated
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <section class="dashboard-card extra-card">
+
+                <div class="card-header">
+
+                    <div>
+
+                        <h3>
+                            Your Recent Reviews
+                        </h3>
+
+                        <p>
+                            Feedback you have shared with professionals
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="data-list">
+
+                    <div class="data-row">
+
+                        <div class="activity-icon">
+                            <i data-lucide="star"></i>
+                        </div>
+
+                        <div class="data-info">
+
+                            <strong>
+                                Living Room Painting
+                            </strong>
+
+                            <span>
+                                "Great work and very clean finish."
+                            </span>
+
+                        </div>
+
+                        <strong class="view-link">
+                            ★ 5.0
+                        </strong>
+
+                    </div>
+
+                    <div class="data-row">
+
+    <div class="activity-icon">
+        <i data-lucide="star"></i>
+    </div>
+
+    <div class="data-info">
+
+        <strong>
+            Kitchen Cleaning
+        </strong>
+
+        <span>
+            "Arrived on time and completed everything."
+        </span>
+
+    </div>
+
+    <strong class="view-link">
+        ★ 4.8
+    </strong>
+
+</div>
+
+
+<div class="data-row">
+
+    <div class="activity-icon">
+        <i data-lucide="star"></i>
+    </div>
+
+    <div class="data-info">
+
+        <strong>
+            Bathroom Plumbing Repair
+        </strong>
+
+        <span>
+            "Very professional and fixed the issue quickly."
+        </span>
+
+    </div>
+
+    <strong class="view-link">
+        ★ 4.9
+    </strong>
+
+</div>
+
+
+<div class="data-row">
+
+    <div class="activity-icon">
+        <i data-lucide="star"></i>
+    </div>
+
+    <div class="data-info">
+
+        <strong>
+            Ceiling Fan Installation
+        </strong>
+
+        <span>
+            "Excellent work and explained everything clearly."
+        </span>
+
+    </div>
+
+    <strong class="view-link">
+        ★ 4.7
+    </strong>
+
+</div>
+
+
+<div class="data-row">
+
+    <div class="activity-icon">
+        <i data-lucide="star"></i>
+    </div>
+
+    <div class="data-info">
+
+        <strong>
+            Living Room Painting
+        </strong>
+
+        <span>
+            "Clean finish and completed the job as promised."
+        </span>
+
+    </div>
+
+    <strong class="view-link">
+        ★ 4.8
+    </strong>
+
+</div>
+
+
+<div class="data-row">
+
+    <div class="activity-icon">
+        <i data-lucide="star"></i>
+    </div>
+
+    <div class="data-info">
+
+        <strong>
+            Furniture Assembly
+        </strong>
+
+        <span>
+            "Friendly service and the furniture was assembled perfectly."
+        </span>
+
+    </div>
+
+    <strong class="view-link">
+        ★ 4.6
+    </strong>
+
+</div>
+
+
+<div class="data-row">
+
+    <div class="activity-icon">
+        <i data-lucide="star"></i>
+    </div>
+
+    <div class="data-info">
+
+        <strong>
+            Garden Maintenance
+        </strong>
+
+        <span>
+            "Did a great job and left the garden neat and tidy."
+        </span>
+
+    </div>
+
+    <strong class="view-link">
+        ★ 4.9
+    </strong>
+
+</div>
+
+
+<div class="data-row">
+
+    <div class="activity-icon">
+        <i data-lucide="star"></i>
+    </div>
+
+    <div class="data-info">
+
+        <strong>
+            Electrical Repair
+        </strong>
+
+        <span>
+            "Quick response and the electrical problem was resolved."
+        </span>
+
+    </div>
+
+    <strong class="view-link">
+        ★ 4.7
+    </strong>
+
+</div>
+
+
+                    <div class="data-row">
+
+                        <div class="activity-icon">
+                            <i data-lucide="star"></i>
+                        </div>
+
+                        <div class="data-info">
+
+                            <strong>
+                                Kitchen Cleaning
+                            </strong>
+
+                            <span>
+                                "Arrived on time and completed everything."
+                            </span>
+
+                        </div>
+
+                        <strong class="view-link">
+                            ★ 4.8
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+        `
+
+    },
+
+
+    notifications: {
+
+        eyebrow: "ACCOUNT UPDATES",
+
+        title: "Notifications",
+
+        html: `
+
+            <section class="metrics-grid">
+
+                <div class="metric-card">
+
+                    <div class="metric-icon">
+                        <i data-lucide="bell"></i>
+                    </div>
+
+                    <div class="metric-value">
+                        03
+                    </div>
+
+                    <div class="metric-label">
+                        Unread
+                    </div>
+
+                </div>
+
+
+                <div class="metric-card">
+
+                    <div class="metric-icon">
+                        <i data-lucide="gavel"></i>
+                    </div>
+
+                    <div class="metric-value">
+                        05
+                    </div>
+
+                    <div class="metric-label">
+                        Bid Updates
+                    </div>
+
+                </div>
+
+
+                <div class="metric-card">
+
+                    <div class="metric-icon">
+                        <i data-lucide="credit-card"></i>
+                    </div>
+
+                    <div class="metric-value">
+                        02
+                    </div>
+
+                    <div class="metric-label">
+                        Payment Updates
+                    </div>
+
+                </div>
+
+
+                <div class="metric-card">
+
+                    <div class="metric-icon">
+                        <i data-lucide="message-square"></i>
+                    </div>
+
+                    <div class="metric-value">
+                        03
+                    </div>
+
+                    <div class="metric-label">
+                        Message Updates
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <section class="dashboard-card extra-card">
+
+                <div class="card-header">
+
+                    <div>
+
+                        <h3>
+                            Recent Notifications
+                        </h3>
+
+                        <p>
+                            Important updates from TaskLocal
+                        </p>
+
+                    </div>
+
+                    <button
+                        class="view-link"
+                        onclick="showToast('Notifications marked as read')">
+
+                        Mark all read
+
+                    </button>
+
+                </div>
+
+
+                <div class="activity-list">
+
+                    <div class="activity-row">
+
+                        <div class="activity-icon">
+                            <i data-lucide="gavel"></i>
+                        </div>
+
+                        <div class="activity-info">
+
+                            <strong>
+                                New bid received
+                            </strong>
+
+                            <span>
+                                Arun Kumar submitted a ₹850 bid for
+                                Bathroom Plumbing Repair.
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="activity-row">
+
+                        <div class="activity-icon">
+                            <i data-lucide="message-square"></i>
+                        </div>
+
+                        <div class="activity-info">
+
+                            <strong>
+                                New message
+                            </strong>
+
+                            <span>
+                                Ravi Electricals sent you a message.
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="activity-row">
+
+                        <div class="activity-icon">
+                            <i data-lucide="credit-card"></i>
+                        </div>
+
+                        <div class="activity-info">
+
+                            <strong>
+                                Payment confirmed
+                            </strong>
+
+                            <span>
+                                Your ₹3,200 payment has been successfully processed.
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+        `
+
+    },
+
+
+    profile: {
+
+        eyebrow: "ACCOUNT",
+
+        title: "My Profile",
+
+        html: `
+
+            <section class="dashboard-card">
+
+                <div class="card-header">
+
+                    <div>
+
+                        <h3>
+                            Profile Information
+                        </h3>
+
+                        <p>
+                            Manage your TaskLocal account details
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="empty-state">
+
+                    <div class="empty-inner">
+
+                        <div class="empty-icon">
+
+                            <i data-lucide="user-round"></i>
+
+                        </div>
+
+                        <h3>
+                            sarah
+                        </h3>
+
+                        <p>
+                            jada@example.com<br>
+                            Bengaluru, Karnataka<br>
+                            Customer since August 2026
+                        </p>
+
+                        <button
+                            class="primary-button"
+                            onclick="showToast('Profile editing enabled')">
+
+                            <i data-lucide="pencil"></i>
+
+                            Edit Profile
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+        `
+
+    },
+
+
+    settings: {
+
+        eyebrow: "ACCOUNT PREFERENCES",
+
+        title: "Settings",
+
+        html: `
+
+            <section class="dashboard-card">
+
+                <div class="card-header">
+
+                    <div>
+
+                        <h3>
+                            Account Settings
+                        </h3>
+
+                        <p>
+                            Control your TaskLocal preferences
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="data-list">
+
+                    <div class="data-row">
+
+                        <div class="activity-icon">
+                            <i data-lucide="bell"></i>
+                        </div>
+
+                        <div class="data-info">
+
+                            <strong>
+                                Notifications
+                            </strong>
+
+                            <span>
+                                Receive updates about tasks, bids and messages
+                            </span>
+
+                        </div>
+
+                        <strong class="view-link">
+                            ON
+                        </strong>
+
+                    </div>
+
+
+                    <div class="data-row">
+
+                        <div class="activity-icon">
+                            <i data-lucide="shield-check"></i>
+                        </div>
+
+                        <div class="data-info">
+
+                            <strong>
+                                Account Security
+                            </strong>
+
+                            <span>
+                                Password and login protection
+                            </span>
+
+                        </div>
+
+                        <strong class="view-link">
+                            Secure
+                        </strong>
+
+                    </div>
+
+
+                    <div class="data-row">
+
+                        <div class="activity-icon">
+                            <i data-lucide="globe"></i>
+                        </div>
+
+                        <div class="data-info">
+
+                            <strong>
+                                Language & Direction
+                            </strong>
+
+                            <span>
+                                Change interface language and RTL direction
+                            </span>
+
+                        </div>
+
+                        <strong class="view-link">
+                            EN
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+        `
+
+    }
+
+};
+
+
+function renderSection(section) {
+
+    const data = dashboardData[section];
+
+    if (!data) {
+        return;
+    }
+
+    pageEyebrow.textContent = data.eyebrow;
+
+    pageTitle.textContent = data.title;
+
+    content.innerHTML = data.html;
+
+    document.querySelectorAll(".sidebar-link").forEach(link => {
+
+        link.classList.toggle(
+            "active",
+            link.dataset.section === section
+        );
+
+    });
+
+    lucide.createIcons();
+
+    closeMobileSidebar();
+
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+
+}
+
+
+document.querySelectorAll(".sidebar-link").forEach(link => {
+
+    link.addEventListener("click", () => {
+
+        renderSection(
+            link.dataset.section
+        );
+
+    });
+
+});
+
+
+function openMobileSidebar() {
+
+    sidebar.classList.add("open");
+
+    mobileOverlay.classList.add("show");
+
+    document.body.style.overflow = "hidden";
+
+}
+
+
+function closeMobileSidebar() {
+
+    sidebar.classList.remove("open");
+
+    mobileOverlay.classList.remove("show");
+
+    document.body.style.overflow = "";
+
+}
+
+
+mobileMenuBtn.addEventListener(
+    "click",
+    openMobileSidebar
+);
+
+
+sidebarClose.addEventListener(
+    "click",
+    closeMobileSidebar
+);
+
+
+mobileOverlay.addEventListener(
+    "click",
+    closeMobileSidebar
+);
+
+
+document.addEventListener(
+    "keydown",
+    event => {
+
+        if (event.key === "Escape") {
+
+            closeMobileSidebar();
+
+            profileDropdown.classList.remove("open");
+
+            profileButton.setAttribute(
+                "aria-expanded",
+                "false"
+            );
+
+        }
+
+    }
+);
+
+
+profileButton.addEventListener(
+    "click",
+    event => {
+
+        event.stopPropagation();
+
+        const open =
+            profileDropdown.classList.toggle("open");
+
+        profileButton.setAttribute(
+            "aria-expanded",
+            open ? "true" : "false"
+        );
+
+    }
+);
+
+
+profileDropdown.addEventListener(
+    "click",
+    event => {
+
+        event.stopPropagation();
+
+    }
+);
+
+
+document.addEventListener(
+    "click",
+    () => {
+
+        profileDropdown.classList.remove("open");
+
+        profileButton.setAttribute(
+            "aria-expanded",
+            "false"
+        );
+
+    }
+);
+
+
+document.querySelectorAll(
+    "[data-profile-action]"
+).forEach(button => {
+
+    button.addEventListener(
+        "click",
+        () => {
+
+            const action =
+                button.dataset.profileAction;
+
+            profileDropdown.classList.remove("open");
+
+            if (action === "profile") {
+
+                renderSection("profile");
+
+            }
+
+            if (action === "notifications") {
+
+                renderSection("notifications");
+
+            }
+
+        }
+    );
+
+});
+
+
+notificationTopBtn.addEventListener(
+    "click",
+    () => {
+
+        renderSection("notifications");
+
+    }
+);
+
+
+function logout() {
+
+    const confirmed =
+        window.confirm(
+            "Are you sure you want to logout?"
+        );
+
+    if (!confirmed) {
+        return;
+    }
+
+    showToast(
+        "Logging out..."
+    );
+
+    setTimeout(() => {
+
+        window.location.href =
+            "login.html";
+
+    }, 800);
+
+}
+
+
+sidebarLogout.addEventListener(
+    "click",
+    logout
+);
+
+
+profileLogout.addEventListener(
+    "click",
+    logout
+);
+
+
+themeToggle.addEventListener(
+    "click",
+    () => {
+
+        document.body.classList.toggle("dark");
+
+        const isDark =
+            document.body.classList.contains("dark");
+
+        localStorage.setItem(
+            "tasklocal-theme",
+            isDark ? "dark" : "light"
+        );
+
+        themeToggle.innerHTML = isDark
+            ? '<i data-lucide="sun"></i>'
+            : '<i data-lucide="moon"></i>';
+
+        lucide.createIcons();
+
+    }
+);
+
+
+rtlToggle.addEventListener(
+    "click",
+    () => {
+
+        const html =
+            document.documentElement;
+
+        const current =
+            html.getAttribute("dir");
+
+        const next =
+            current === "rtl"
+                ? "ltr"
+                : "rtl";
+
+        html.setAttribute(
+            "dir",
+            next
+        );
+
+        localStorage.setItem(
+            "tasklocal-direction",
+            next
+        );
+
+    }
+);
+
+
+function showToast(message) {
+
+    toastMessage.textContent =
+        message;
+
+    toast.classList.add("show");
+
+    setTimeout(() => {
+
+        toast.classList.remove("show");
+
+    }, 2200);
+
+}
+
+
+const savedTheme =
+    localStorage.getItem(
+        "tasklocal-theme"
+    );
+
+if (savedTheme === "dark") {
+
+    document.body.classList.add("dark");
+
+    themeToggle.innerHTML =
+        '<i data-lucide="sun"></i>';
+
+}
+
+
+const savedDirection =
+    localStorage.getItem(
+        "tasklocal-direction"
+    );
+
+if (savedDirection) {
+
+    document.documentElement.setAttribute(
+        "dir",
+        savedDirection
+    );
+
+}
+
+
+lucide.createIcons();
+
+renderSection("dashboard");
+    </script>
+
+</body>
+
+</html>

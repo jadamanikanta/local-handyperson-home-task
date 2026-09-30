@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sign Up - TaskLocal</title>
+
+    <link rel="icon" type="image/png" href="logo.png">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <link rel="stylesheet" href="signup.css">
+</head>
+
+<body>
+
+    <div class="background-animation">
+
+        <div class="floating-image image-one">
+            <img
+                src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=700&q=80"
+                alt="Home service">
+        </div>
+
+        <div class="floating-image image-two">
+            <img
+                src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=700&q=80"
+                alt="Handyperson service">
+        </div>
+
+        <div class="floating-image image-three">
+            <img
+                src="https://images.unsplash.com/photo-1527515637462-cff94eecc1ac?auto=format&fit=crop&w=700&q=80"
+                alt="Cleaning service">
+        </div>
+
+        <div class="floating-image image-four">
+            <img
+                src="https://images.unsplash.com/photo-1504148455328-c376907d081c?auto=format&fit=crop&w=700&q=80"
+                alt="Home repair">
+        </div>
+
+        <div class="floating-image image-five">
+            <img
+                src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?auto=format&fit=crop&w=700&q=80"
+                alt="Electrical service">
+        </div>
+
+        <div class="service-orb orb-one"></div>
+        <div class="service-orb orb-two"></div>
+        <div class="service-orb orb-three"></div>
+
+    </div>
+
+    <div class="page-overlay"></div>
+
+    <div class="top-controls">
+
+        <button
+            id="rtlToggle"
+            class="rtl-btn"
+            type="button"
+            aria-label="Toggle text direction">
+            RTL
+        </button>
+
+        <button
+            id="themeToggle"
+            class="theme-btn"
+            type="button"
+            aria-label="Toggle dark mode">
+            <i data-lucide="moon"></i>
+        </button>
+
+    </div>
+
+    <main class="signup-page">
+
+        <section class="signup-card">
+
+            <div class="signup-logo">
+
+                <a href="index.html">
+
+                    <img
+                        src="logo.jpeg"
+                        alt="TaskLocal Logo">
+
+                    <span class="logo-text">
+                        Task<span>Local</span>
+                    </span>
+
+                </a>
+
+            </div>
+
+            <div class="signup-header">
+
+                <span class="signup-label">
+                    JOIN TASKLOCAL
+                </span>
+
+                <h1>
+                    Create Your Account
+                </h1>
+
+                <p>
+                    Join your local community and make home tasks easier.
+                </p>
+
+            </div>
+
+            <div class="social-login">
+
+                <a
+                    href="https://accounts.google.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="social-btn">
+
+                    <i class="fa-brands fa-google google-icon"></i>
+
+                    <span>
+                         Google
+                    </span>
+
+                </a>
+
+                <a
+                    href="https://appleid.apple.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="social-btn">
+
+                    <i class="fa-brands fa-apple apple-icon"></i>
+
+                    <span>
+                      Apple
+                    </span>
+
+                </a>
+
+            </div>
+
+            <div class="divider">
+                <span>OR CREATE WITH EMAIL</span>
+            </div>
+
+            <form id="signupForm" novalidate>
+
+                <div class="form-group">
+
+                    <label for="fullName">
+                        Full Name
+                    </label>
+
+                    <div class="input-wrapper">
+
+                        <i
+                            data-lucide="user"
+                            class="input-icon">
+                        </i>
+
+                        <input
+                            type="text"
+                            id="fullName"
+                            name="fullName"
+                            placeholder="Enter your full name"
+                            autocomplete="name"
+                            required>
+
+                    </div>
+
+                </div>
+
+                <div class="form-group">
+
+                    <label for="email">
+                        Email Address
+                    </label>
+
+                    <div class="input-wrapper">
+
+                        <i
+                            data-lucide="mail"
+                            class="input-icon">
+                        </i>
+
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="Enter your email address"
+                            autocomplete="email"
+                            required>
+
+                    </div>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="password">
+                        Password
+                    </label>
+
+                    <div class="input-wrapper">
+
+                        <i
+                            data-lucide="lock"
+                            class="input-icon">
+                        </i>
+
+                        <input
+                            type="password"
+                            id="password"
+                            name="password"
+                            placeholder="Create a password"
+                            autocomplete="new-password"
+                            required>
+
+                        <button
+                            type="button"
+                            class="password-toggle"
+                            data-target="password"
+                            aria-label="Show password">
+
+                            <i data-lucide="eye"></i>
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+                <div class="form-group">
+
+                    <label for="confirmPassword">
+                        Confirm Password
+                    </label>
+
+                    <div class="input-wrapper">
+
+                        <i
+                            data-lucide="shield-check"
+                            class="input-icon">
+                        </i>
+
+                        <input
+                            type="password"
+                            id="confirmPassword"
+                            name="confirmPassword"
+                            placeholder="Confirm your password"
+                            autocomplete="new-password"
+                            required>
+
+                        <button
+                            type="button"
+                            class="password-toggle"
+                            data-target="confirmPassword"
+                            aria-label="Show password">
+
+                            <i data-lucide="eye"></i>
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+                <label class="terms-option">
+
+                    <input
+                        type="checkbox"
+                        id="terms"
+                        name="terms"
+                        required>
+
+                    <span class="custom-checkbox"></span>
+
+                    <span class="terms-text">
+                        I agree to the
+                        <a href="terms.html">
+                            Terms & Conditions
+                        </a>
+                        and
+                        <a href="privacy-policy.html">
+                            Privacy Policy
+                        </a>
+                    </span>
+
+                </label>
+
+                <button
+                    type="submit"
+                    class="signup-btn">
+
+                    <span>
+                        Create Account
+                    </span>
+
+                    <i data-lucide="arrow-right"></i>
+
+                </button>
+
+            </form>
+
+            <div class="login-text">
+
+                <span>
+                    Already have an account?
+                </span>
+
+                <a href="login.html">
+                    Sign In
+                </a>
+
+            </div>
+
+
+        </section>
+
+    </main>
+
+    <script>
+
+        document.addEventListener("DOMContentLoaded", () => {
+
+    const body = document.body;
+
+    const rtlToggle = document.getElementById("rtlToggle");
+    const themeToggle = document.getElementById("themeToggle");
+    const signupForm = document.getElementById("signupForm");
+
+    const savedTheme =
+        localStorage.getItem("tasklocal-theme");
+
+    const savedDirection =
+        localStorage.getItem("tasklocal-direction");
+
+    if (savedTheme === "dark") {
+
+        body.classList.add("dark");
+
+        themeToggle.innerHTML =
+            '<i data-lucide="sun"></i>';
+
+    } else {
+
+        themeToggle.innerHTML =
+            '<i data-lucide="moon"></i>';
+    }
+
+    if (savedDirection === "rtl") {
+
+        document.documentElement.setAttribute(
+            "dir",
+            "rtl"
+        );
+
+        rtlToggle.textContent = "LTR";
+
+    } else {
+
+        document.documentElement.setAttribute(
+            "dir",
+            "ltr"
+        );
+
+        rtlToggle.textContent = "RTL";
+    }
+
+    lucide.createIcons();
+
+    themeToggle.addEventListener("click", () => {
+
+        body.classList.toggle("dark");
+
+        const isDark =
+            body.classList.contains("dark");
+
+        localStorage.setItem(
+            "tasklocal-theme",
+            isDark ? "dark" : "light"
+        );
+
+        themeToggle.innerHTML = isDark
+            ? '<i data-lucide="sun"></i>'
+            : '<i data-lucide="moon"></i>';
+
+        lucide.createIcons();
+    });
+
+    rtlToggle.addEventListener("click", () => {
+
+        const isRTL =
+            document.documentElement.getAttribute("dir") === "rtl";
+
+        const newDirection =
+            isRTL ? "ltr" : "rtl";
+
+        document.documentElement.setAttribute(
+            "dir",
+            newDirection
+        );
+
+        localStorage.setItem(
+            "tasklocal-direction",
+            newDirection
+        );
+
+        rtlToggle.textContent =
+            newDirection === "rtl"
+                ? "LTR"
+                : "RTL";
+    });
+
+    document.querySelectorAll(".password-toggle").forEach(button => {
+
+        button.addEventListener("click", () => {
+
+            const targetId =
+                button.getAttribute("data-target");
+
+            const input =
+                document.getElementById(targetId);
+
+            if (!input) return;
+
+            const showing =
+                input.type === "text";
+
+            input.type =
+                showing ? "password" : "text";
+
+            button.setAttribute(
+                "aria-label",
+                showing
+                    ? "Show password"
+                    : "Hide password"
+            );
+
+            button.innerHTML =
+                showing
+                    ? '<i data-lucide="eye"></i>'
+                    : '<i data-lucide="eye-off"></i>';
+
+            lucide.createIcons();
+        });
+
+    });
+
+    signupForm.addEventListener("submit", event => {
+
+        event.preventDefault();
+
+        const fullName =
+            document.getElementById("fullName").value.trim();
+
+        const email =
+            document.getElementById("email").value.trim();
+
+        const phone =
+            document.getElementById("phone").value.trim();
+
+        const password =
+            document.getElementById("password").value;
+
+        const confirmPassword =
+            document.getElementById("confirmPassword").value;
+
+        const terms =
+            document.getElementById("terms").checked;
+
+        removeMessage();
+
+        if (!fullName) {
+
+            showMessage(
+                "Please enter your full name.",
+                "error"
+            );
+
+            return;
+        }
+
+        if (!email) {
+
+            showMessage(
+                "Please enter your email address.",
+                "error"
+            );
+
+            return;
+        }
+
+        const emailPattern =
+            /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+        if (!emailPattern.test(email)) {
+
+            showMessage(
+                "Please enter a valid email address.",
+                "error"
+            );
+
+            return;
+        }
+
+        if (phone) {
+
+            const phonePattern =
+                /^[0-9+\-\s()]{7,18}$/;
+
+            if (!phonePattern.test(phone)) {
+
+                showMessage(
+                    "Please enter a valid phone number.",
+                    "error"
+                );
+
+                return;
+            }
+        }
+
+        if (password.length < 8) {
+
+            showMessage(
+                "Password must contain at least 8 characters.",
+                "error"
+            );
+
+            return;
+        }
+
+        if (password !== confirmPassword) {
+
+            showMessage(
+                "Passwords do not match.",
+                "error"
+            );
+
+            return;
+        }
+
+        if (!terms) {
+
+            showMessage(
+                "Please accept the Terms & Conditions and Privacy Policy.",
+                "error"
+            );
+
+            return;
+        }
+
+        showMessage(
+            "Your account has been created successfully.",
+            "success"
+        );
+
+        setTimeout(() => {
+
+            window.location.href =
+                "login.html";
+
+        }, 1200);
+
+    });
+
+    function showMessage(message, type) {
+
+        removeMessage();
+
+        const messageBox =
+            document.createElement("div");
+
+        messageBox.className =
+            `form-message ${type}`;
+
+        messageBox.textContent =
+            message;
+
+        signupForm.prepend(messageBox);
+
+    }
+
+    function removeMessage() {
+
+        const existing =
+            document.querySelector(".form-message");
+
+        if (existing) {
+            existing.remove();
+        }
+    }
+
+});
+    </script>
+
+</body>
+
+</html>

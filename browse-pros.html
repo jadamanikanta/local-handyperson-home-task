@@ -1,0 +1,1982 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>TaskLocal | Local Handyperson & Home Task Marketplace</title>
+
+    <link rel="icon" type="image/png" sizes="184x184" href="logo.jpeg">
+
+    <link rel="stylesheet" href="global.css">
+    <link rel="stylesheet" href="browse-pros.css">
+
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body>
+
+<header class="header">
+
+    <div class="navbar-container nav">
+
+        <div class="logo">
+
+            <a href="index.html">
+
+                <img src="logo.jpeg"
+                     alt="TaskLocal Logo">
+
+                <span class="logo-text">
+                    Task<span class="logo-header-secondary">Local</span>
+                </span>
+
+            </a>
+
+        </div>
+
+        <nav class="nav-links" id="navMenu">
+
+            <div class="dropdown">
+
+                <a href="index.html"
+                   class="nav-item nav-link"
+                   data-page="home">
+
+                    Home
+
+                    <i data-lucide="chevron-down"></i>
+
+                </a>
+
+                <div class="dropdown-menu">
+
+                    <a href="index.html"
+                       class="nav-link"
+                       data-page="home">
+                        Home 1
+                    </a>
+
+                    <a href="home-2.html"
+                       class="nav-link"
+                       data-page="home">
+                        Home 2
+                    </a>
+
+                </div>
+
+            </div>
+
+            <a href="post-task.html"
+               class="nav-link">
+                Post a Task
+            </a>
+
+            <a href="browse-pros.html"
+               class="nav-link">
+                Browse Pros
+            </a>
+
+            <a href="how-it-works.html"
+               class="nav-link">
+                How It Works
+            </a>
+
+            <a href="contact.html"
+               class="nav-link">
+                Contact
+            </a>
+
+            <a href="dashboard.html"
+               class="nav-link">
+                Dashboard
+            </a>
+
+            <button class="btn-primary mobile-login"
+                    id="mobileLoginBtn"
+                    type="button">
+                Login
+            </button>
+
+        </nav>
+
+        <div class="nav-actions">
+
+            <button id="rtlToggle"
+                    class="btn-secondary"
+                    type="button"
+                    aria-label="Toggle text direction">
+                RTL
+            </button>
+
+            <button id="themeToggle"
+                    class="icon-btn"
+                    type="button"
+                    aria-label="Toggle dark mode">
+                <i data-lucide="moon"></i>
+            </button>
+
+            <button class="btn-primary desktop-login"
+                    id="loginBtn"
+                    type="button">
+                Login
+            </button>
+
+            <button id="menuToggle" class="hamburger">☰</button>
+
+        </div>
+
+    </div>
+
+</header>
+
+<section class="pros-hero">
+
+    <div class="pros-hero-overlay"></div>
+
+    <div class="pros-hero-container">
+
+        <div class="pros-hero-content">
+
+            <span class="pros-hero-tag">
+                LOCAL HELP, WHEN YOU NEED IT
+            </span>
+
+            <h1>
+                Find the right
+                <strong>pro for your task.</strong>
+            </h1>
+
+            <p>
+                Discover trusted local people with the skills,
+                experience, and availability to help with jobs around your home.
+            </p>
+
+            <div class="pros-search-box">
+
+                <div class="pros-search-field">
+
+                    <i data-lucide="search"></i>
+
+                    <div>
+                        <span>WHAT DO YOU NEED?</span>
+                        <input
+                            type="text"
+                            placeholder="Plumbing, cleaning, painting..."
+                        >
+                    </div>
+
+                </div>
+
+                <div class="pros-search-divider"></div>
+
+                <div class="pros-search-field">
+
+                    <i data-lucide="map-pin"></i>
+
+                    <div>
+                        <span>YOUR LOCATION</span>
+                        <input
+                            type="text"
+                            placeholder="Enter your area"
+                        >
+                    </div>
+
+                </div>
+
+                <button type="button" class="pros-search-button">
+                    <span>Find Pros</span>
+                    <i data-lucide="arrow-up-right"></i>
+                </button>
+
+            </div>
+
+            <div class="pros-hero-trust">
+
+                <div>
+                    <i data-lucide="badge-check"></i>
+                    <span>Local professionals</span>
+                </div>
+
+                <div>
+                    <i data-lucide="star"></i>
+                    <span>Ratings & reviews</span>
+                </div>
+
+                <div>
+                    <i data-lucide="clock-3"></i>
+                    <span>Check availability</span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="popular-services-section">
+
+    <div class="popular-services-container">
+
+        <div class="popular-services-heading">
+
+            <div>
+                <span>EXPLORE SERVICES</span>
+
+                <h2>
+                    Find help for
+                    <strong>almost any task.</strong>
+                </h2>
+            </div>
+
+            <p>
+                Browse popular services and discover local people
+                with the skills you need for your home.
+            </p>
+
+        </div>
+
+        <div class="popular-services-grid">
+
+            <a href="#" class="popular-service-card">
+
+                <img
+                    src="https://images.unsplash.com/photo-1607472586893-edb57bdc0e39?auto=format&fit=crop&w=900&q=85"
+                    alt="Plumbing service"
+                >
+
+                <div class="popular-service-overlay"></div>
+
+                <div class="popular-service-content">
+
+                    <span>01</span>
+
+                    <div>
+                        <h3>Plumbing</h3>
+                        <p>Leaks, taps, pipes and repairs</p>
+                    </div>
+
+                    <i data-lucide="arrow-up-right"></i>
+
+                </div>
+
+            </a>
+
+
+            <a href="#" class="popular-service-card">
+
+                <img
+                    src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?auto=format&fit=crop&w=900&q=85"
+                    alt="Electrical service"
+                >
+
+                <div class="popular-service-overlay"></div>
+
+                <div class="popular-service-content">
+
+                    <span>02</span>
+
+                    <div>
+                        <h3>Electrical</h3>
+                        <p>Fixtures, wiring and installations</p>
+                    </div>
+
+                    <i data-lucide="arrow-up-right"></i>
+
+                </div>
+
+            </a>
+
+
+            <a href="#" class="popular-service-card">
+
+                <img
+                    src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=900&q=85"
+                    alt="Home cleaning service"
+                >
+
+                <div class="popular-service-overlay"></div>
+
+                <div class="popular-service-content">
+
+                    <span>03</span>
+
+                    <div>
+                        <h3>Cleaning</h3>
+                        <p>Home, kitchen and deep cleaning</p>
+                    </div>
+
+                    <i data-lucide="arrow-up-right"></i>
+
+                </div>
+
+            </a>
+
+
+            <a href="#" class="popular-service-card">
+
+                <img
+                    src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&w=900&q=85"
+                    alt="Furniture assembly service"
+                >
+
+                <div class="popular-service-overlay"></div>
+
+                <div class="popular-service-content">
+
+                    <span>04</span>
+
+                    <div>
+                        <h3>Furniture</h3>
+                        <p>Assembly, moving and installation</p>
+                    </div>
+
+                    <i data-lucide="arrow-up-right"></i>
+
+                </div>
+
+            </a>
+
+
+            <a href="#" class="popular-service-card">
+
+                <img
+                    src="https://images.unsplash.com/photo-1562259949-e8e7689d7828?auto=format&fit=crop&w=900&q=85"
+                    alt="Painting service"
+                >
+
+                <div class="popular-service-overlay"></div>
+
+                <div class="popular-service-content">
+
+                    <span>05</span>
+
+                    <div>
+                        <h3>Painting</h3>
+                        <p>Walls, rooms and home refreshes</p>
+                    </div>
+
+                    <i data-lucide="arrow-up-right"></i>
+
+                </div>
+
+            </a>
+
+
+            <a href="#" class="popular-service-card">
+
+                <img
+                    src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=900&q=85"
+                    alt="General home repair service"
+                >
+
+                <div class="popular-service-overlay"></div>
+
+                <div class="popular-service-content">
+
+                    <span>06</span>
+
+                    <div>
+                        <h3>General Repairs</h3>
+                        <p>Small fixes and everyday home tasks</p>
+                    </div>
+
+                    <i data-lucide="arrow-up-right"></i>
+
+                </div>
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="pros-filter-section">
+
+    <div class="pros-filter-container">
+
+        <div class="pros-filter-heading">
+
+            <div>
+                <span>FIND YOUR MATCH</span>
+
+                <h2>
+                    Narrow it down to the
+                    <strong>right local pro.</strong>
+                </h2>
+            </div>
+
+            <p>
+                Use the filters to find people based on service,
+                location, rating, budget, and availability.
+            </p>
+
+        </div>
+
+        <div class="pros-filter-panel">
+
+            <div class="pros-filter-search">
+
+                <i data-lucide="search"></i>
+
+                <input
+                    type="text"
+                    placeholder="Search for a service or skill..."
+                >
+
+            </div>
+
+            <div class="pros-filter-options">
+
+                <div class="pros-filter-item">
+
+                    <label>
+                        Service
+                    </label>
+
+                    <div class="pros-filter-select">
+
+                        <i data-lucide="wrench"></i>
+
+                        <select>
+                            <option>All services</option>
+                            <option>Plumbing</option>
+                            <option>Electrical</option>
+                            <option>Cleaning</option>
+                            <option>Furniture</option>
+                            <option>Painting</option>
+                            <option>General Repairs</option>
+                        </select>
+
+                        <i data-lucide="chevron-down"></i>
+
+                    </div>
+
+                </div>
+
+
+                <div class="pros-filter-item">
+
+                    <label>
+                        Location
+                    </label>
+
+                    <div class="pros-filter-select">
+
+                        <i data-lucide="map-pin"></i>
+
+                        <select>
+                            <option>Any location</option>
+                            <option>Within 2 km</option>
+                            <option>Within 5 km</option>
+                            <option>Within 10 km</option>
+                            <option>Within 20 km</option>
+                        </select>
+
+                        <i data-lucide="chevron-down"></i>
+
+                    </div>
+
+                </div>
+
+
+                <div class="pros-filter-item">
+
+                    <label>
+                        Rating
+                    </label>
+
+                    <div class="pros-filter-select">
+
+                        <i data-lucide="star"></i>
+
+                        <select>
+                            <option>Any rating</option>
+                            <option>4.5+ rating</option>
+                            <option>4.0+ rating</option>
+                            <option>3.5+ rating</option>
+                        </select>
+
+                        <i data-lucide="chevron-down"></i>
+
+                    </div>
+
+                </div>
+
+
+                <div class="pros-filter-item">
+
+                    <label>
+                        Availability
+                    </label>
+
+                    <div class="pros-filter-select">
+
+                        <i data-lucide="calendar-check-2"></i>
+
+                        <select>
+                            <option>Any availability</option>
+                            <option>Available today</option>
+                            <option>Available this week</option>
+                            <option>Flexible</option>
+                        </select>
+
+                        <i data-lucide="chevron-down"></i>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="pros-filter-bottom">
+
+                <div class="pros-active-filters">
+
+                    <span>
+                        Popular:
+                    </span>
+
+                    <button type="button">
+                        Nearby
+                    </button>
+
+                    <button type="button">
+                        Highly rated
+                    </button>
+
+                    <button type="button">
+                        Available today
+                    </button>
+
+                </div>
+
+                <button
+                    type="button"
+                    class="pros-filter-button"
+                >
+                    <i data-lucide="sliders-horizontal"></i>
+                    <span>Apply Filters</span>
+                </button>
+
+            </div>
+
+        </div>
+
+        <div class="pros-results-bar">
+
+            <div>
+                <strong>124</strong>
+                <span>local pros available</span>
+            </div>
+
+            <div class="pros-sort">
+
+                <span>Sort by</span>
+
+                <select>
+                    <option>Recommended</option>
+                    <option>Highest rated</option>
+                    <option>Nearest first</option>
+                    <option>Most experienced</option>
+                </select>
+
+                <i data-lucide="chevron-down"></i>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="pros-nearby-section">
+
+    <div class="pros-nearby-container">
+
+        <div class="pros-nearby-visual">
+
+            <img
+                src="professional-helping-home-task.png"
+                alt="Local home service"
+            >
+
+            <div class="pros-nearby-location-card">
+
+                <div class="pros-nearby-location-icon">
+                    <i data-lucide="map-pin"></i>
+                </div>
+
+                <div>
+                    <strong>Local professionals</strong>
+                    <span>Serving your area</span>
+                </div>
+
+            </div>
+
+            <div class="pros-nearby-distance">
+                <i data-lucide="navigation"></i>
+                <span>Within 10 km</span>
+            </div>
+
+        </div>
+
+
+        <div class="pros-nearby-content">
+
+            <span class="pros-nearby-label">
+                LOCAL CONNECTIONS
+            </span>
+
+            <h2>
+                Get help from people
+                <strong>close to home.</strong>
+            </h2>
+
+            <p>
+                TaskLocal helps you discover professionals who serve
+                your area, so finding help for everyday home tasks
+                feels more convenient and connected.
+            </p>
+
+
+            <div class="pros-nearby-features">
+
+                <div class="pros-nearby-feature">
+
+                    <div class="pros-nearby-feature-icon">
+                        <i data-lucide="map-pinned"></i>
+                    </div>
+
+                    <div>
+                        <h3>Nearby professionals</h3>
+                        <p>
+                            Discover people offering services around
+                            your neighbourhood.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="pros-nearby-feature">
+
+                    <div class="pros-nearby-feature-icon">
+                        <i data-lucide="badge-check"></i>
+                    </div>
+
+                    <div>
+                        <h3>Explore profiles</h3>
+                        <p>
+                            Review their skills, experience and
+                            customer ratings before connecting.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="pros-nearby-feature">
+
+                    <div class="pros-nearby-feature-icon">
+                        <i data-lucide="message-circle"></i>
+                    </div>
+
+                    <div>
+                        <h3>Connect directly</h3>
+                        <p>
+                            Discuss your task and details before
+                            making arrangements.
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <a href="#" class="pros-nearby-button">
+                <span>Explore Nearby Pros</span>
+                <i data-lucide="arrow-up-right"></i>
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="choose-pro-section">
+
+    <div class="choose-pro-container">
+
+        <div class="choose-pro-heading">
+
+            <span>MAKE A CONFIDENT CHOICE</span>
+
+            <h2>
+                Choose the right pro
+                <strong>with confidence.</strong>
+            </h2>
+
+            <p>
+                Take a moment to compare profiles, experience and
+                availability before connecting with someone for your task.
+            </p>
+
+        </div>
+
+
+        <div class="choose-pro-steps">
+
+            <div class="choose-pro-step">
+
+                <div class="choose-pro-number">
+                    01
+                </div>
+
+                <div class="choose-pro-icon">
+                    <i data-lucide="user-round-search"></i>
+                </div>
+
+                <h3>Check the profile</h3>
+
+                <p>
+                    Explore the professional's services, experience,
+                    location and customer feedback.
+                </p>
+
+            </div>
+
+
+            <div class="choose-pro-connector"></div>
+
+
+            <div class="choose-pro-step">
+
+                <div class="choose-pro-number">
+                    02
+                </div>
+
+                <div class="choose-pro-icon">
+                    <i data-lucide="scale"></i>
+                </div>
+
+                <h3>Compare your options</h3>
+
+                <p>
+                    Look at ratings, pricing, response times and
+                    availability to find a suitable match.
+                </p>
+
+            </div>
+
+
+            <div class="choose-pro-connector"></div>
+
+
+            <div class="choose-pro-step">
+
+                <div class="choose-pro-number">
+                    03
+                </div>
+
+                <div class="choose-pro-icon">
+                    <i data-lucide="message-square-more"></i>
+                </div>
+
+                <h3>Connect directly</h3>
+
+                <p>
+                    Talk about your task, expectations and details
+                    before making arrangements.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="pros-trust-section">
+
+    <div class="pros-trust-container">
+
+        <div class="pros-trust-heading">
+
+            <span>BUILT AROUND LOCAL TRUST</span>
+
+            <h2>
+                Real people.
+                <strong>Real local help.</strong>
+            </h2>
+
+            <p>
+                See why homeowners use TaskLocal to discover,
+                compare and connect with local professionals.
+            </p>
+
+        </div>
+
+
+        <div class="pros-trust-stats">
+
+            <div class="pros-trust-stat">
+
+                <div class="pros-trust-stat-icon">
+                    <i data-lucide="users-round"></i>
+                </div>
+
+                <strong>2,500+</strong>
+
+                <span>Local professionals</span>
+
+            </div>
+
+
+            <div class="pros-trust-stat">
+
+                <div class="pros-trust-stat-icon">
+                    <i data-lucide="house"></i>
+                </div>
+
+                <strong>8,000+</strong>
+
+                <span>Tasks completed</span>
+
+            </div>
+
+
+            <div class="pros-trust-stat">
+
+                <div class="pros-trust-stat-icon">
+                    <i data-lucide="star"></i>
+                </div>
+
+                <strong>4.8 / 5</strong>
+
+                <span>Average community rating</span>
+
+            </div>
+
+
+            <div class="pros-trust-stat">
+
+                <div class="pros-trust-stat-icon">
+                    <i data-lucide="map"></i>
+                </div>
+
+                <strong>25+</strong>
+
+                <span>Local areas covered</span>
+
+            </div>
+
+        </div>
+
+
+        <div class="pros-trust-quote">
+
+            <div class="pros-trust-quote-mark">
+                <i data-lucide="quote"></i>
+            </div>
+
+            <div class="pros-trust-quote-content">
+
+                <p>
+                    "I could quickly compare nearby professionals,
+                    check their ratings and find someone available
+                    for the job I needed."
+                </p>
+
+                <div class="pros-trust-person">
+
+                    <div class="pros-trust-avatar">
+                        AR
+                    </div>
+
+                    <div>
+                        <strong>Arun R.</strong>
+                        <span>TaskLocal customer</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="pros-trust-rating">
+
+                <i data-lucide="star"></i>
+                <i data-lucide="star"></i>
+                <i data-lucide="star"></i>
+                <i data-lucide="star"></i>
+                <i data-lucide="star"></i>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="pros-final-cta">
+
+    <div class="pros-final-cta-container">
+
+        <div class="pros-final-cta-content">
+
+            <span>READY TO GET STARTED?</span>
+
+            <h2>
+                Find the right local pro
+                <strong>for your next task.</strong>
+            </h2>
+
+            <p>
+                Explore nearby professionals, compare their profiles,
+                and connect with someone who can help.
+            </p>
+
+        </div>
+
+        <div class="pros-final-cta-actions">
+
+            <a href="post-task.html" class="pros-final-cta-primary">
+                Post a Task
+                <i data-lucide="arrow-up-right"></i>
+            </a>
+
+            <a href="#pros-filter" class="pros-final-cta-secondary">
+                Browse Professionals
+                <i data-lucide="search"></i>
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<footer class="footer">
+
+    <div class="footer-container footer-grid">
+
+        <div class="footer-col">
+
+            <h3 class="footer-title"
+                id="homepage-redirect">
+
+                <picture class="footer-logo-wrap">
+
+                    <img src="logo.jpeg"
+                         alt="TaskLocal - Local Handyperson & Home Task Marketplace"
+                         class="footer-logo ">
+
+                 
+
+                </picture>
+
+                <span class="footer-brand">
+
+                    <span class="brand-primary">
+                        Task
+                    </span>
+
+                    <span class="brand-secondary">
+                        Local
+                    </span>
+
+                </span>
+
+            </h3>
+
+            <p>
+                Connecting homeowners with trusted local handypersons
+                for everyday home tasks, repairs, maintenance, moving,
+                assembly, and more.
+            </p>
+
+            <div class="footer-social">
+
+                <a href="#"
+                   class="social-icon"
+                   aria-label="Facebook">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+
+                <a href="#"
+                   class="social-icon"
+                   aria-label="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+
+                <a href="#"
+                   class="social-icon"
+                   aria-label="Twitter">
+                    <i class="fab fa-twitter"></i>
+                </a>
+
+                <a href="#"
+                   class="social-icon"
+                   aria-label="LinkedIn">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-col">
+
+            <h4 class="footer-subtitle">
+                Quick Links
+            </h4>
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="about.html">
+                About Us
+            </a>
+
+            <a href="post-task.html">
+                Post a Task
+            </a>
+
+            <a href="browse-pros.html">
+                Browse Pros
+            </a>
+
+            <a href="how-it-works.html">
+                How It Works
+            </a>
+
+        </div>
+
+
+        <div class="footer-col">
+
+            <h4 class="footer-subtitle">
+                Popular Tasks
+            </h4>
+
+            <a href="browse-pros.html">
+                Home Repairs
+            </a>
+
+            <a href="browse-pros.html">
+                Furniture Assembly
+            </a>
+
+            <a href="browse-pros.html">
+                Cleaning
+            </a>
+
+            <a href="browse-pros.html">
+                Moving & Lifting
+            </a>
+
+            <a href="browse-pros.html">
+                Yard & Outdoor Work
+            </a>
+
+        </div>
+
+
+        <div class="footer-col">
+
+            <h4 class="footer-subtitle">
+                Resources
+            </h4>
+
+            <a href="dashboard.html">
+                My Dashboard
+            </a>
+
+            <a href="how-it-works.html">
+                How It Works
+            </a>
+
+            <a href="post-task.html">
+                Post a Task
+            </a>
+
+            <a href="404page.html">
+                404 Page
+            </a>
+
+            <a href="coming-soon.html">
+                Coming Soon
+            </a>
+
+        </div>
+
+
+        <div class="footer-col">
+
+            <h4 class="footer-subtitle">
+                Contact Us
+            </h4>
+
+            <p>
+                Email: hello@tasklocal.com
+            </p>
+
+            <p>
+                Phone: +91 0000000000
+            </p>
+
+            <p>
+                Location: India
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+        <div class="footer-container footer-bottom-content">
+
+            <p>
+                © 2026 TaskLocal. All rights reserved.
+            </p>
+
+            <div class="footer-links">
+
+                <a href="terms&conditions.html">
+                    Terms & Conditions
+                </a>
+
+                <a href="privacy-policy.html">
+                    Privacy Policy
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<script>
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    const loginBtn =
+        document.getElementById("loginBtn");
+
+    if (loginBtn) {
+
+        loginBtn.addEventListener("click", () => {
+
+            window.location.href = "login.html";
+
+        });
+
+    }
+
+
+    const mobileLoginBtn =
+        document.getElementById("mobileLoginBtn");
+
+    if (mobileLoginBtn) {
+
+        mobileLoginBtn.addEventListener("click", () => {
+
+            window.location.href = "login.html";
+
+        });
+
+    }
+
+
+    const links =
+        document.querySelectorAll(".nav-link");
+
+    const currentPage =
+        window.location.pathname.split("/").pop()
+        || "index.html";
+
+
+    links.forEach(link => {
+
+        const href =
+            link.getAttribute("href");
+
+        if (!href) return;
+
+        const page =
+            href.split("/").pop();
+
+        if (page === currentPage) {
+
+            link.classList.add("active");
+
+        }
+
+    });
+
+
+    const homePages = [
+        "index.html",
+        "home-1.html",
+        "home-2.html"
+    ];
+
+
+    if (homePages.includes(currentPage)) {
+
+        const homeLink =
+            document.querySelector(
+                '.nav-link[href="index.html"]'
+            );
+
+        if (homeLink) {
+
+            homeLink.classList.add("active");
+
+        }
+
+    }
+
+
+    const themeToggle =
+        document.getElementById("themeToggle");
+
+
+    if (
+        localStorage.getItem("tasklocal-theme")
+        === "dark"
+    ) {
+
+        document.body.classList.add("dark");
+
+    }
+
+
+    function updateThemeIcon() {
+
+        if (!themeToggle) return;
+
+        themeToggle.innerHTML =
+            document.body.classList.contains("dark")
+                ? '<i data-lucide="sun"></i>'
+                : '<i data-lucide="moon"></i>';
+
+        lucide.createIcons();
+
+    }
+
+
+    updateThemeIcon();
+
+
+    if (themeToggle) {
+
+        themeToggle.addEventListener("click", () => {
+
+            document.body.classList.toggle("dark");
+
+            if (
+                document.body.classList.contains("dark")
+            ) {
+
+                localStorage.setItem(
+                    "tasklocal-theme",
+                    "dark"
+                );
+
+            } else {
+
+                localStorage.setItem(
+                    "tasklocal-theme",
+                    "light"
+                );
+
+            }
+
+            updateThemeIcon();
+
+        });
+
+    }
+
+
+    const rtlToggle =
+        document.getElementById("rtlToggle");
+
+
+    const savedDir =
+        localStorage.getItem("tasklocal-direction")
+        || "ltr";
+
+
+    document.documentElement.setAttribute(
+        "dir",
+        savedDir
+    );
+
+
+    if (rtlToggle) {
+
+        rtlToggle.textContent =
+            savedDir === "rtl"
+                ? "LTR"
+                : "RTL";
+
+
+        rtlToggle.addEventListener("click", () => {
+
+            const currentDir =
+                document.documentElement
+                    .getAttribute("dir");
+
+
+            if (currentDir === "rtl") {
+
+                document.documentElement
+                    .setAttribute("dir", "ltr");
+
+                localStorage.setItem(
+                    "tasklocal-direction",
+                    "ltr"
+                );
+
+                rtlToggle.textContent = "RTL";
+
+            } else {
+
+                document.documentElement
+                    .setAttribute("dir", "rtl");
+
+                localStorage.setItem(
+                    "tasklocal-direction",
+                    "rtl"
+                );
+
+                rtlToggle.textContent = "LTR";
+
+            }
+
+        });
+
+    }
+
+
+    const menuToggle = document.getElementById("menuToggle");
+    const navMenu = document.getElementById("navMenu");
+
+    if (menuToggle && navMenu) {
+        menuToggle.addEventListener("click", () => {
+            navMenu.classList.toggle("active");
+        });
+
+        document.addEventListener("click", (e) => {
+            if (!navMenu.contains(e.target) && !menuToggle.contains(e.target)) {
+                navMenu.classList.remove("active");
+                document.querySelectorAll(".dropdown-menu").forEach(menu => {
+                    menu.classList.remove("show");
+                });
+            }
+        });
+    }
+
+    document
+        .querySelectorAll(".dropdown")
+        .forEach(drop => {
+
+            const toggle =
+                drop.querySelector(".nav-item");
+
+            const menu =
+                drop.querySelector(".dropdown-menu");
+
+
+            if (toggle && menu) {
+
+                toggle.addEventListener(
+                    "click",
+                    (e) => {
+
+                        if (window.innerWidth <= 1025) {
+
+                            e.preventDefault();
+
+                            menu.classList.toggle("show");
+
+                        }
+
+                    }
+                );
+
+            }
+
+        });
+
+
+    const homepageRedirect =
+        document.getElementById(
+            "homepage-redirect"
+        );
+
+
+    if (homepageRedirect) {
+
+        homepageRedirect.addEventListener(
+            "click",
+            () => {
+
+                window.location.href =
+                    "index.html";
+
+            }
+        );
+
+    }
+
+
+    lucide.createIcons();
+
+});
+
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    const prosData = [
+        {
+            name: "Arjun Home Services",
+            service: "Plumbing",
+            location: 2,
+            rating: 4.9,
+            reviews: 128,
+            availability: ["Available today", "Available this week"],
+            experience: 8,
+            price: 500,
+            response: "Usually responds within 30 min",
+            image: "https://images.unsplash.com/photo-1607472586893-edb57bdc0e39?auto=format&fit=crop&w=900&q=85"
+        },
+        {
+            name: "Suresh Electrical Works",
+            service: "Electrical",
+            location: 5,
+            rating: 4.8,
+            reviews: 94,
+            availability: ["Available this week", "Flexible"],
+            experience: 7,
+            price: 600,
+            response: "Usually responds within 1 hour",
+            image: "https://images.unsplash.com/photo-1621905252507-b35492cc74b4?auto=format&fit=crop&w=900&q=85"
+        },
+        {
+            name: "CleanNest Professionals",
+            service: "Cleaning",
+            location: 3,
+            rating: 4.7,
+            reviews: 76,
+            availability: ["Available today", "Available this week"],
+            experience: 6,
+            price: 450,
+            response: "Usually responds within 45 min",
+            image: "https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=900&q=85"
+        },
+        {
+            name: "Urban Furniture Pros",
+            service: "Furniture",
+            location: 8,
+            rating: 4.6,
+            reviews: 61,
+            availability: ["Available this week", "Flexible"],
+            experience: 5,
+            price: 700,
+            response: "Usually responds within 2 hours",
+            image: "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&w=900&q=85"
+        },
+        {
+            name: "ColorCraft Painters",
+            service: "Painting",
+            location: 10,
+            rating: 4.8,
+            reviews: 83,
+            availability: ["Available this week"],
+            experience: 9,
+            price: 900,
+            response: "Usually responds within 1 hour",
+            image: "https://images.unsplash.com/photo-1562259949-e8e7689d7828?auto=format&fit=crop&w=900&q=85"
+        },
+        {
+            name: "FixRight Home Care",
+            service: "General Repairs",
+            location: 4,
+            rating: 4.9,
+            reviews: 112,
+            availability: ["Available today", "Flexible"],
+            experience: 10,
+            price: 550,
+            response: "Usually responds within 25 min",
+            image: "https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=900&q=85"
+        },
+        {
+            name: "QuickFix Plumbing",
+            service: "Plumbing",
+            location: 7,
+            rating: 4.5,
+            reviews: 48,
+            availability: ["Flexible"],
+            experience: 5,
+            price: 400,
+            response: "Usually responds within 2 hours",
+            image: "Other-Local-Tasks.jpeg"
+        },
+        {
+            name: "BrightLine Electric",
+            service: "Electrical",
+            location: 12,
+            rating: 4.6,
+            reviews: 69,
+            availability: ["Available this week"],
+            experience: 8,
+            price: 750,
+            response: "Usually responds within 90 min",
+            image: "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=900&q=85"
+        },
+        {
+    name: "FreshHome Cleaning Services",
+    service: "Cleaning",
+    location: 6,
+    rating: 4.8,
+    reviews: 91,
+    availability: ["Available today", "Available this week"],
+    experience: 7,
+    price: 500,
+    response: "Usually responds within 45 min",
+    image: "Cleaning&Home-Help.jpeg"
+}
+    ];
+
+    const searchInput = document.querySelector(".pros-filter-search input");
+
+    const filterSelects = document.querySelectorAll(
+        ".pros-filter-options select"
+    );
+
+    const applyButton = document.querySelector(".pros-filter-button");
+
+    const resultCount = document.querySelector(
+        ".pros-results-bar strong"
+    );
+
+    const resultText = document.querySelector(
+        ".pros-results-bar > div:first-child span"
+    );
+
+    const sortSelect = document.querySelector(".pros-sort select");
+
+    const popularButtons = document.querySelectorAll(
+        ".pros-active-filters button"
+    );
+
+    const panel = document.querySelector(".pros-filter-panel");
+
+    if (
+        !searchInput ||
+        !applyButton ||
+        !resultCount ||
+        !resultText ||
+        !sortSelect ||
+        !panel
+    ) {
+        return;
+    }
+
+    const resultArea = document.createElement("div");
+
+    resultArea.className = "pros-filter-results";
+
+    panel.insertAdjacentElement(
+        "afterend",
+        resultArea
+    );
+
+    function getFilters() {
+
+        const values = [...filterSelects].map(
+            select => select.value
+        );
+
+        return {
+            service: values[0] || "All services",
+            location: values[1] || "Any location",
+            rating: values[2] || "Any rating",
+            availability: values[3] || "Any availability",
+            search: searchInput.value.trim().toLowerCase()
+        };
+    }
+
+    function filterPros() {
+
+        const filters = getFilters();
+
+        let filtered = prosData.filter(pro => {
+
+            const matchesSearch =
+                !filters.search ||
+                pro.name.toLowerCase().includes(filters.search) ||
+                pro.service.toLowerCase().includes(filters.search);
+
+            const matchesService =
+                filters.service === "All services" ||
+                pro.service === filters.service;
+
+            let matchesLocation = true;
+
+            if (filters.location === "Within 2 km") {
+                matchesLocation = pro.location <= 2;
+            }
+
+            if (filters.location === "Within 5 km") {
+                matchesLocation = pro.location <= 5;
+            }
+
+            if (filters.location === "Within 10 km") {
+                matchesLocation = pro.location <= 10;
+            }
+
+            if (filters.location === "Within 20 km") {
+                matchesLocation = pro.location <= 20;
+            }
+
+            let matchesRating = true;
+
+            if (filters.rating === "4.5+ rating") {
+                matchesRating = pro.rating >= 4.5;
+            }
+
+            if (filters.rating === "4.0+ rating") {
+                matchesRating = pro.rating >= 4;
+            }
+
+            if (filters.rating === "3.5+ rating") {
+                matchesRating = pro.rating >= 3.5;
+            }
+
+            const matchesAvailability =
+                filters.availability === "Any availability" ||
+                pro.availability.includes(filters.availability);
+
+            return (
+                matchesSearch &&
+                matchesService &&
+                matchesLocation &&
+                matchesRating &&
+                matchesAvailability
+            );
+
+        });
+
+        return filtered;
+    }
+
+    function sortPros(pros) {
+
+        const sortValue = sortSelect.value;
+
+        if (sortValue === "Highest rated") {
+
+            return pros.sort(
+                (a, b) => b.rating - a.rating
+            );
+
+        }
+
+        if (sortValue === "Nearest first") {
+
+            return pros.sort(
+                (a, b) => a.location - b.location
+            );
+
+        }
+
+        if (sortValue === "Most experienced") {
+
+            return pros.sort(
+                (a, b) => b.experience - a.experience
+            );
+
+        }
+
+        return pros.sort(
+            (a, b) => b.rating - a.rating
+        );
+    }
+
+    function createCard(pro) {
+
+        return `
+            <article class="pros-result-card">
+
+                <div class="pros-result-image">
+
+                    <img
+                        src="${pro.image}"
+                        alt="${pro.service} professional"
+                    >
+
+                    <span class="pros-result-verified">
+                        <i data-lucide="badge-check"></i>
+                        Verified
+                    </span>
+
+                </div>
+
+                <div class="pros-result-body">
+
+                    <div class="pros-result-top">
+
+                        <div>
+
+                            <h3>${pro.name}</h3>
+
+                            <span class="pros-result-service">
+                                ${pro.service}
+                            </span>
+
+                        </div>
+
+                        <div class="pros-result-rating">
+                            <i data-lucide="star"></i>
+                            <strong>${pro.rating}</strong>
+                            <span>(${pro.reviews})</span>
+                        </div>
+
+                    </div>
+
+                    <div class="pros-result-details">
+
+                        <span>
+                            <i data-lucide="map-pin"></i>
+                            ${pro.location} km away
+                        </span>
+
+                        <span>
+                            <i data-lucide="briefcase-business"></i>
+                            ${pro.experience} years experience
+                        </span>
+
+                        <span>
+                            <i data-lucide="clock-3"></i>
+                            ${pro.response}
+                        </span>
+
+                    </div>
+
+                    <div class="pros-result-bottom">
+
+                        <div>
+                            <small>Starting from</small>
+                            <strong>₹${pro.price}</strong>
+                        </div>
+
+                        <a href="#" class="pros-view-profile">
+                            View Profile
+                            <i data-lucide="arrow-up-right"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </article>
+        `;
+    }
+
+    function renderResults() {
+
+        let filtered = filterPros();
+
+        filtered = sortPros(filtered);
+
+        resultCount.textContent = filtered.length;
+
+        resultText.textContent =
+            filtered.length === 1
+                ? "local pro available"
+                : "local pros available";
+
+        if (!filtered.length) {
+
+            resultArea.innerHTML = `
+                <div class="pros-no-results">
+
+                    <div class="pros-no-results-icon">
+                        <i data-lucide="search-x"></i>
+                    </div>
+
+                    <h3>No matching pros found</h3>
+
+                    <p>
+                        Try changing your filters or searching
+                        for another service.
+                    </p>
+
+                    <button
+                        type="button"
+                        class="pros-reset-button"
+                    >
+                        Reset Filters
+                    </button>
+
+                </div>
+            `;
+
+        } else {
+
+            resultArea.innerHTML = `
+
+                <div class="pros-result-heading">
+
+                    <div>
+                        <span>AVAILABLE PROFESSIONALS</span>
+                        <h2>
+                            Pros ready to
+                            <strong>help you.</strong>
+                        </h2>
+                    </div>
+
+                </div>
+
+                <div class="pros-result-grid">
+                    ${filtered.map(createCard).join("")}
+                </div>
+            `;
+        }
+
+        if (window.lucide) {
+            lucide.createIcons();
+        }
+
+        addResetFunctionality();
+    }
+
+    function addResetFunctionality() {
+
+        const resetButton =
+            document.querySelector(".pros-reset-button");
+
+        if (!resetButton) {
+            return;
+        }
+
+        resetButton.addEventListener(
+            "click",
+            resetFilters
+        );
+    }
+
+    function resetFilters() {
+
+        searchInput.value = "";
+
+        filterSelects.forEach(select => {
+            select.selectedIndex = 0;
+        });
+
+        sortSelect.selectedIndex = 0;
+
+        renderResults();
+
+    }
+
+    popularButtons.forEach(button => {
+
+        button.addEventListener("click", () => {
+
+            const text = button.textContent.trim();
+
+            if (text === "Nearby") {
+
+                filterSelects[1].value = "Within 5 km";
+
+            }
+
+            if (text === "Highly rated") {
+
+                filterSelects[2].value = "4.5+ rating";
+
+            }
+
+            if (text === "Available today") {
+
+                filterSelects[3].value = "Available today";
+
+            }
+
+            renderResults();
+
+        });
+
+    });
+
+    applyButton.addEventListener(
+        "click",
+        renderResults
+    );
+
+    sortSelect.addEventListener(
+        "change",
+        renderResults
+    );
+
+    searchInput.addEventListener(
+        "keydown",
+        event => {
+
+            if (event.key === "Enter") {
+                renderResults();
+            }
+
+        }
+    );
+
+    filterSelects.forEach(select => {
+
+        select.addEventListener(
+            "change",
+            () => {
+
+                applyButton.classList.add(
+                    "pros-filter-ready"
+                );
+
+            }
+        );
+
+    });
+
+    renderResults();
+
+});
+</script>
+
+</body>
+</html>

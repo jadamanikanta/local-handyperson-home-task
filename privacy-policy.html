@@ -1,0 +1,1600 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Privacy Policy | TaskLocal</title>
+
+    <link rel="icon" type="image/png" href="logo.jpeg">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+    <style>
+
+        :root {
+            --primary: #FF7A5C;
+            --primary-dark: #EA580C;
+
+            --secondary: #0F4D4A;
+            --secondary-dark: #083B39;
+
+            --bg-color: #F8FAFC;
+            --text-color: #1E293B;
+
+            --card-bg: #FFFFFF;
+            --border-color: #E2E8F0;
+
+            --primary-light: rgba(249, 115, 22, 0.12);
+            --secondary-light: rgba(15, 77, 74, 0.10);
+
+            --heading-color: #083B39;
+            --text-light: #64748B;
+        }
+
+        body.dark {
+            --bg-color: #071C1B;
+            --text-color: #E8F3F2;
+
+            --card-bg: #0D2927;
+            --border-color: #24504D;
+
+            --primary: #FB923C;
+            --primary-dark: #F97316;
+
+            --secondary: #5EEAD4;
+            --secondary-dark: #2DD4BF;
+
+            --primary-light: rgba(251, 146, 60, 0.18);
+            --secondary-light: rgba(94, 234, 212, 0.12);
+
+            --heading-color: #F0FDFA;
+            --text-light: #94A3B8;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            min-height: 100vh;
+            overflow-x: hidden;
+
+            background: var(--bg-color);
+            color: var(--text-color);
+
+            font-family: "Inter", "Segoe UI", Arial, sans-serif;
+
+            transition:
+                background 0.35s ease,
+                color 0.35s ease;
+        }
+
+        button {
+            font: inherit;
+            cursor: pointer;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .background-animation {
+            position: fixed;
+            inset: 0;
+
+            overflow: hidden;
+
+            pointer-events: none;
+
+            z-index: 0;
+        }
+
+        .orb {
+            position: absolute;
+
+            border-radius: 50%;
+
+            filter: blur(2px);
+
+            animation:
+                floatOrb 9s ease-in-out infinite;
+        }
+
+        .orb-one {
+            width: 260px;
+            height: 260px;
+
+            top: 5%;
+            left: -80px;
+
+            background:
+                rgba(255, 122, 92, 0.10);
+        }
+
+        .orb-two {
+            width: 320px;
+            height: 320px;
+
+            right: -110px;
+            bottom: 5%;
+
+            background:
+                rgba(15, 77, 74, 0.09);
+
+            animation-delay: -3s;
+        }
+
+        .orb-three {
+            width: 150px;
+            height: 150px;
+
+            top: 48%;
+            left: 42%;
+
+            background:
+                rgba(255, 122, 92, 0.07);
+
+            animation-delay: -5s;
+        }
+
+        body.dark .orb-one {
+            background:
+                rgba(251, 146, 60, 0.10);
+        }
+
+        body.dark .orb-two {
+            background:
+                rgba(94, 234, 212, 0.08);
+        }
+
+        body.dark .orb-three {
+            background:
+                rgba(251, 146, 60, 0.07);
+        }
+
+        .page-overlay {
+            position: fixed;
+            inset: 0;
+
+            z-index: 1;
+
+            pointer-events: none;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    rgba(248, 250, 252, 0.82),
+                    rgba(248, 250, 252, 0.60)
+                );
+        }
+
+        body.dark .page-overlay {
+            background:
+                linear-gradient(
+                    135deg,
+                    rgba(7, 28, 27, 0.82),
+                    rgba(7, 28, 27, 0.62)
+                );
+        }
+
+        .top-controls {
+            position: fixed;
+
+            top: 20px;
+            right: 22px;
+
+            z-index: 20;
+
+            display: flex;
+            align-items: center;
+
+            gap: 8px;
+        }
+
+        .rtl-btn,
+        .theme-btn {
+            height: 40px;
+
+            border: 1px solid var(--secondary);
+            border-radius: 9px;
+
+            background:
+                rgba(255, 255, 255, 0.88);
+
+            color: var(--text-color);
+
+            backdrop-filter: blur(12px);
+
+            transition:
+                border-color 0.25s ease,
+                color 0.25s ease,
+                background 0.25s ease,
+                transform 0.25s ease;
+        }
+
+        body.dark .rtl-btn,
+        body.dark .theme-btn {
+            background:
+                rgba(13, 41, 39, 0.90);
+        }
+
+        .rtl-btn {
+            min-width: 46px;
+
+            padding: 0 10px;
+
+            font-size: 11px;
+            font-weight: 800;
+        }
+
+        .theme-btn {
+            width: 40px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .theme-btn i {
+            font-size: 15px;
+        }
+
+        .rtl-btn:hover,
+        .theme-btn:hover {
+            border-color: var(--primary);
+            color: var(--primary);
+
+            transform:
+                translateY(-1px);
+        }
+
+        .privacy-page {
+            position: relative;
+
+            z-index: 5;
+
+            width: 100%;
+            min-height: 100vh;
+
+            padding:
+                35px 20px 70px;
+
+            display: flex;
+            justify-content: center;
+        }
+
+        .privacy-container {
+            width: min(100%, 900px);
+        }
+
+        .privacy-logo {
+            display: flex;
+            justify-content: center;
+
+            margin-bottom: 30px;
+        }
+
+        .privacy-logo a {
+            display: inline-flex;
+            align-items: center;
+
+            gap: 8px;
+        }
+
+        .privacy-logo img {
+            width: 52px;
+            height: 52px;
+
+            object-fit: contain;
+        }
+
+        .logo-text {
+            color: var(--primary);
+
+            font-size: 24px;
+            font-weight: 800;
+        }
+
+        .logo-text span {
+            color: var(--secondary);
+        }
+
+        .privacy-card {
+            padding: 42px 48px;
+
+            border: 1px solid var(--border-color);
+            border-radius: 22px;
+
+            background:
+                rgba(255, 255, 255, 0.94);
+
+            box-shadow:
+                0 25px 70px
+                rgba(15, 23, 42, 0.12);
+
+            backdrop-filter: blur(18px);
+        }
+
+        body.dark .privacy-card {
+            background:
+                rgba(13, 41, 39, 0.95);
+
+            box-shadow:
+                0 25px 70px
+                rgba(0, 0, 0, 0.38);
+        }
+
+        .privacy-header {
+            padding-bottom: 30px;
+
+            border-bottom:
+                1px solid var(--border-color);
+
+            text-align: center;
+        }
+
+        .privacy-label {
+            display: inline-block;
+
+            margin-bottom: 10px;
+
+            color: var(--primary);
+
+            font-size: 11px;
+            font-weight: 800;
+
+            letter-spacing: 1.5px;
+        }
+
+        .privacy-header h1 {
+            margin-bottom: 10px;
+
+            color: var(--heading-color);
+
+            font-size: 34px;
+            font-weight: 800;
+
+            line-height: 1.2;
+        }
+
+        .privacy-header p {
+            max-width: 650px;
+
+            margin: 0 auto;
+
+            color: var(--text-light);
+
+            font-size: 14px;
+
+            line-height: 1.8;
+        }
+
+        .updated-date {
+            margin-top: 13px;
+
+            color: var(--text-light);
+
+            font-size: 12px;
+            font-weight: 600;
+        }
+
+        .privacy-content {
+            padding-top: 30px;
+        }
+
+        .privacy-section {
+            margin-bottom: 32px;
+        }
+
+        .privacy-section:last-child {
+            margin-bottom: 0;
+        }
+
+        .privacy-section h2 {
+            margin-bottom: 11px;
+
+            display: flex;
+            align-items: center;
+
+            gap: 10px;
+
+            color: var(--heading-color);
+
+            font-size: 21px;
+            font-weight: 800;
+
+            line-height: 1.4;
+        }
+
+        .privacy-section h2::before {
+            content: "";
+
+            width: 5px;
+            height: 22px;
+
+            flex: 0 0 5px;
+
+            border-radius: 5px;
+
+            background: var(--primary);
+        }
+
+        .privacy-section p {
+            margin-bottom: 10px;
+
+            color: var(--text-color);
+
+            font-size: 14px;
+
+            line-height: 1.85;
+        }
+
+        .privacy-section p:last-child {
+            margin-bottom: 0;
+        }
+
+        .privacy-section ul {
+            margin-top: 10px;
+
+            padding-left: 23px;
+        }
+
+        .privacy-section li {
+            margin-bottom: 9px;
+
+            color: var(--text-color);
+
+            font-size: 14px;
+
+            line-height: 1.8;
+        }
+
+        .privacy-section li::marker {
+            color: var(--primary);
+        }
+
+        .highlight-box {
+            margin-top: 16px;
+
+            padding: 16px 18px;
+
+            border:
+                1px solid var(--border-color);
+
+            border-left:
+                4px solid var(--primary);
+
+            border-radius: 10px;
+
+            background:
+                var(--primary-light);
+        }
+
+        [dir="rtl"] .highlight-box {
+            border-left:
+                1px solid var(--border-color);
+
+            border-right:
+                4px solid var(--primary);
+        }
+
+        .highlight-box p {
+            margin: 0;
+
+            font-size: 13px;
+
+            line-height: 1.7;
+        }
+
+        .privacy-table {
+            width: 100%;
+
+            margin-top: 15px;
+
+            border-collapse: collapse;
+
+            overflow: hidden;
+
+            border:
+                1px solid var(--border-color);
+
+            border-radius: 10px;
+        }
+
+        .privacy-table th,
+        .privacy-table td {
+            padding: 13px 14px;
+
+            border:
+                1px solid var(--border-color);
+
+            text-align: left;
+
+            font-size: 13px;
+
+            line-height: 1.6;
+        }
+
+        .privacy-table th {
+            color: var(--heading-color);
+
+            background:
+                var(--secondary-light);
+
+            font-weight: 800;
+        }
+
+        .privacy-table td {
+            color: var(--text-color);
+
+            background:
+                var(--card-bg);
+        }
+
+        .contact-box {
+            margin-top: 10px;
+
+            padding: 20px;
+
+            border:
+                1px solid var(--border-color);
+
+            border-radius: 13px;
+
+            background:
+                var(--secondary-light);
+        }
+
+        .contact-box strong {
+            display: block;
+
+            margin-bottom: 5px;
+
+            color: var(--heading-color);
+
+            font-size: 15px;
+        }
+
+        .contact-box p {
+            margin: 0;
+
+            font-size: 13px;
+        }
+
+        .contact-box a {
+            color: var(--primary);
+
+            font-weight: 700;
+        }
+
+        [dir="rtl"] .top-controls {
+            right: auto;
+            left: 22px;
+        }
+
+        [dir="rtl"] .privacy-section ul {
+            padding-left: 0;
+            padding-right: 23px;
+        }
+
+        [dir="rtl"] .privacy-table th,
+        [dir="rtl"] .privacy-table td {
+            text-align: right;
+        }
+
+        @keyframes floatOrb {
+
+            0%,
+            100% {
+                transform:
+                    translate3d(0, 0, 0)
+                    scale(1);
+            }
+
+            50% {
+                transform:
+                    translate3d(25px, -20px, 0)
+                    scale(1.08);
+            }
+        }
+
+        @media (max-width: 1024px) {
+
+            .privacy-page {
+                padding:
+                    32px 18px 60px;
+            }
+
+            .privacy-card {
+                padding:
+                    38px 40px;
+            }
+
+            .privacy-header h1 {
+                font-size: 31px;
+            }
+
+            .privacy-section h2 {
+                font-size: 20px;
+            }
+
+            .privacy-section p,
+            .privacy-section li {
+                font-size: 14px;
+            }
+        }
+
+        @media (max-width: 768px) {
+
+            .top-controls {
+                top: 14px;
+                right: 15px;
+            }
+
+            [dir="rtl"] .top-controls {
+                right: auto;
+                left: 15px;
+            }
+
+            .rtl-btn,
+            .theme-btn {
+                height: 37px;
+            }
+
+            .rtl-btn {
+                min-width: 43px;
+                font-size: 10px;
+            }
+
+            .theme-btn {
+                width: 37px;
+            }
+
+            .privacy-page {
+                padding:
+                    70px 14px 45px;
+            }
+
+            .privacy-logo {
+                margin-bottom: 20px;
+            }
+
+            .privacy-logo img {
+                width: 46px;
+                height: 46px;
+            }
+
+            .logo-text {
+                font-size: 21px;
+            }
+
+            .privacy-card {
+                padding:
+                    30px 25px;
+
+                border-radius: 17px;
+            }
+
+            .privacy-header {
+                padding-bottom: 23px;
+            }
+
+            .privacy-label {
+                font-size: 10px;
+            }
+
+            .privacy-header h1 {
+                font-size: 27px;
+            }
+
+            .privacy-header p {
+                font-size: 13px;
+                line-height: 1.7;
+            }
+
+            .updated-date {
+                font-size: 11px;
+            }
+
+            .privacy-content {
+                padding-top: 25px;
+            }
+
+            .privacy-section {
+                margin-bottom: 27px;
+            }
+
+            .privacy-section h2 {
+                font-size: 18px;
+            }
+
+            .privacy-section h2::before {
+                height: 20px;
+            }
+
+            .privacy-section p,
+            .privacy-section li {
+                font-size: 13px;
+                line-height: 1.75;
+            }
+
+            .privacy-section ul {
+                padding-left: 20px;
+            }
+
+            [dir="rtl"] .privacy-section ul {
+                padding-right: 20px;
+            }
+
+            .highlight-box {
+                padding: 14px 15px;
+            }
+
+            .highlight-box p {
+                font-size: 12px;
+            }
+
+            .privacy-table {
+                display: block;
+                overflow-x: auto;
+            }
+
+            .privacy-table th,
+            .privacy-table td {
+                min-width: 150px;
+
+                padding: 11px 12px;
+
+                font-size: 12px;
+            }
+
+            .contact-box {
+                padding: 17px;
+            }
+
+            .contact-box strong {
+                font-size: 14px;
+            }
+
+            .contact-box p {
+                font-size: 12px;
+            }
+        }
+
+        @media (max-width: 360px) {
+
+            body {
+                overflow-x: hidden;
+            }
+
+            .top-controls {
+                top: 9px;
+                right: 9px;
+
+                gap: 5px;
+            }
+
+            [dir="rtl"] .top-controls {
+                left: 9px;
+                right: auto;
+            }
+
+            .rtl-btn,
+            .theme-btn {
+                height: 32px;
+            }
+
+            .rtl-btn {
+                min-width: 38px;
+
+                padding: 0 7px;
+
+                font-size: 9px;
+            }
+
+            .theme-btn {
+                width: 32px;
+            }
+
+            .theme-btn i {
+                font-size: 13px;
+            }
+
+            .privacy-page {
+                padding:
+                    58px 8px 30px;
+            }
+
+            .privacy-logo {
+                margin-bottom: 14px;
+            }
+
+            .privacy-logo img {
+                width: 38px;
+                height: 38px;
+            }
+
+            .logo-text {
+                font-size: 18px;
+            }
+
+            .privacy-logo a {
+                gap: 5px;
+            }
+
+            .privacy-card {
+                width: 100%;
+
+                padding:
+                    22px 16px;
+
+                border-radius: 14px;
+            }
+
+            .privacy-header {
+                padding-bottom: 18px;
+            }
+
+            .privacy-label {
+                margin-bottom: 7px;
+
+                font-size: 8px;
+
+                letter-spacing: 1px;
+            }
+
+            .privacy-header h1 {
+                margin-bottom: 8px;
+
+                font-size: 22px;
+            }
+
+            .privacy-header p {
+                font-size: 11px;
+
+                line-height: 1.6;
+            }
+
+            .updated-date {
+                margin-top: 9px;
+
+                font-size: 9px;
+            }
+
+            .privacy-content {
+                padding-top: 20px;
+            }
+
+            .privacy-section {
+                margin-bottom: 23px;
+            }
+
+            .privacy-section h2 {
+                margin-bottom: 8px;
+
+                gap: 7px;
+
+                font-size: 16px;
+            }
+
+            .privacy-section h2::before {
+                width: 4px;
+                height: 17px;
+
+                flex-basis: 4px;
+            }
+
+            .privacy-section p,
+            .privacy-section li {
+                font-size: 11px;
+
+                line-height: 1.7;
+            }
+
+            .privacy-section ul {
+                padding-left: 17px;
+                margin-top: 7px;
+            }
+
+            [dir="rtl"] .privacy-section ul {
+                padding-right: 17px;
+            }
+
+            .highlight-box {
+                margin-top: 11px;
+
+                padding: 11px 12px;
+            }
+
+            .highlight-box p {
+                font-size: 10px;
+            }
+
+            .privacy-table {
+                margin-top: 11px;
+            }
+
+            .privacy-table th,
+            .privacy-table td {
+                min-width: 135px;
+
+                padding: 9px 10px;
+
+                font-size: 10px;
+            }
+
+            .contact-box {
+                padding: 13px;
+            }
+
+            .contact-box strong {
+                font-size: 12px;
+            }
+
+            .contact-box p {
+                font-size: 10px;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div class="background-animation">
+
+        <div class="orb orb-one"></div>
+        <div class="orb orb-two"></div>
+        <div class="orb orb-three"></div>
+
+    </div>
+
+    <div class="page-overlay"></div>
+
+    <div class="top-controls">
+
+        <button
+            id="rtlToggle"
+            class="rtl-btn"
+            type="button"
+            aria-label="Toggle text direction">
+            RTL
+        </button>
+
+        <button
+            id="themeToggle"
+            class="theme-btn"
+            type="button"
+            aria-label="Toggle dark mode">
+
+            <i class="fa-solid fa-moon"></i>
+
+        </button>
+
+    </div>
+
+    <main class="privacy-page">
+
+        <div class="privacy-container">
+
+            <div class="privacy-logo">
+
+                <a href="index.html">
+
+                    <img
+                        src="logo.jpeg"
+                        alt="TaskLocal Logo">
+
+                    <span class="logo-text">
+                        Task<span>Local</span>
+                    </span>
+
+                </a>
+
+            </div>
+
+            <article class="privacy-card">
+
+                <header class="privacy-header">
+
+                    <span class="privacy-label">
+                        TASKLOCAL POLICY
+                    </span>
+
+                    <h1>
+                        Privacy Policy
+                    </h1>
+
+                    <p>
+                        This Privacy Policy explains how TaskLocal
+                        may collect, use, protect, and manage information
+                        when you use our local home-task marketplace.
+                    </p>
+
+                    <div class="updated-date">
+                        Last updated: September 2026
+                    </div>
+
+                </header>
+
+                <div class="privacy-content">
+
+                    <section class="privacy-section">
+
+                        <h2>
+                            1. Introduction
+                        </h2>
+
+                        <p>
+                            TaskLocal respects your privacy and aims to
+                            handle your information responsibly. This
+                            policy describes the types of information
+                            that may be collected when you create an
+                            account, post a task, browse professionals,
+                            communicate with users, or use other
+                            TaskLocal features.
+                        </p>
+
+                        <p>
+                            By using TaskLocal, you acknowledge the
+                            practices described in this Privacy Policy.
+                        </p>
+
+                    </section>
+
+                    <section class="privacy-section">
+
+                        <h2>
+                            2. Information We Collect
+                        </h2>
+
+                        <p>
+                            Depending on how you use the platform,
+                            TaskLocal may collect information such as:
+                        </p>
+
+                        <ul>
+
+                            <li>
+                                Name and account profile information.
+                            </li>
+
+                            <li>
+                                Email address and contact information.
+                            </li>
+
+                            <li>
+                                Login and account authentication details.
+                            </li>
+
+                            <li>
+                                Task descriptions and related project
+                                information.
+                            </li>
+
+                            <li>
+                                Service preferences and scheduling
+                                information.
+                            </li>
+
+                            <li>
+                                Reviews, ratings, messages, and feedback.
+                            </li>
+
+                            <li>
+                                Payment-related information required
+                                to process supported transactions.
+                            </li>
+
+                        </ul>
+
+                    </section>
+
+                    <section class="privacy-section">
+
+                        <h2>
+                            3. Information You Provide
+                        </h2>
+
+                        <p>
+                            You may provide information directly when
+                            registering for an account, completing your
+                            profile, posting a task, submitting a bid,
+                            communicating with another user, contacting
+                            support, or submitting a review.
+                        </p>
+
+                        <div class="highlight-box">
+
+                            <p>
+                                Please avoid including unnecessary
+                                sensitive personal information in public
+                                task descriptions, reviews, or messages.
+                            </p>
+
+                        </div>
+
+                    </section>
+
+                    <section class="privacy-section">
+
+                        <h2>
+                            4. How We Use Information
+                        </h2>
+
+                        <p>
+                            Information may be used to operate and
+                            improve TaskLocal, including for purposes such
+                            as:
+                        </p>
+
+                        <ul>
+
+                            <li>
+                                Creating and managing user accounts.
+                            </li>
+
+                            <li>
+                                Connecting customers with relevant
+                                professionals.
+                            </li>
+
+                            <li>
+                                Processing task requests and supported
+                                payments.
+                            </li>
+
+                            <li>
+                                Providing customer support.
+                            </li>
+
+                            <li>
+                                Sending important account and service
+                                notifications.
+                            </li>
+
+                            <li>
+                                Improving platform features and usability.
+                            </li>
+
+                            <li>
+                                Detecting suspicious activity and
+                                protecting platform security.
+                            </li>
+
+                        </ul>
+
+                    </section>
+
+                    <section class="privacy-section">
+
+                        <h2>
+                            5. Task and Profile Information
+                        </h2>
+
+                        <p>
+                            Information included in a task listing or
+                            professional profile may be visible to other
+                            users when necessary for marketplace
+                            functionality.
+                        </p>
+
+                        <p>
+                            Users should consider carefully what they
+                            include in public-facing descriptions,
+                            profile information, reviews, and uploaded
+                            content.
+                        </p>
+
+                    </section>
+
+                    <section class="privacy-section">
+
+                        <h2>
+                            6. Communications
+                        </h2>
+
+                        <p>
+                            TaskLocal may process communications exchanged
+                            through supported platform features to
+                            provide the requested service, maintain
+                            security, assist with support requests, and
+                            address reported misuse.
+                        </p>
+
+                        <p>
+                            Users should not use TaskLocal messaging
+                            features to share information that they do
+                            not want another participant in a task to
+                            receive.
+                        </p>
+
+                    </section>
+
+                    <section class="privacy-section">
+
+                        <h2>
+                            7. Cookies and Similar Technologies
+                        </h2>
+
+                        <p>
+                            TaskLocal may use cookies, local storage,
+                            and similar technologies to remember
+                            preferences, maintain sessions, improve
+                            functionality, and understand how platform
+                            features are used.
+                        </p>
+
+                        <p>
+                            Your browser may provide controls for
+                            managing cookies and related storage
+                            technologies.
+                        </p>
+
+                    </section>
+
+                    <section class="privacy-section">
+
+                        <h2>
+                            8. Payment Information
+                        </h2>
+
+                        <p>
+                            Where payment functionality is available,
+                            payment information may be processed through
+                            appropriate payment services or providers.
+                        </p>
+
+                        <p>
+                            TaskLocal may receive transaction-related
+                            information such as payment status,
+                            transaction references, or payment history
+                            without necessarily storing complete
+                            payment-card information.
+                        </p>
+
+                    </section>
+
+                    <section class="privacy-section">
+
+                        <h2>
+                            9. Sharing of Information
+                        </h2>
+
+                        <p>
+                            Information may be shared when necessary to
+                            provide TaskLocal services or operate the
+                            platform.
+                        </p>
+
+                        <ul>
+
+                            <li>
+                                With users when required to facilitate
+                                a task or marketplace interaction.
+                            </li>
+
+                            <li>
+                                With service providers supporting
+                                platform operations.
+                            </li>
+
+                            <li>
+                                With payment providers when required
+                                to process supported transactions.
+                            </li>
+
+                            <li>
+                                When required by applicable law or
+                                lawful requests.
+                            </li>
+
+                            <li>
+                                When necessary to protect the rights,
+                                security, and integrity of TaskLocal,
+                                its users, or others.
+                            </li>
+
+                        </ul>
+
+                    </section>
+
+                    <section class="privacy-section">
+
+                        <h2>
+                            10. Information Security
+                        </h2>
+
+                        <p>
+                            TaskLocal may use reasonable technical and
+                            organizational measures intended to protect
+                            information from unauthorized access,
+                            alteration, disclosure, or destruction.
+                        </p>
+
+                        <p>
+                            However, no internet-based service can
+                            guarantee absolute security. Users should
+                            protect their account credentials and notify
+                            support of suspected unauthorized access.
+                        </p>
+
+                    </section>
+
+                    <section class="privacy-section">
+
+                        <h2>
+                            11. Data Retention
+                        </h2>
+
+                        <p>
+                            Information may be retained for as long as
+                            reasonably necessary to provide services,
+                            maintain business and transaction records,
+                            resolve disputes, comply with legal
+                            requirements, and protect platform security.
+                        </p>
+
+                    </section>
+
+                    <section class="privacy-section">
+
+                        <h2>
+                            12. Your Choices
+                        </h2>
+
+                        <p>
+                            Depending on the features available in your
+                            account, you may be able to review or update
+                            certain profile information.
+                        </p>
+
+                        <p>
+                            You may also contact TaskLocal regarding
+                            questions about information associated with
+                            your account.
+                        </p>
+
+                    </section>
+
+                    <section class="privacy-section">
+
+                        <h2>
+                            13. Children's Privacy
+                        </h2>
+
+                        <p>
+                            TaskLocal is intended for users who are
+                            legally permitted to use the service.
+                            The platform is not designed to knowingly
+                            collect personal information from children
+                            who are not permitted to use such services.
+                        </p>
+
+                    </section>
+
+                    <section class="privacy-section">
+
+                        <h2>
+                            14. Third-Party Services
+                        </h2>
+
+                        <p>
+                            TaskLocal may integrate with third-party
+                            services such as authentication providers,
+                            payment providers, analytics services, or
+                            communication tools.
+                        </p>
+
+                        <p>
+                            Third-party services may process information
+                            according to their own privacy policies and
+                            terms.
+                        </p>
+
+                    </section>
+
+                    <section class="privacy-section">
+
+                        <h2>
+                            15. Policy Updates
+                        </h2>
+
+                        <p>
+                            TaskLocal may update this Privacy Policy when
+                            platform features, business practices, or
+                            applicable requirements change.
+                        </p>
+
+                        <p>
+                            The updated version will display a revised
+                            effective or updated date. Users are encouraged
+                            to review this page periodically.
+                        </p>
+
+                    </section>
+
+                    <section class="privacy-section">
+
+                        <h2>
+                            16. Contact Us
+                        </h2>
+
+                        <p>
+                            If you have questions or concerns regarding
+                            this Privacy Policy or your information,
+                            please contact TaskLocal support.
+                        </p>
+
+                        <div class="contact-box">
+
+                            <strong>
+                                TaskLocal Support
+                            </strong>
+
+                            <p>
+                                Email:
+                                <a href="mailto:hello@tasklocal.com">
+                                    hello@tasklocal.com
+                                </a>
+                            </p>
+
+                        </div>
+
+                    </section>
+
+                </div>
+
+            </article>
+
+        </div>
+
+    </main>
+
+    <script>
+
+        const body = document.body;
+
+        const themeToggle =
+            document.getElementById("themeToggle");
+
+        const rtlToggle =
+            document.getElementById("rtlToggle");
+
+        const savedTheme =
+            localStorage.getItem("tasklocal-theme");
+
+        const savedDirection =
+            localStorage.getItem("tasklocal-direction");
+
+        if (savedTheme === "dark") {
+            body.classList.add("dark");
+        }
+
+        if (savedDirection === "rtl") {
+
+            document.documentElement.setAttribute(
+                "dir",
+                "rtl"
+            );
+
+            rtlToggle.textContent = "LTR";
+
+        } else {
+
+            document.documentElement.setAttribute(
+                "dir",
+                "ltr"
+            );
+
+            rtlToggle.textContent = "RTL";
+
+        }
+
+        function updateThemeIcon() {
+
+            const icon =
+                themeToggle.querySelector("i");
+
+            if (body.classList.contains("dark")) {
+
+                icon.className =
+                    "fa-solid fa-sun";
+
+            } else {
+
+                icon.className =
+                    "fa-solid fa-moon";
+
+            }
+        }
+
+        updateThemeIcon();
+
+        themeToggle.addEventListener(
+            "click",
+            function () {
+
+                body.classList.toggle("dark");
+
+                const theme =
+                    body.classList.contains("dark")
+                        ? "dark"
+                        : "light";
+
+                localStorage.setItem(
+                    "tasklocal-theme",
+                    theme
+                );
+
+                updateThemeIcon();
+
+            }
+        );
+
+        rtlToggle.addEventListener(
+            "click",
+            function () {
+
+                const currentDirection =
+                    document.documentElement
+                        .getAttribute("dir");
+
+                if (currentDirection === "rtl") {
+
+                    document.documentElement
+                        .setAttribute(
+                            "dir",
+                            "ltr"
+                        );
+
+                    rtlToggle.textContent = "RTL";
+
+                    localStorage.setItem(
+                        "tasklocal-direction",
+                        "ltr"
+                    );
+
+                } else {
+
+                    document.documentElement
+                        .setAttribute(
+                            "dir",
+                            "rtl"
+                        );
+
+                    rtlToggle.textContent = "LTR";
+
+                    localStorage.setItem(
+                        "tasklocal-direction",
+                        "rtl"
+                    );
+
+                }
+
+            }
+        );
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,1314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>TaskLocal | Local Handyperson & Home Task Marketplace</title>
+
+    <link rel="icon" type="image/png" sizes="184x184" href="logo.jpeg">
+
+    <link rel="stylesheet" href="global.css">
+    <link rel="stylesheet" href="contact.css">
+
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body>
+
+<header class="header">
+
+    <div class="navbar-container nav">
+
+        <div class="logo">
+
+            <a href="index.html">
+
+                <img src="logo.jpeg"
+                     alt="TaskLocal Logo">
+
+                <span class="logo-text">
+                    Task<span class="logo-header-secondary">Local</span>
+                </span>
+
+            </a>
+
+        </div>
+
+        <nav class="nav-links" id="navMenu">
+
+            <div class="dropdown">
+
+                <a href="index.html"
+                   class="nav-item nav-link"
+                   data-page="home">
+
+                    Home
+
+                    <i data-lucide="chevron-down"></i>
+
+                </a>
+
+                <div class="dropdown-menu">
+
+                    <a href="index.html"
+                       class="nav-link"
+                       data-page="home">
+                        Home 1
+                    </a>
+
+                    <a href="home-2.html"
+                       class="nav-link"
+                       data-page="home">
+                        Home 2
+                    </a>
+
+                </div>
+
+            </div>
+
+            <a href="post-task.html"
+               class="nav-link">
+                Post a Task
+            </a>
+
+            <a href="browse-pros.html"
+               class="nav-link">
+                Browse Pros
+            </a>
+
+            <a href="how-it-works.html"
+               class="nav-link">
+                How It Works
+            </a>
+
+            <a href="contact.html"
+               class="nav-link">
+                Contact
+            </a>
+
+            <a href="dashboard.html"
+               class="nav-link">
+                Dashboard
+            </a>
+
+            <button class="btn-primary mobile-login"
+                    id="mobileLoginBtn"
+                    type="button">
+                Login
+            </button>
+
+        </nav>
+
+        <div class="nav-actions">
+
+            <button id="rtlToggle"
+                    class="btn-secondary"
+                    type="button"
+                    aria-label="Toggle text direction">
+                RTL
+            </button>
+
+            <button id="themeToggle"
+                    class="icon-btn"
+                    type="button"
+                    aria-label="Toggle dark mode">
+                <i data-lucide="moon"></i>
+            </button>
+
+            <button class="btn-primary desktop-login"
+                    id="loginBtn"
+                    type="button">
+                Login
+            </button>
+
+            <button id="menuToggle" class="hamburger">☰</button>
+
+        </div>
+
+    </div>
+
+</header>
+
+
+<section class="contact-hero">
+
+    <div class="contact-hero-overlay"></div>
+
+    <div class="contact-hero-content">
+
+        <span>GET IN TOUCH</span>
+
+        <h1>
+            We're here to help with
+            <strong>your next task.</strong>
+        </h1>
+
+        <p>
+            Have a question about TaskLocal, need help with a task,
+            or want to know more about becoming a local pro?
+            Send us a message.
+        </p>
+
+        <div class="contact-hero-actions">
+
+            <a href="#contact-form" class="contact-hero-primary">
+                Contact Us
+                <i data-lucide="arrow-down"></i>
+            </a>
+
+            
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="contact-options-section">
+
+    <div class="contact-options-container">
+
+        <div class="contact-options-heading">
+
+            <span>HOW CAN WE HELP?</span>
+
+            <h2>
+                Choose the right way to
+                <strong>reach TaskLocal.</strong>
+            </h2>
+
+            <p>
+                Whether you need help with a task, have a question about
+                the platform, or want to join as a local pro, we're here.
+            </p>
+
+        </div>
+
+
+        <div class="contact-options-grid">
+
+            <div class="contact-option-card">
+
+                <div class="contact-option-top">
+
+                    <span class="contact-option-number">01</span>
+
+                    <div class="contact-option-arrow">
+                        <i data-lucide="arrow-up-right"></i>
+                    </div>
+
+                </div>
+
+                <div class="contact-option-accent"></div>
+
+                <h3>Task & Customer Support</h3>
+
+                <p>
+                    Need help posting a task, understanding how TaskLocal
+                    works, or managing something on your account?
+                </p>
+
+                <a href="#contact-form">
+                    Get customer support
+                    <i data-lucide="arrow-right"></i>
+                </a>
+
+            </div>
+
+
+            <div class="contact-option-card">
+
+                <div class="contact-option-top">
+
+                    <span class="contact-option-number">02</span>
+
+                    <div class="contact-option-arrow">
+                        <i data-lucide="arrow-up-right"></i>
+                    </div>
+
+                </div>
+
+                <div class="contact-option-accent"></div>
+
+                <h3>General Enquiries</h3>
+
+                <p>
+                    Have a question, suggestion or feedback about the
+                    TaskLocal platform? Send us a message anytime.
+                </p>
+
+                <a href="#contact-form">
+                    Send an enquiry
+                    <i data-lucide="arrow-right"></i>
+                </a>
+
+            </div>
+
+
+            <div class="contact-option-card">
+
+                <div class="contact-option-top">
+
+                    <span class="contact-option-number">03</span>
+
+                    <div class="contact-option-arrow">
+                        <i data-lucide="arrow-up-right"></i>
+                    </div>
+
+                </div>
+
+                <div class="contact-option-accent"></div>
+
+                <h3>Professional Support</h3>
+
+                <p>
+                    Already offering services or interested in becoming
+                    a local professional on TaskLocal?
+                </p>
+
+                <a href="#contact-form">
+                    Contact professional support
+                    <i data-lucide="arrow-right"></i>
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="contact-form-section">
+
+    <div class="contact-form-container">
+
+        <div class="contact-form-content">
+
+            <div class="contact-form-heading">
+
+                <span>SEND US A MESSAGE</span>
+
+                <h2>
+                    Let's talk about
+                    <strong>what you need.</strong>
+                </h2>
+
+                <p>
+                    Tell us a little about your question or request.
+                    Our team will review your message and get back to you.
+                </p>
+
+            </div>
+
+
+            <form class="contact-form" id="contact-form">
+
+                <div class="contact-form-row">
+
+                    <div class="contact-input-group">
+                        <label for="contact-name">Full Name</label>
+
+                        <div class="contact-input">
+                            <i data-lucide="user-round"></i>
+                            <input
+                                type="text"
+                                id="contact-name"
+                                name="name"
+                                placeholder="Enter your name"
+                                required
+                            >
+                        </div>
+                    </div>
+
+
+                    <div class="contact-input-group">
+                        <label for="contact-email">Email Address</label>
+
+                        <div class="contact-input">
+                            <i data-lucide="mail"></i>
+                            <input
+                                type="email"
+                                id="contact-email"
+                                name="email"
+                                placeholder="Enter your email"
+                                required
+                            >
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <div class="contact-input-group">
+
+                    <label for="contact-subject">Subject</label>
+
+                    <div class="contact-input">
+                        <i data-lucide="message-square-text"></i>
+
+                        <select id="contact-subject" name="subject" required>
+                            <option value="" selected disabled>
+                                Select a subject
+                            </option>
+                            <option value="task-support">
+                                Task Support
+                            </option>
+                            <option value="general">
+                                General Enquiry
+                            </option>
+                            <option value="professional">
+                                Professional Support
+                            </option>
+                            <option value="feedback">
+                                Feedback
+                            </option>
+                        </select>
+
+                        <i data-lucide="chevron-down" class="select-arrow"></i>
+                    </div>
+
+                </div>
+
+
+                <div class="contact-input-group">
+
+                    <label for="contact-message">Message</label>
+
+                    <div class="contact-textarea">
+
+                        <i data-lucide="align-left"></i>
+
+                        <textarea
+                            id="contact-message"
+                            name="message"
+                            rows="6"
+                            placeholder="Tell us how we can help..."
+                            required
+                        ></textarea>
+
+                    </div>
+
+                </div>
+
+
+                <div class="contact-form-bottom">
+
+                    <div class="contact-form-note">
+                        <i data-lucide="shield-check"></i>
+
+                        <span>
+                            Your information is only used to respond
+                            to your enquiry.
+                        </span>
+                    </div>
+
+                    <button type="submit" class="contact-submit">
+                        Send Message
+                        <i data-lucide="arrow-up-right"></i>
+                    </button>
+
+                </div>
+
+            </form>
+
+        </div>
+
+
+        <div class="contact-location-card">
+
+    <div class="contact-location-image">
+
+        <img 
+            src="https://images.unsplash.com/photo-1596176530529-78163a4f7af2?auto=format&fit=crop&w=1000&q=85"
+            alt="Bengaluru city"
+        >
+
+        <div class="contact-location-overlay"></div>
+
+        <div class="contact-location-badge">
+            <i data-lucide="map-pin"></i>
+            Bengaluru, India
+        </div>
+
+    </div>
+
+
+    <div class="contact-location-content">
+
+        <span>OUR LOCATION</span>
+
+        <h3>
+            Local support,
+            right here in Bengaluru.
+        </h3>
+
+        <p>
+            Visit our Bengaluru support office or reach out online.
+            Our team is available to help with your TaskLocal questions.
+        </p>
+
+
+        <div class="contact-info-list">
+
+            <div class="contact-info-item">
+
+                <div class="contact-info-icon">
+                    <i data-lucide="map-pin"></i>
+                </div>
+
+                <div>
+                    <span>Address</span>
+                    <strong>12th Main Road, Indiranagar</strong>
+                </div>
+
+            </div>
+
+
+            <div class="contact-info-item">
+
+                <div class="contact-info-icon">
+                    <i data-lucide="mail"></i>
+                </div>
+
+                <div>
+                    <span>Email</span>
+                    <strong>hello@tasklocal.com</strong>
+                </div>
+
+            </div>
+
+
+            <div class="contact-info-item">
+
+                <div class="contact-info-icon">
+                    <i data-lucide="clock-3"></i>
+                </div>
+
+                <div>
+                    <span>Working Hours</span>
+                    <strong>Mon – Sat · 9:00 AM – 6:00 PM</strong>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+    </div>
+
+</section>
+
+<section class="contact-map-section">
+
+    <div class="contact-map-container">
+
+        <div class="contact-map-box">
+
+            <iframe
+                src="https://www.google.com/maps?q=Indiranagar,Bengaluru,Karnataka,India&output=embed"
+                title="TaskLocal Bengaluru Location"
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+
+            <div class="contact-map-label">
+
+                <div class="contact-map-label-icon">
+                    <i data-lucide="map-pin"></i>
+                </div>
+
+                <div>
+                    <span>TaskLocal</span>
+                    <strong> Bengaluru</strong>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="contact-map-content">
+
+            <span>FIND US</span>
+
+            <h2>
+                Local support,
+                <strong>close to home.</strong>
+            </h2>
+
+            <p>
+                Our demo support location is based in Bengaluru.
+                Whether you are posting a task or looking for local
+                professionals, TaskLocal is built around community
+                connections.
+            </p>
+
+
+            <div class="contact-map-details">
+
+                <div class="contact-map-detail">
+
+                    <div class="contact-map-detail-icon">
+                        <i data-lucide="map-pin"></i>
+                    </div>
+
+                    <div>
+                        <span>Location</span>
+                        <strong>
+                            
+                            Bengaluru, Karnataka
+                        </strong>
+                    </div>
+
+                </div>
+
+
+                <div class="contact-map-detail">
+
+                    <div class="contact-map-detail-icon">
+                        <i data-lucide="clock-3"></i>
+                    </div>
+
+                    <div>
+                        <span>Working Hours</span>
+                        <strong>
+                            Monday – Saturday · 9:00 AM – 6:00 PM
+                        </strong>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <a
+                href="https://www.google.com/maps/search/?api=1&query=Indiranagar,Bengaluru,Karnataka,India"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="contact-map-button">
+
+                Open in Google Maps
+
+                <i data-lucide="external-link"></i>
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="contact-faq-section">
+
+    <div class="contact-faq-container">
+
+        <div class="contact-faq-intro">
+
+            <span>QUICK ANSWERS</span>
+
+            <h2>
+                Have a question?
+                <strong>We can help.</strong>
+            </h2>
+
+            <p>
+                Find quick answers to some common questions about
+                contacting TaskLocal and using the platform.
+            </p>
+
+            <a href="#contact-form" class="contact-faq-link">
+                Still need help?
+                <i data-lucide="arrow-up-right"></i>
+            </a>
+
+        </div>
+
+
+        <div class="contact-faq-list">
+
+            <div class="contact-faq-item active">
+
+                <button class="contact-faq-question" type="button">
+
+                    <span>
+                        How do I post a task on TaskLocal?
+                    </span>
+
+                    <span class="contact-faq-icon">
+                        <i data-lucide="minus" class="faq-minus"></i>
+                        <i data-lucide="plus" class="faq-plus"></i>
+                    </span>
+
+                </button>
+
+                <div class="contact-faq-answer">
+
+                    <p>
+                        Choose Post a Task, provide the task details,
+                        preferred timing and location, then publish
+                        your request for local professionals to discover.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="contact-faq-item">
+
+                <button class="contact-faq-question" type="button">
+
+                    <span>
+                        How can I find a local professional?
+                    </span>
+
+                    <span class="contact-faq-icon">
+                        <i data-lucide="minus" class="faq-minus"></i>
+                        <i data-lucide="plus" class="faq-plus"></i>
+                    </span>
+
+                </button>
+
+                <div class="contact-faq-answer">
+
+                    <p>
+                        Use Browse Pros to explore professionals by
+                        service, location, availability and other
+                        relevant profile information.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="contact-faq-item">
+
+                <button class="contact-faq-question" type="button">
+
+                    <span>
+                        Can professionals join TaskLocal?
+                    </span>
+
+                    <span class="contact-faq-icon">
+                        <i data-lucide="minus" class="faq-minus"></i>
+                        <i data-lucide="plus" class="faq-plus"></i>
+                    </span>
+
+                </button>
+
+                <div class="contact-faq-answer">
+
+                    <p>
+                        Yes. Local professionals can create a profile,
+                        describe their services and connect with customers
+                        looking for help with home tasks.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="contact-faq-item">
+
+                <button class="contact-faq-question" type="button">
+
+                    <span>
+                        How can I contact TaskLocal support?
+                    </span>
+
+                    <span class="contact-faq-icon">
+                        <i data-lucide="minus" class="faq-minus"></i>
+                        <i data-lucide="plus" class="faq-plus"></i>
+                    </span>
+
+                </button>
+
+                <div class="contact-faq-answer">
+
+                    <p>
+                        You can use the contact form above to send your
+                        question or request. Include as much relevant
+                        information as possible so the team can assist you.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="contact-final-cta">
+
+    <div class="contact-final-cta-container">
+
+        <div class="contact-final-cta-content">
+
+            <span>LET'S GET STARTED</span>
+
+            <h2>
+                Need help with a task?
+                <strong>Let's make it happen.</strong>
+            </h2>
+
+            <p>
+                Post your task or explore local professionals
+                ready to help with everyday work.
+            </p>
+
+        </div>
+
+
+        <div class="contact-final-cta-actions">
+
+            <a href="post-task.html" class="contact-final-primary">
+                Post a Task
+                <i data-lucide="arrow-up-right"></i>
+            </a>
+
+            <a href="browse-pros.html" class="contact-final-secondary">
+                Browse Pros
+                <i data-lucide="search"></i>
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<footer class="footer">
+
+    <div class="footer-container footer-grid">
+
+        <div class="footer-col">
+
+            <h3 class="footer-title"
+                id="homepage-redirect">
+
+                <picture class="footer-logo-wrap">
+
+                    <img src="logo.jpeg"
+                         alt="TaskLocal - Local Handyperson & Home Task Marketplace"
+                         class="footer-logo ">
+
+                 
+
+                </picture>
+
+                <span class="footer-brand">
+
+                    <span class="brand-primary">
+                        Task
+                    </span>
+
+                    <span class="brand-secondary">
+                        Local
+                    </span>
+
+                </span>
+
+            </h3>
+
+            <p>
+                Connecting homeowners with trusted local handypersons
+                for everyday home tasks, repairs, maintenance, moving,
+                assembly, and more.
+            </p>
+
+            <div class="footer-social">
+
+                <a href="#"
+                   class="social-icon"
+                   aria-label="Facebook">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+
+                <a href="#"
+                   class="social-icon"
+                   aria-label="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+
+                <a href="#"
+                   class="social-icon"
+                   aria-label="Twitter">
+                    <i class="fab fa-twitter"></i>
+                </a>
+
+                <a href="#"
+                   class="social-icon"
+                   aria-label="LinkedIn">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-col">
+
+            <h4 class="footer-subtitle">
+                Quick Links
+            </h4>
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="about.html">
+                About Us
+            </a>
+
+            <a href="post-task.html">
+                Post a Task
+            </a>
+
+            <a href="browse-pros.html">
+                Browse Pros
+            </a>
+
+            <a href="how-it-works.html">
+                How It Works
+            </a>
+
+        </div>
+
+
+        <div class="footer-col">
+
+            <h4 class="footer-subtitle">
+                Popular Tasks
+            </h4>
+
+            <a href="browse-pros.html">
+                Home Repairs
+            </a>
+
+            <a href="browse-pros.html">
+                Furniture Assembly
+            </a>
+
+            <a href="browse-pros.html">
+                Cleaning
+            </a>
+
+            <a href="browse-pros.html">
+                Moving & Lifting
+            </a>
+
+            <a href="browse-pros.html">
+                Yard & Outdoor Work
+            </a>
+
+        </div>
+
+
+        <div class="footer-col">
+
+            <h4 class="footer-subtitle">
+                Resources
+            </h4>
+
+            <a href="dashboard.html">
+                My Dashboard
+            </a>
+
+            <a href="how-it-works.html">
+                How It Works
+            </a>
+
+            <a href="post-task.html">
+                Post a Task
+            </a>
+
+            <a href="404page.html">
+                404 Page
+            </a>
+
+            <a href="coming-soon.html">
+                Coming Soon
+            </a>
+
+        </div>
+
+
+        <div class="footer-col">
+
+            <h4 class="footer-subtitle">
+                Contact Us
+            </h4>
+
+            <p>
+                Email: hello@tasklocal.com
+            </p>
+
+            <p>
+                Phone: +91 0000000000
+            </p>
+
+            <p>
+                Location: India
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+        <div class="footer-container footer-bottom-content">
+
+            <p>
+                © 2026 TaskLocal. All rights reserved.
+            </p>
+
+            <div class="footer-links">
+
+                <a href="terms&conditions.html">
+                    Terms & Conditions
+                </a>
+
+                <a href="privacy-policy.html">
+                    Privacy Policy
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<script>
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    const loginBtn =
+        document.getElementById("loginBtn");
+
+    if (loginBtn) {
+
+        loginBtn.addEventListener("click", () => {
+
+            window.location.href = "login.html";
+
+        });
+
+    }
+
+
+    const mobileLoginBtn =
+        document.getElementById("mobileLoginBtn");
+
+    if (mobileLoginBtn) {
+
+        mobileLoginBtn.addEventListener("click", () => {
+
+            window.location.href = "login.html";
+
+        });
+
+    }
+
+
+    const links =
+        document.querySelectorAll(".nav-link");
+
+    const currentPage =
+        window.location.pathname.split("/").pop()
+        || "index.html";
+
+
+    links.forEach(link => {
+
+        const href =
+            link.getAttribute("href");
+
+        if (!href) return;
+
+        const page =
+            href.split("/").pop();
+
+        if (page === currentPage) {
+
+            link.classList.add("active");
+
+        }
+
+    });
+
+
+    const homePages = [
+        "index.html",
+        "home-1.html",
+        "home-2.html"
+    ];
+
+
+    if (homePages.includes(currentPage)) {
+
+        const homeLink =
+            document.querySelector(
+                '.nav-link[href="index.html"]'
+            );
+
+        if (homeLink) {
+
+            homeLink.classList.add("active");
+
+        }
+
+    }
+
+
+    const themeToggle =
+        document.getElementById("themeToggle");
+
+
+    if (
+        localStorage.getItem("tasklocal-theme")
+        === "dark"
+    ) {
+
+        document.body.classList.add("dark");
+
+    }
+
+
+    function updateThemeIcon() {
+
+        if (!themeToggle) return;
+
+        themeToggle.innerHTML =
+            document.body.classList.contains("dark")
+                ? '<i data-lucide="sun"></i>'
+                : '<i data-lucide="moon"></i>';
+
+        lucide.createIcons();
+
+    }
+
+
+    updateThemeIcon();
+
+
+    if (themeToggle) {
+
+        themeToggle.addEventListener("click", () => {
+
+            document.body.classList.toggle("dark");
+
+            if (
+                document.body.classList.contains("dark")
+            ) {
+
+                localStorage.setItem(
+                    "tasklocal-theme",
+                    "dark"
+                );
+
+            } else {
+
+                localStorage.setItem(
+                    "tasklocal-theme",
+                    "light"
+                );
+
+            }
+
+            updateThemeIcon();
+
+        });
+
+    }
+
+
+    const rtlToggle =
+        document.getElementById("rtlToggle");
+
+
+    const savedDir =
+        localStorage.getItem("tasklocal-direction")
+        || "ltr";
+
+
+    document.documentElement.setAttribute(
+        "dir",
+        savedDir
+    );
+
+
+    if (rtlToggle) {
+
+        rtlToggle.textContent =
+            savedDir === "rtl"
+                ? "LTR"
+                : "RTL";
+
+
+        rtlToggle.addEventListener("click", () => {
+
+            const currentDir =
+                document.documentElement
+                    .getAttribute("dir");
+
+
+            if (currentDir === "rtl") {
+
+                document.documentElement
+                    .setAttribute("dir", "ltr");
+
+                localStorage.setItem(
+                    "tasklocal-direction",
+                    "ltr"
+                );
+
+                rtlToggle.textContent = "RTL";
+
+            } else {
+
+                document.documentElement
+                    .setAttribute("dir", "rtl");
+
+                localStorage.setItem(
+                    "tasklocal-direction",
+                    "rtl"
+                );
+
+                rtlToggle.textContent = "LTR";
+
+            }
+
+        });
+
+    }
+
+
+    const menuToggle = document.getElementById("menuToggle");
+    const navMenu = document.getElementById("navMenu");
+
+    if (menuToggle && navMenu) {
+        menuToggle.addEventListener("click", () => {
+            navMenu.classList.toggle("active");
+        });
+
+        document.addEventListener("click", (e) => {
+            if (!navMenu.contains(e.target) && !menuToggle.contains(e.target)) {
+                navMenu.classList.remove("active");
+                document.querySelectorAll(".dropdown-menu").forEach(menu => {
+                    menu.classList.remove("show");
+                });
+            }
+        });
+    }
+
+    document
+        .querySelectorAll(".dropdown")
+        .forEach(drop => {
+
+            const toggle =
+                drop.querySelector(".nav-item");
+
+            const menu =
+                drop.querySelector(".dropdown-menu");
+
+
+            if (toggle && menu) {
+
+                toggle.addEventListener(
+                    "click",
+                    (e) => {
+
+                        if (window.innerWidth <= 1025) {
+
+                            e.preventDefault();
+
+                            menu.classList.toggle("show");
+
+                        }
+
+                    }
+                );
+
+            }
+
+        });
+
+
+    const homepageRedirect =
+        document.getElementById(
+            "homepage-redirect"
+        );
+
+
+    if (homepageRedirect) {
+
+        homepageRedirect.addEventListener(
+            "click",
+            () => {
+
+                window.location.href =
+                    "index.html";
+
+            }
+        );
+
+    }
+
+
+    lucide.createIcons();
+
+});
+
+
+document.querySelectorAll(".contact-faq-question").forEach(button => {
+
+    button.addEventListener("click", () => {
+
+        const currentItem = button.closest(".contact-faq-item");
+
+        document.querySelectorAll(".contact-faq-item").forEach(item => {
+
+            if (item !== currentItem) {
+                item.classList.remove("active");
+            }
+
+        });
+
+        currentItem.classList.toggle("active");
+
+        if (typeof lucide !== "undefined") {
+            lucide.createIcons();
+        }
+
+    });
+
+});
+
+</script>
+
+</body>
+</html>

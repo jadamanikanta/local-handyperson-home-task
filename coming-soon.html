@@ -1,0 +1,1550 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Coming Soon | TaskLocal</title>
+
+    <link rel="icon" type="image/png" href="logo.jpeg">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+
+        :root {
+            --primary: #FF7A5C;
+            --primary-dark: #EA580C;
+
+            --secondary: #0F4D4A;
+            --secondary-dark: #083B39;
+
+            --bg-color: #F8FAFC;
+            --text-color: #1E293B;
+
+            --card-bg: #FFFFFF;
+            --border-color: #E2E8F0;
+
+            --primary-light: rgba(249, 115, 22, 0.12);
+            --secondary-light: rgba(15, 77, 74, 0.10);
+
+            --heading-color: #083B39;
+            --text-light: #64748B;
+        }
+
+        body.dark {
+            --bg-color: #071C1B;
+            --text-color: #E8F3F2;
+
+            --card-bg: #0D2927;
+            --border-color: #24504D;
+
+            --primary: #FB923C;
+            --primary-dark: #F97316;
+
+            --secondary: #5EEAD4;
+            --secondary-dark: #2DD4BF;
+
+            --primary-light: rgba(251, 146, 60, 0.18);
+            --secondary-light: rgba(94, 234, 212, 0.12);
+
+            --heading-color: #F0FDFA;
+            --text-light: #94A3B8;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+        }
+
+        body {
+            min-height: 100vh;
+            overflow: hidden;
+
+            background: var(--bg-color);
+            color: var(--text-color);
+
+            font-family: "Inter", "Segoe UI", Arial, sans-serif;
+
+            transition:
+                background 0.35s ease,
+                color 0.35s ease;
+        }
+
+        button,
+        input {
+            font: inherit;
+        }
+
+        button {
+            cursor: pointer;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .background-animation {
+            position: fixed;
+            inset: 0;
+
+            z-index: 0;
+
+            overflow: hidden;
+
+            pointer-events: none;
+        }
+
+        .page-overlay {
+            position: fixed;
+            inset: 0;
+
+            z-index: 1;
+
+            pointer-events: none;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    rgba(248, 250, 252, 0.82),
+                    rgba(248, 250, 252, 0.58)
+                );
+        }
+
+        body.dark .page-overlay {
+            background:
+                linear-gradient(
+                    135deg,
+                    rgba(7, 28, 27, 0.84),
+                    rgba(7, 28, 27, 0.62)
+                );
+        }
+
+        .floating-image {
+            position: absolute;
+
+            width: 160px;
+            height: 110px;
+
+            overflow: hidden;
+
+            border: 5px solid rgba(255, 255, 255, 0.80);
+            border-radius: 18px;
+
+            box-shadow:
+                0 18px 45px rgba(15, 23, 42, 0.16);
+
+            opacity: 0.68;
+
+            animation:
+                floatingImage 8s ease-in-out infinite;
+        }
+
+        body.dark .floating-image {
+            border-color: rgba(94, 234, 212, 0.20);
+
+            box-shadow:
+                0 18px 45px rgba(0, 0, 0, 0.45);
+
+            opacity: 0.46;
+        }
+
+        .floating-image img {
+            width: 100%;
+            height: 100%;
+
+            object-fit: cover;
+        }
+
+        .image-one {
+            top: 8%;
+            left: 5%;
+        }
+
+        .image-two {
+            top: 13%;
+            right: 5%;
+
+            animation-delay: -2s;
+        }
+
+        .image-three {
+            bottom: 9%;
+            left: 6%;
+
+            animation-delay: -4s;
+        }
+
+        .image-four {
+            bottom: 8%;
+            right: 7%;
+
+            animation-delay: -6s;
+        }
+
+        .service-orb {
+            position: absolute;
+
+            border-radius: 50%;
+
+            filter: blur(2px);
+
+            animation:
+                orbFloat 9s ease-in-out infinite;
+        }
+
+        .orb-one {
+            width: 220px;
+            height: 220px;
+
+            top: 7%;
+            left: 30%;
+
+            background:
+                rgba(255, 122, 92, 0.13);
+        }
+
+        .orb-two {
+            width: 280px;
+            height: 280px;
+
+            right: 20%;
+            bottom: -5%;
+
+            background:
+                rgba(15, 77, 74, 0.10);
+
+            animation-delay: -3s;
+        }
+
+        .orb-three {
+            width: 130px;
+            height: 130px;
+
+            left: 38%;
+            bottom: 10%;
+
+            background:
+                rgba(255, 122, 92, 0.10);
+
+            animation-delay: -5s;
+        }
+
+        body.dark .orb-one {
+            background:
+                rgba(251, 146, 60, 0.13);
+        }
+
+        body.dark .orb-two {
+            background:
+                rgba(94, 234, 212, 0.10);
+        }
+
+        body.dark .orb-three {
+            background:
+                rgba(251, 146, 60, 0.10);
+        }
+
+        .top-controls {
+            position: fixed;
+
+            top: 20px;
+            right: 22px;
+
+            z-index: 20;
+
+            display: flex;
+            align-items: center;
+
+            gap: 8px;
+        }
+
+        .rtl-btn,
+        .theme-btn {
+            height: 39px;
+
+            border: 1px solid var(--secondary);
+            border-radius: 9px;
+
+            background:
+                rgba(255, 255, 255, 0.84);
+
+            color: var(--text-color);
+
+            backdrop-filter: blur(10px);
+
+            transition:
+                border-color 0.25s ease,
+                color 0.25s ease,
+                background 0.25s ease;
+        }
+
+        body.dark .rtl-btn,
+        body.dark .theme-btn {
+            background:
+                rgba(13, 41, 39, 0.88);
+        }
+
+        .rtl-btn {
+            min-width: 45px;
+
+            padding: 0 10px;
+
+            font-size: 11px;
+            font-weight: 800;
+        }
+
+        .theme-btn {
+            width: 39px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .theme-btn i {
+            width: 17px;
+            height: 17px;
+        }
+
+        .rtl-btn:hover,
+        .theme-btn:hover {
+            border-color: var(--primary);
+            color: var(--primary);
+        }
+
+        .coming-page {
+            position: relative;
+
+            z-index: 5;
+
+            width: 100%;
+            height: 100vh;
+
+            padding: 30px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .coming-card {
+            width: min(100%, 680px);
+
+            padding: 38px 48px;
+
+            text-align: center;
+
+            border: 1px solid var(--border-color);
+            border-radius: 24px;
+
+            background:
+                rgba(255, 255, 255, 0.94);
+
+            box-shadow:
+                0 25px 70px rgba(15, 23, 42, 0.14);
+
+            backdrop-filter: blur(18px);
+        }
+
+        body.dark .coming-card {
+            background:
+                rgba(13, 41, 39, 0.95);
+
+            box-shadow:
+                0 25px 70px rgba(0, 0, 0, 0.42);
+        }
+
+        .coming-logo {
+            display: flex;
+            justify-content: center;
+
+            margin-bottom: 15px;
+        }
+
+        .coming-logo a {
+            display: inline-flex;
+            align-items: center;
+
+            gap: 8px;
+        }
+
+        .coming-logo img {
+            width: 50px;
+            height: 50px;
+
+            object-fit: contain;
+        }
+
+        .logo-text {
+            color: var(--primary);
+
+            font-size: 24px;
+            font-weight: 800;
+        }
+
+        .logo-text span {
+            color: var(--secondary);
+        }
+
+        .coming-label {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+
+            gap: 7px;
+
+            margin-bottom: 12px;
+
+            padding: 7px 13px;
+
+            border: 1px solid var(--primary);
+            border-radius: 30px;
+
+            background:
+                var(--primary-light);
+
+            color: var(--primary);
+
+            font-size: 10px;
+            font-weight: 800;
+
+            letter-spacing: 1px;
+        }
+
+        .coming-label i {
+            width: 14px;
+            height: 14px;
+        }
+
+        .coming-card h1 {
+            margin-bottom: 10px;
+
+            color: var(--heading-color);
+
+            font-size: clamp(34px, 5vw, 50px);
+            font-weight: 800;
+
+            line-height: 1.08;
+        }
+
+        .coming-card h1 span {
+            color: var(--primary);
+        }
+
+        .coming-description {
+            max-width: 530px;
+
+            margin: 0 auto 23px;
+
+            color: var(--text-light);
+
+            font-size: 14px;
+            line-height: 1.7;
+        }
+
+        .countdown-title {
+            margin-bottom: 11px;
+
+            color: var(--heading-color);
+
+            font-size: 11px;
+            font-weight: 800;
+
+            letter-spacing: 1px;
+        }
+
+        .countdown {
+            display: grid;
+
+            grid-template-columns:
+                repeat(4, 1fr);
+
+            gap: 10px;
+
+            margin-bottom: 23px;
+        }
+
+        .countdown-box {
+            position: relative;
+
+            min-height: 88px;
+
+            padding: 12px 8px;
+
+            display: flex;
+            flex-direction: column;
+
+            align-items: center;
+            justify-content: center;
+
+            border: 1px solid var(--border-color);
+            border-radius: 13px;
+
+            background:
+                var(--card-bg);
+
+            overflow: hidden;
+        }
+
+        .countdown-box::before {
+            content: "";
+
+            position: absolute;
+
+            top: 0;
+            left: 0;
+            right: 0;
+
+            height: 3px;
+
+            background:
+                var(--primary);
+        }
+
+        .countdown-number {
+            color: var(--primary);
+
+            font-size: 30px;
+            font-weight: 800;
+
+            line-height: 1;
+        }
+
+        .countdown-label {
+            margin-top: 8px;
+
+            color: var(--text-light);
+
+            font-size: 9px;
+            font-weight: 800;
+
+            letter-spacing: 0.8px;
+
+            text-transform: uppercase;
+        }
+
+        .coming-features {
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 9px;
+
+            margin-bottom: 21px;
+        }
+
+        .feature-item {
+            min-height: 75px;
+
+            padding: 10px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            gap: 7px;
+
+            border: 1px solid var(--border-color);
+            border-radius: 11px;
+
+            background:
+                var(--card-bg);
+
+            color: var(--text-color);
+
+            font-size: 10px;
+            font-weight: 700;
+        }
+
+        .feature-icon {
+            width: 28px;
+            height: 28px;
+
+            flex: 0 0 28px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 7px;
+
+            background:
+                var(--primary-light);
+
+            color: var(--primary);
+        }
+
+        .feature-icon i {
+            width: 14px;
+            height: 14px;
+        }
+
+        .back-home {
+            display: inline-flex;
+            align-items: center;
+
+            gap: 6px;
+
+            color: var(--text-light);
+
+            font-size: 11px;
+            font-weight: 700;
+
+            transition:
+                color 0.25s ease;
+        }
+
+        .back-home:hover {
+            color: var(--primary);
+        }
+
+        .back-home i {
+            width: 14px;
+            height: 14px;
+        }
+
+        .launch-message {
+            display: none;
+
+            margin-bottom: 22px;
+
+            padding: 13px;
+
+            border-radius: 10px;
+
+            background:
+                var(--secondary-light);
+
+            color: var(--secondary);
+
+            font-size: 13px;
+            font-weight: 800;
+        }
+
+        .launch-message.show {
+            display: block;
+        }
+
+        [dir="rtl"] .top-controls {
+            right: auto;
+            left: 22px;
+        }
+
+        [dir="rtl"] .back-home i {
+            transform:
+                rotate(180deg);
+        }
+
+        @keyframes floatingImage {
+
+            0%,
+            100% {
+                transform:
+                    translate3d(0, 0, 0)
+                    rotate(-2deg);
+            }
+
+            50% {
+                transform:
+                    translate3d(0, -18px, 0)
+                    rotate(2deg);
+            }
+        }
+
+        @keyframes orbFloat {
+
+            0%,
+            100% {
+                transform:
+                    translate(0, 0)
+                    scale(1);
+            }
+
+            50% {
+                transform:
+                    translate(25px, -20px)
+                    scale(1.08);
+            }
+        }
+
+        @media (max-width: 1024px) {
+
+            .coming-card {
+                width: min(100%, 620px);
+
+                padding: 34px 40px;
+            }
+
+            .coming-card h1 {
+                font-size: 44px;
+            }
+
+            .coming-description {
+                font-size: 13px;
+            }
+
+            .floating-image {
+                width: 130px;
+                height: 90px;
+
+                border-width: 4px;
+            }
+
+            .image-one {
+                left: 2%;
+            }
+
+            .image-two {
+                right: 2%;
+            }
+
+            .image-three {
+                left: 2%;
+            }
+
+            .image-four {
+                right: 2%;
+            }
+        }
+
+        @media (max-width: 768px) {
+
+            .coming-page {
+                padding: 70px 20px 20px;
+            }
+
+            .coming-card {
+                width: min(100%, 540px);
+
+                padding: 30px 27px;
+
+                border-radius: 20px;
+            }
+
+            .coming-logo {
+                margin-bottom: 13px;
+            }
+
+            .coming-logo img {
+                width: 45px;
+                height: 45px;
+            }
+
+            .logo-text {
+                font-size: 22px;
+            }
+
+            .coming-card h1 {
+                font-size: 37px;
+            }
+
+            .coming-description {
+                margin-bottom: 20px;
+
+                font-size: 12px;
+            }
+
+            .countdown {
+                gap: 7px;
+
+                margin-bottom: 19px;
+            }
+
+            .countdown-box {
+                min-height: 78px;
+
+                border-radius: 10px;
+            }
+
+            .countdown-number {
+                font-size: 26px;
+            }
+
+            .countdown-label {
+                margin-top: 6px;
+
+                font-size: 8px;
+            }
+
+            .coming-features {
+                gap: 7px;
+            }
+
+            .feature-item {
+                min-height: 65px;
+
+                padding: 7px;
+
+                font-size: 9px;
+            }
+
+            .feature-icon {
+                width: 25px;
+                height: 25px;
+
+                flex-basis: 25px;
+            }
+
+            .feature-icon i {
+                width: 13px;
+                height: 13px;
+            }
+
+            .top-controls {
+                top: 14px;
+                right: 15px;
+
+                gap: 7px;
+            }
+
+            [dir="rtl"] .top-controls {
+                right: auto;
+                left: 15px;
+            }
+
+            .rtl-btn,
+            .theme-btn {
+                height: 37px;
+            }
+
+            .rtl-btn {
+                min-width: 43px;
+
+                font-size: 10px;
+            }
+
+            .theme-btn {
+                width: 37px;
+            }
+
+            .floating-image {
+                width: 100px;
+                height: 73px;
+
+                border-width: 3px;
+
+                opacity: 0.35;
+            }
+
+            .image-one {
+                left: -8px;
+            }
+
+            .image-two {
+                right: -8px;
+            }
+
+            .image-three {
+                left: -8px;
+            }
+
+            .image-four {
+                right: -8px;
+            }
+        }
+
+        @media (max-width: 360px) {
+
+            body {
+                overflow: hidden;
+            }
+
+            .coming-page {
+                height: 100vh;
+
+                padding: 52px 9px 9px;
+            }
+
+            .coming-card {
+                width: 100%;
+                max-width: 350px;
+
+                padding: 20px 13px;
+
+                border-radius: 15px;
+            }
+
+            .coming-logo {
+                margin-bottom: 8px;
+            }
+
+            .coming-logo img {
+                width: 37px;
+                height: 37px;
+            }
+
+            .coming-logo a {
+                gap: 5px;
+            }
+
+            .logo-text {
+                font-size: 18px;
+            }
+
+            .coming-label {
+                margin-bottom: 8px;
+
+                padding: 5px 8px;
+
+                font-size: 7px;
+            }
+
+            .coming-label i {
+                width: 11px;
+                height: 11px;
+            }
+
+            .coming-card h1 {
+                margin-bottom: 7px;
+
+                font-size: 28px;
+            }
+
+            .coming-description {
+                margin-bottom: 13px;
+
+                font-size: 9px;
+                line-height: 1.45;
+            }
+
+            .countdown-title {
+                margin-bottom: 8px;
+
+                font-size: 8px;
+            }
+
+            .countdown {
+                gap: 4px;
+
+                margin-bottom: 14px;
+            }
+
+            .countdown-box {
+                min-height: 62px;
+
+                padding: 7px 3px;
+
+                border-radius: 7px;
+            }
+
+            .countdown-box::before {
+                height: 2px;
+            }
+
+            .countdown-number {
+                font-size: 21px;
+            }
+
+            .countdown-label {
+                margin-top: 5px;
+
+                font-size: 6px;
+
+                letter-spacing: 0.4px;
+            }
+
+            .coming-features {
+                gap: 4px;
+
+                margin-bottom: 13px;
+            }
+
+            .feature-item {
+                min-height: 55px;
+
+                padding: 5px 3px;
+
+                gap: 4px;
+
+                border-radius: 7px;
+
+                font-size: 7px;
+            }
+
+            .feature-icon {
+                width: 21px;
+                height: 21px;
+
+                flex-basis: 21px;
+
+                border-radius: 5px;
+            }
+
+            .feature-icon i {
+                width: 11px;
+                height: 11px;
+            }
+
+            .back-home {
+                font-size: 8px;
+            }
+
+            .back-home i {
+                width: 11px;
+                height: 11px;
+            }
+
+            .top-controls {
+                top: 8px;
+                right: 9px;
+
+                gap: 5px;
+            }
+
+            [dir="rtl"] .top-controls {
+                right: auto;
+                left: 9px;
+            }
+
+            .rtl-btn,
+            .theme-btn {
+                height: 32px;
+            }
+
+            .rtl-btn {
+                min-width: 38px;
+
+                padding: 0 7px;
+
+                font-size: 9px;
+            }
+
+            .theme-btn {
+                width: 32px;
+            }
+
+            .theme-btn i {
+                width: 14px;
+                height: 14px;
+            }
+
+            .floating-image {
+                width: 75px;
+                height: 53px;
+
+                border-width: 2px;
+
+                border-radius: 7px;
+
+                opacity: 0.20;
+            }
+
+            .image-one {
+                top: 10%;
+                left: -22px;
+            }
+
+            .image-two {
+                top: 15%;
+                right: -22px;
+            }
+
+            .image-three {
+                bottom: 7%;
+                left: -22px;
+            }
+
+            .image-four {
+                bottom: 5%;
+                right: -22px;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div class="background-animation">
+
+        <div class="floating-image image-one">
+            <img
+                src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=700&q=80"
+                alt=""
+            >
+        </div>
+
+        <div class="floating-image image-two">
+            <img
+                src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?auto=format&fit=crop&w=700&q=80"
+                alt=""
+            >
+        </div>
+
+        <div class="floating-image image-three">
+            <img
+                src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=700&q=80"
+                alt=""
+            >
+        </div>
+
+        <div class="floating-image image-four">
+            <img
+                src="https://images.unsplash.com/photo-1504148455328-c376907d081c?auto=format&fit=crop&w=700&q=80"
+                alt=""
+            >
+        </div>
+
+        <div class="service-orb orb-one"></div>
+        <div class="service-orb orb-two"></div>
+        <div class="service-orb orb-three"></div>
+
+    </div>
+
+    <div class="page-overlay"></div>
+
+    <div class="top-controls">
+
+        <button
+            id="rtlToggle"
+            class="rtl-btn"
+            type="button"
+        >
+            RTL
+        </button>
+
+        <button
+            id="themeToggle"
+            class="theme-btn"
+            type="button"
+        >
+            <i data-lucide="moon"></i>
+        </button>
+
+    </div>
+
+    <main class="coming-page">
+
+        <section class="coming-card">
+
+            <div class="coming-logo">
+
+                <a href="index.html">
+
+                    <img
+                        src="logo.jpeg"
+                        alt="TaskLocal Logo"
+                    >
+
+                    <span class="logo-text">
+                        Task<span>Local</span>
+                    </span>
+
+                </a>
+
+            </div>
+
+            <div class="coming-label">
+
+                <i data-lucide="clock-3"></i>
+
+                LAUNCH COUNTDOWN
+
+            </div>
+
+            <h1>
+                We're <span>Coming Soon</span>
+            </h1>
+
+            <p class="coming-description">
+                TaskLocal is getting ready to connect you with
+                trusted local handypersons for everyday home tasks.
+            </p>
+
+            <div class="countdown-title">
+                LAUNCHING IN
+            </div>
+
+            <div class="countdown">
+
+                <div class="countdown-box">
+
+                    <span
+                        class="countdown-number"
+                        id="days"
+                    >
+                        00
+                    </span>
+
+                    <span class="countdown-label">
+                        Days
+                    </span>
+
+                </div>
+
+                <div class="countdown-box">
+
+                    <span
+                        class="countdown-number"
+                        id="hours"
+                    >
+                        00
+                    </span>
+
+                    <span class="countdown-label">
+                        Hours
+                    </span>
+
+                </div>
+
+                <div class="countdown-box">
+
+                    <span
+                        class="countdown-number"
+                        id="minutes"
+                    >
+                        00
+                    </span>
+
+                    <span class="countdown-label">
+                        Minutes
+                    </span>
+
+                </div>
+
+                <div class="countdown-box">
+
+                    <span
+                        class="countdown-number"
+                        id="seconds"
+                    >
+                        00
+                    </span>
+
+                    <span class="countdown-label">
+                        Seconds
+                    </span>
+
+                </div>
+
+            </div>
+
+            <div
+                class="launch-message"
+                id="launchMessage"
+            >
+                TaskLocal is now live. Welcome!
+            </div>
+
+            <div class="coming-features">
+
+                <div class="feature-item">
+
+                    <div class="feature-icon">
+                        <i data-lucide="clipboard-list"></i>
+                    </div>
+
+                    <span>
+                        Post Tasks
+                    </span>
+
+                </div>
+
+                <div class="feature-item">
+
+                    <div class="feature-icon">
+                        <i data-lucide="users"></i>
+                    </div>
+
+                    <span>
+                        Find Local Pros
+                    </span>
+
+                </div>
+
+                <div class="feature-item">
+
+                    <div class="feature-icon">
+                        <i data-lucide="badge-check"></i>
+                    </div>
+
+                    <span>
+                        Trusted Service
+                    </span>
+
+                </div>
+
+            </div>
+
+            <a
+                href="index.html"
+                class="back-home"
+            >
+
+                <i data-lucide="arrow-left"></i>
+
+                Back to TaskLocal
+
+            </a>
+
+        </section>
+
+    </main>
+
+    <script>
+
+        document.addEventListener(
+            "DOMContentLoaded",
+            function () {
+
+                lucide.createIcons();
+
+                const body =
+                    document.body;
+
+                const themeToggle =
+                    document.getElementById(
+                        "themeToggle"
+                    );
+
+                const rtlToggle =
+                    document.getElementById(
+                        "rtlToggle"
+                    );
+
+                const daysElement =
+                    document.getElementById(
+                        "days"
+                    );
+
+                const hoursElement =
+                    document.getElementById(
+                        "hours"
+                    );
+
+                const minutesElement =
+                    document.getElementById(
+                        "minutes"
+                    );
+
+                const secondsElement =
+                    document.getElementById(
+                        "seconds"
+                    );
+
+                const launchMessage =
+                    document.getElementById(
+                        "launchMessage"
+                    );
+
+                const savedTheme =
+                    localStorage.getItem(
+                        "tasklocal-theme"
+                    );
+
+                const savedDirection =
+                    localStorage.getItem(
+                        "tasklocal-direction"
+                    );
+
+                if (savedTheme === "dark") {
+
+                    body.classList.add("dark");
+
+                    themeToggle.innerHTML =
+                        '<i data-lucide="sun"></i>';
+
+                }
+
+                if (savedDirection === "rtl") {
+
+                    document.documentElement
+                        .setAttribute(
+                            "dir",
+                            "rtl"
+                        );
+
+                    rtlToggle.textContent =
+                        "LTR";
+                }
+
+                lucide.createIcons();
+
+                themeToggle.addEventListener(
+                    "click",
+                    function () {
+
+                        body.classList.toggle(
+                            "dark"
+                        );
+
+                        const isDark =
+                            body.classList.contains(
+                                "dark"
+                            );
+
+                        localStorage.setItem(
+                            "tasklocal-theme",
+                            isDark
+                                ? "dark"
+                                : "light"
+                        );
+
+                        themeToggle.innerHTML =
+                            isDark
+                                ? '<i data-lucide="sun"></i>'
+                                : '<i data-lucide="moon"></i>';
+
+                        lucide.createIcons();
+
+                    }
+                );
+
+                rtlToggle.addEventListener(
+                    "click",
+                    function () {
+
+                        const currentDirection =
+                            document.documentElement
+                                .getAttribute("dir") ||
+                            "ltr";
+
+                        const newDirection =
+                            currentDirection === "ltr"
+                                ? "rtl"
+                                : "ltr";
+
+                        document.documentElement
+                            .setAttribute(
+                                "dir",
+                                newDirection
+                            );
+
+                        rtlToggle.textContent =
+                            newDirection === "rtl"
+                                ? "LTR"
+                                : "RTL";
+
+                        localStorage.setItem(
+                            "tasklocal-direction",
+                            newDirection
+                        );
+
+                    }
+                );
+
+                const launchDate =
+                    new Date(
+                        "2026-12-31T23:59:59+05:30"
+                    ).getTime();
+
+                function updateCountdown() {
+
+                    const now =
+                        new Date().getTime();
+
+                    const difference =
+                        launchDate - now;
+
+                    if (difference <= 0) {
+
+                        daysElement.textContent =
+                            "00";
+
+                        hoursElement.textContent =
+                            "00";
+
+                        minutesElement.textContent =
+                            "00";
+
+                        secondsElement.textContent =
+                            "00";
+
+                        launchMessage.classList.add(
+                            "show"
+                        );
+
+                        return;
+
+                    }
+
+                    const days =
+                        Math.floor(
+                            difference /
+                            (1000 * 60 * 60 * 24)
+                        );
+
+                    const hours =
+                        Math.floor(
+                            (
+                                difference %
+                                (1000 * 60 * 60 * 24)
+                            ) /
+                            (1000 * 60 * 60)
+                        );
+
+                    const minutes =
+                        Math.floor(
+                            (
+                                difference %
+                                (1000 * 60 * 60)
+                            ) /
+                            (1000 * 60)
+                        );
+
+                    const seconds =
+                        Math.floor(
+                            (
+                                difference %
+                                (1000 * 60)
+                            ) /
+                            1000
+                        );
+
+                    daysElement.textContent =
+                        String(days).padStart(
+                            2,
+                            "0"
+                        );
+
+                    hoursElement.textContent =
+                        String(hours).padStart(
+                            2,
+                            "0"
+                        );
+
+                    minutesElement.textContent =
+                        String(minutes).padStart(
+                            2,
+                            "0"
+                        );
+
+                    secondsElement.textContent =
+                        String(seconds).padStart(
+                            2,
+                            "0"
+                        );
+                }
+
+                updateCountdown();
+
+                setInterval(
+                    updateCountdown,
+                    1000
+                );
+
+            }
+        );
+
+    </script>
+
+</body>
+</html>

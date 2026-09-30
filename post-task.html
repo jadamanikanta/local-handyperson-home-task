@@ -1,0 +1,1653 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>TaskLocal | Local Handyperson & Home Task Marketplace</title>
+
+    <link rel="icon" type="image/png" sizes="184x184" href="logo.jpeg">
+
+    <link rel="stylesheet" href="global.css">
+    <link rel="stylesheet" href="post-task.css">
+
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body>
+
+<header class="header">
+
+    <div class="navbar-container nav">
+
+        <div class="logo">
+
+            <a href="index.html">
+
+                <img src="logo.jpeg"
+                     alt="TaskLocal Logo">
+
+                <span class="logo-text">
+                    Task<span class="logo-header-secondary">Local</span>
+                </span>
+
+            </a>
+
+        </div>
+
+        <nav class="nav-links" id="navMenu">
+
+            <div class="dropdown">
+
+                <a href="index.html"
+                   class="nav-item nav-link"
+                   data-page="home">
+
+                    Home
+
+                    <i data-lucide="chevron-down"></i>
+
+                </a>
+
+                <div class="dropdown-menu">
+
+                    <a href="index.html"
+                       class="nav-link"
+                       data-page="home">
+                        Home 1
+                    </a>
+
+                    <a href="home-2.html"
+                       class="nav-link"
+                       data-page="home">
+                        Home 2
+                    </a>
+
+                </div>
+
+            </div>
+
+            <a href="post-task.html"
+               class="nav-link">
+                Post a Task
+            </a>
+
+            <a href="browse-pros.html"
+               class="nav-link">
+                Browse Pros
+            </a>
+
+            <a href="how-it-works.html"
+               class="nav-link">
+                How It Works
+            </a>
+
+            <a href="contact.html"
+               class="nav-link">
+                Contact
+            </a>
+
+            <a href="dashboard.html"
+               class="nav-link">
+                Dashboard
+            </a>
+
+            <button class="btn-primary mobile-login"
+                    id="mobileLoginBtn"
+                    type="button">
+                Login
+            </button>
+
+        </nav>
+
+        <div class="nav-actions">
+
+            <button id="rtlToggle"
+                    class="btn-secondary"
+                    type="button"
+                    aria-label="Toggle text direction">
+                RTL
+            </button>
+
+            <button id="themeToggle"
+                    class="icon-btn"
+                    type="button"
+                    aria-label="Toggle dark mode">
+                <i data-lucide="moon"></i>
+            </button>
+
+            <button class="btn-primary desktop-login"
+                    id="loginBtn"
+                    type="button">
+                Login
+            </button>
+
+            <button id="menuToggle" class="hamburger">☰</button>
+
+        </div>
+
+    </div>
+
+</header>
+
+<section class="post-task-hero">
+
+    <div class="post-task-hero-overlay"></div>
+
+    <div class="post-task-hero-content">
+
+        <span class="post-task-hero-label">
+            POST A TASK
+        </span>
+
+        <h1>
+            Tell us what needs
+            <span>to get done.</span>
+        </h1>
+
+        <p>
+            Describe your task, share the details, and connect
+            with local people who can help get it done.
+        </p>
+
+        <div class="post-task-hero-points">
+
+            <div>
+                <i data-lucide="clipboard-check"></i>
+                <span>Describe your task</span>
+            </div>
+
+            <div>
+                <i data-lucide="map-pin"></i>
+                <span>Keep it local</span>
+            </div>
+
+            <div>
+                <i data-lucide="handshake"></i>
+                <span>Connect with help</span>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="post-task-details">
+
+    <div class="post-task-details-container">
+
+        <div class="post-task-form-card">
+
+            <div class="post-task-form-heading">
+                <span>01 — TASK DETAILS</span>
+
+                <h2>
+                    What do you need
+                    <strong>help with?</strong>
+                </h2>
+
+                <p>
+                    Give local helpers enough information to understand
+                    your task and decide if they can help.
+                </p>
+            </div>
+
+            <form class="post-task-form">
+
+                <div class="post-task-form-group post-task-full">
+                    <label for="task-title">
+                        Task title
+                    </label>
+
+                    <input
+                        type="text"
+                        id="task-title"
+                        placeholder="Example: Fix a leaking kitchen tap"
+                    >
+                </div>
+
+                <div class="post-task-form-row">
+
+                    <div class="post-task-form-group">
+
+                        <label for="task-category">
+                            Category
+                        </label>
+
+                        <div class="post-task-select">
+                            <select id="task-category">
+                                <option value="">Select category</option>
+                                <option>Home Repair</option>
+                                <option>Cleaning</option>
+                                <option>Moving</option>
+                                <option>Gardening</option>
+                                <option>Furniture Assembly</option>
+                                <option>Other</option>
+                            </select>
+
+                            <i data-lucide="chevron-down"></i>
+                        </div>
+
+                    </div>
+
+                    <div class="post-task-form-group">
+
+                        <label for="task-location">
+                            Location
+                        </label>
+
+                        <div class="post-task-input-icon">
+
+                            <i data-lucide="map-pin"></i>
+
+                            <input
+                                type="text"
+                                id="task-location"
+                                placeholder="Your local area"
+                            >
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="post-task-form-group post-task-full">
+
+                    <label for="task-description">
+                        Describe your task
+                    </label>
+
+                    <textarea
+                        id="task-description"
+                        rows="5"
+                        placeholder="Tell us what needs to be done, what you already have, and any details that may help..."
+                    ></textarea>
+
+                    <span class="post-task-form-hint">
+                        The more detail you provide, the easier it is for local helpers to understand your task.
+                    </span>
+
+                </div>
+
+                <div class="post-task-form-row">
+
+                    <div class="post-task-form-group">
+
+                        <label for="task-date">
+                            Preferred date
+                        </label>
+
+                        <div class="post-task-input-icon">
+
+                            <i data-lucide="calendar-days"></i>
+
+                            <input
+                                type="date"
+                                id="task-date"
+                            >
+
+                        </div>
+
+                    </div>
+
+                    <div class="post-task-form-group">
+
+                        <label for="task-time">
+                            Preferred time
+                        </label>
+
+                        <div class="post-task-input-icon">
+
+                            <i data-lucide="clock-3"></i>
+
+                            <input
+                                type="time"
+                                id="task-time"
+                            >
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="post-task-form-group post-task-full">
+
+                    <label>
+                        Add photos
+                        <span>Optional</span>
+                    </label>
+
+                    <label class="post-task-upload">
+
+                        <input
+                            type="file"
+                            multiple
+                            accept="image/*"
+                        >
+
+                        <div class="post-task-upload-icon">
+                            <i data-lucide="image-plus"></i>
+                        </div>
+
+                        <div class="post-task-upload-content">
+                            <strong>Add photos of your task</strong>
+
+                            <small>
+                                Photos can help explain what needs to be done
+                            </small>
+                        </div>
+
+                        <i
+                            data-lucide="plus"
+                            class="post-task-upload-plus"
+                        ></i>
+
+                    </label>
+
+                </div>
+
+            </form>
+
+        </div>
+
+
+        <aside class="post-task-sidebar">
+
+            <div class="post-task-guide">
+
+                <div class="post-task-guide-header">
+
+                    <span>GOOD TO KNOW</span>
+
+                    <i data-lucide="lightbulb"></i>
+
+                </div>
+
+                <h3>
+                    Help local pros understand your task.
+                </h3>
+
+                <p>
+                    A clear task description makes it easier for local
+                    helpers to understand what you need and decide if
+                    they can help.
+                </p>
+
+                <div class="post-task-guide-list">
+
+                    <div>
+                        <span>01</span>
+
+                        <p>
+                            Explain exactly what needs to be done.
+                        </p>
+                    </div>
+
+                    <div>
+                        <span>02</span>
+
+                        <p>
+                            Mention your preferred date and timing.
+                        </p>
+                    </div>
+
+                    <div>
+                        <span>03</span>
+
+                        <p>
+                            Add photos when they help show the problem.
+                        </p>
+                    </div>
+
+                    <div>
+                        <span>04</span>
+
+                        <p>
+                            Include useful access or material details.
+                        </p>
+                    </div>
+
+                </div>
+
+                <div class="post-task-guide-note">
+
+                    <i data-lucide="shield-check"></i>
+
+                    <span>
+                        You can review your task before posting it.
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <div class="post-task-preview-card">
+
+                <div class="post-task-preview-header">
+
+                    <span>TASK PREVIEW</span>
+
+                    <i data-lucide="eye"></i>
+
+                </div>
+
+                <div class="post-task-preview-status">
+
+                    <i data-lucide="circle-check"></i>
+
+                    <span>Ready to complete</span>
+
+                </div>
+
+                <h3>
+                    Your task will appear here
+                </h3>
+
+                <p>
+                    As you add details, your task will be easier for
+                    local helpers to understand.
+                </p>
+
+                <div class="post-task-preview-items">
+
+                    <div>
+
+                        <i data-lucide="tag"></i>
+
+                        <span>Category</span>
+
+                        <strong>Not selected</strong>
+
+                    </div>
+
+                    <div>
+
+                        <i data-lucide="map-pin"></i>
+
+                        <span>Location</span>
+
+                        <strong>Not added</strong>
+
+                    </div>
+
+                    <div>
+
+                        <i data-lucide="calendar-days"></i>
+
+                        <span>Preferred date</span>
+
+                        <strong>Not selected</strong>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </aside>
+
+    </div>
+
+</section>
+
+<section class="task-process-section">
+
+    <div class="task-process-container">
+
+        <div class="task-process-heading">
+
+            <span> WHAT HAPPENS NEXT</span>
+
+            <h2>
+                From your task
+                <strong>to local help.</strong>
+            </h2>
+
+            <p>
+                Posting a task is simple. Share what you need,
+                connect with suitable local people, and arrange
+                the details that work for you.
+            </p>
+
+        </div>
+
+        <div class="task-process-track">
+
+            <div class="task-process-line"></div>
+
+            <article class="task-process-card">
+
+                <div class="task-process-number">
+                    01
+                </div>
+
+                <div class="task-process-icon">
+                    <i data-lucide="clipboard-pen"></i>
+                </div>
+
+                <span>POST</span>
+
+                <h3>
+                    Share your task
+                </h3>
+
+                <p>
+                    Tell the community what you need,
+                    when you need it, and where the task is located.
+                </p>
+
+            </article>
+
+
+            <article class="task-process-card">
+
+                <div class="task-process-number">
+                    02
+                </div>
+
+                <div class="task-process-icon">
+                    <i data-lucide="message-circle-more"></i>
+                </div>
+
+                <span>CONNECT</span>
+
+                <h3>
+                    Find local help
+                </h3>
+
+                <p>
+                    Local people can discover your task
+                    and get in touch when they can help.
+                </p>
+
+            </article>
+
+
+            <article class="task-process-card">
+
+                <div class="task-process-number">
+                    03
+                </div>
+
+                <div class="task-process-icon">
+                    <i data-lucide="check-circle-2"></i>
+                </div>
+
+                <span>COMPLETE</span>
+
+                <h3>
+                    Get it done
+                </h3>
+
+                <p>
+                    Discuss the details, agree on the timing,
+                    and get your task completed.
+                </p>
+
+            </article>
+
+        </div>
+
+        <div class="task-process-bottom">
+
+            <i data-lucide="sparkles"></i>
+
+            <span>
+                Clear details help the right local people understand your task.
+            </span>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="task-tips-section">
+
+    <div class="task-tips-container">
+
+        <div class="task-tips-heading">
+
+            <span> MAKE YOUR TASK CLEAR</span>
+
+            <h2>
+                A little detail can
+                <strong>go a long way.</strong>
+            </h2>
+
+            <p>
+                Help local people understand exactly what you need
+                by including a few useful details in your task.
+            </p>
+
+        </div>
+
+        <div class="task-tips-layout">
+
+            <article class="task-tip-card">
+
+                <div class="task-tip-top">
+                    <span>01</span>
+
+                    <div class="task-tip-icon">
+                        <i data-lucide="file-text"></i>
+                    </div>
+                </div>
+
+                <h3>
+                    Be specific
+                </h3>
+
+                <p>
+                    Explain what needs to be fixed, moved, cleaned,
+                    assembled, or completed.
+                </p>
+
+            </article>
+
+
+            <article class="task-tip-card task-tip-featured">
+
+                <div class="task-tip-top">
+                    <span>02</span>
+
+                    <div class="task-tip-icon">
+                        <i data-lucide="camera"></i>
+                    </div>
+                </div>
+
+                <h3>
+                    Show the task
+                </h3>
+
+                <p>
+                    Add photos when they help local helpers understand
+                    the size, condition, or location of the work.
+                </p>
+
+            </article>
+
+
+            <div class="task-tips-center">
+
+                <div class="task-tips-center-icon">
+                    <i data-lucide="message-square-text"></i>
+                </div>
+
+                <span>HELPFUL DETAILS</span>
+
+                <h3>
+                    Make your task
+                    easy to understand.
+                </h3>
+
+                <p>
+                    Clear information helps create better conversations
+                    between customers and local helpers.
+                </p>
+
+            </div>
+
+
+            <article class="task-tip-card">
+
+                <div class="task-tip-top">
+                    <span>03</span>
+
+                    <div class="task-tip-icon">
+                        <i data-lucide="clock-4"></i>
+                    </div>
+                </div>
+
+                <h3>
+                    Add your timing
+                </h3>
+
+                <p>
+                    Let people know when you would ideally like the
+                    task to be completed.
+                </p>
+
+            </article>
+
+
+            <article class="task-tip-card">
+
+                <div class="task-tip-top">
+                    <span>04</span>
+
+                    <div class="task-tip-icon">
+                        <i data-lucide="map-pin"></i>
+                    </div>
+                </div>
+
+                <h3>
+                    Mention the location
+                </h3>
+
+                <p>
+                    Include your local area so nearby people can
+                    understand where the task needs to happen.
+                </p>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="task-preferences-section">
+
+    <div class="task-preferences-container">
+
+        <div class="task-preferences-heading">
+
+            <span>SET YOUR PREFERENCES</span>
+
+            <h2>
+                Add the details that
+                <strong>matter to you.</strong>
+            </h2>
+
+            <p>
+                Set a budget and share any preferences that can help
+                local helpers understand what works for you.
+            </p>
+
+        </div>
+
+        <div class="task-preferences-card">
+
+            <div class="task-budget-area">
+
+                <div class="task-preferences-label">
+                    <span>YOUR BUDGET</span>
+                    <i data-lucide="wallet-cards"></i>
+                </div>
+
+                <h3>
+                    What are you comfortable spending?
+                </h3>
+
+                <p>
+                    This helps local people understand the expected
+                    scope of your task.
+                </p>
+
+                <div class="task-budget-input">
+
+                    <span>₹</span>
+
+                    <input
+                        type="number"
+                        placeholder="Enter your budget"
+                        min="0"
+                    >
+
+                    <small>
+                        Optional
+                    </small>
+
+                </div>
+
+                <div class="task-budget-options">
+
+                    <button type="button">₹500</button>
+                    <button type="button">₹1,000</button>
+                    <button type="button">₹2,500</button>
+                    <button type="button">₹5,000+</button>
+
+                </div>
+
+            </div>
+
+
+            <div class="task-preferences-divider"></div>
+
+
+            <div class="task-preference-area">
+
+                <div class="task-preferences-label">
+                    <span>YOUR PREFERENCES</span>
+                    <i data-lucide="sliders-horizontal"></i>
+                </div>
+
+                <h3>
+                    Anything else to mention?
+                </h3>
+
+                <p>
+                    Add information that could make the task easier
+                    to plan or complete.
+                </p>
+
+                <div class="task-preference-options">
+
+                    <label class="task-preference-option">
+
+                        <input type="checkbox">
+
+                        <span class="task-preference-check">
+                            <i data-lucide="check"></i>
+                        </span>
+
+                        <div>
+                            <strong>Bring your own tools</strong>
+                            <small>
+                                Helper should have the required tools.
+                            </small>
+                        </div>
+
+                    </label>
+
+
+                    <label class="task-preference-option">
+
+                        <input type="checkbox">
+
+                        <span class="task-preference-check">
+                            <i data-lucide="check"></i>
+                        </span>
+
+                        <div>
+                            <strong>Materials are provided</strong>
+                            <small>
+                                I already have the required materials.
+                            </small>
+                        </div>
+
+                    </label>
+
+
+                    <label class="task-preference-option">
+
+                        <input type="checkbox">
+
+                        <span class="task-preference-check">
+                            <i data-lucide="check"></i>
+                        </span>
+
+                        <div>
+                            <strong>Flexible timing</strong>
+                            <small>
+                                I can adjust the preferred time.
+                            </small>
+                        </div>
+
+                    </label>
+
+
+                    <label class="task-preference-option">
+
+                        <input type="checkbox">
+
+                        <span class="task-preference-check">
+                            <i data-lucide="check"></i>
+                        </span>
+
+                        <div>
+                            <strong>Need help choosing materials</strong>
+                            <small>
+                                I may need advice before starting.
+                            </small>
+                        </div>
+
+                    </label>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="task-review-section">
+
+    <div class="task-review-container">
+
+        <div class="task-review-heading">
+
+            <span>FINAL REVIEW</span>
+
+            <h2>
+                Almost ready to
+                <strong>post your task.</strong>
+            </h2>
+
+            <p>
+                Take a quick look at the information you've provided
+                before sharing your task with the local community.
+            </p>
+
+        </div>
+
+        <div class="task-review-card">
+
+            <div class="task-review-main">
+
+                <div class="task-review-top">
+
+                    <div>
+                        <span>TASK PREVIEW</span>
+                        <h3>Fix a leaking kitchen tap</h3>
+                    </div>
+
+                    <div class="task-review-status">
+                        <i data-lucide="circle-check"></i>
+                        Ready
+                    </div>
+
+                </div>
+
+                <div class="task-review-details">
+
+                    <div class="task-review-detail">
+
+                        <div class="task-review-detail-icon">
+                            <i data-lucide="map-pin"></i>
+                        </div>
+
+                        <div>
+                            <span>LOCATION</span>
+                            <strong>Local area</strong>
+                        </div>
+
+                    </div>
+
+                    <div class="task-review-detail">
+
+                        <div class="task-review-detail-icon">
+                            <i data-lucide="calendar-days"></i>
+                        </div>
+
+                        <div>
+                            <span>DATE</span>
+                            <strong>Preferred date</strong>
+                        </div>
+
+                    </div>
+
+                    <div class="task-review-detail">
+
+                        <div class="task-review-detail-icon">
+                            <i data-lucide="clock-3"></i>
+                        </div>
+
+                        <div>
+                            <span>TIME</span>
+                            <strong>Preferred time</strong>
+                        </div>
+
+                    </div>
+
+                    <div class="task-review-detail">
+
+                        <div class="task-review-detail-icon">
+                            <i data-lucide="wallet"></i>
+                        </div>
+
+                        <div>
+                            <span>BUDGET</span>
+                            <strong>₹1,000</strong>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="task-review-description">
+
+                    <span>DESCRIPTION</span>
+
+                    <p>
+                        Need help fixing a leaking kitchen tap.
+                        The tap has started dripping continuously and
+                        needs to be checked and repaired.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="task-review-side">
+
+                <div class="task-review-side-icon">
+                    <i data-lucide="shield-check"></i>
+                </div>
+
+                <span>BEFORE YOU POST</span>
+
+                <h3>
+                    Make sure everything looks right.
+                </h3>
+
+                <div class="task-review-checklist">
+
+                    <div>
+                        <i data-lucide="check"></i>
+                        <span>Task details are clear</span>
+                    </div>
+
+                    <div>
+                        <i data-lucide="check"></i>
+                        <span>Preferred timing is included</span>
+                    </div>
+
+                    <div>
+                        <i data-lucide="check"></i>
+                        <span>Location information is correct</span>
+                    </div>
+
+                    <div>
+                        <i data-lucide="check"></i>
+                        <span>Budget has been reviewed</span>
+                    </div>
+
+                </div>
+
+                <button type="button" class="task-review-button">
+                    <span>Post My Task</span>
+                    <i data-lucide="arrow-up-right"></i>
+                </button>
+
+                <small>
+                    You can update your task details later.
+                </small>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="task-confidence-section">
+
+    <div class="task-confidence-container">
+
+        <div class="task-confidence-content">
+
+            <span>POST WITH CONFIDENCE</span>
+
+            <h2>
+                Your task is ready.
+                <strong>Let the community help.</strong>
+            </h2>
+
+            <p>
+                A clear task gives local people the information they need
+                to understand your request and decide whether they can help.
+            </p>
+
+        </div>
+
+        <div class="task-confidence-points">
+
+            <div class="task-confidence-point">
+
+                <div class="task-confidence-icon">
+                    <i data-lucide="users-round"></i>
+                </div>
+
+                <div>
+                    <h3>Local connections</h3>
+
+                    <p>
+                        Reach people who are looking for tasks
+                        they can help with in their community.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="task-confidence-point">
+
+                <div class="task-confidence-icon">
+                    <i data-lucide="messages-square"></i>
+                </div>
+
+                <div>
+                    <h3>Clear conversations</h3>
+
+                    <p>
+                        Discuss the work, timing, and details
+                        before making arrangements.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="task-confidence-point">
+
+                <div class="task-confidence-icon">
+                    <i data-lucide="clipboard-check"></i>
+                </div>
+
+                <div>
+                    <h3>Stay organized</h3>
+
+                    <p>
+                        Keep your task information together so
+                        everything is easier to manage.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<footer class="footer">
+
+    <div class="footer-container footer-grid">
+
+        <div class="footer-col">
+
+            <h3 class="footer-title"
+                id="homepage-redirect">
+
+                <picture class="footer-logo-wrap">
+
+                    <img src="logo.jpeg"
+                         alt="TaskLocal - Local Handyperson & Home Task Marketplace"
+                         class="footer-logo ">
+
+                 
+
+                </picture>
+
+                <span class="footer-brand">
+
+                    <span class="brand-primary">
+                        Task
+                    </span>
+
+                    <span class="brand-secondary">
+                        Local
+                    </span>
+
+                </span>
+
+            </h3>
+
+            <p>
+                Connecting homeowners with trusted local handypersons
+                for everyday home tasks, repairs, maintenance, moving,
+                assembly, and more.
+            </p>
+
+            <div class="footer-social">
+
+                <a href="#"
+                   class="social-icon"
+                   aria-label="Facebook">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+
+                <a href="#"
+                   class="social-icon"
+                   aria-label="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+
+                <a href="#"
+                   class="social-icon"
+                   aria-label="Twitter">
+                    <i class="fab fa-twitter"></i>
+                </a>
+
+                <a href="#"
+                   class="social-icon"
+                   aria-label="LinkedIn">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-col">
+
+            <h4 class="footer-subtitle">
+                Quick Links
+            </h4>
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="about.html">
+                About Us
+            </a>
+
+            <a href="post-task.html">
+                Post a Task
+            </a>
+
+            <a href="browse-pros.html">
+                Browse Pros
+            </a>
+
+            <a href="how-it-works.html">
+                How It Works
+            </a>
+
+        </div>
+
+
+        <div class="footer-col">
+
+            <h4 class="footer-subtitle">
+                Popular Tasks
+            </h4>
+
+            <a href="browse-pros.html">
+                Home Repairs
+            </a>
+
+            <a href="browse-pros.html">
+                Furniture Assembly
+            </a>
+
+            <a href="browse-pros.html">
+                Cleaning
+            </a>
+
+            <a href="browse-pros.html">
+                Moving & Lifting
+            </a>
+
+            <a href="browse-pros.html">
+                Yard & Outdoor Work
+            </a>
+
+        </div>
+
+
+        <div class="footer-col">
+
+            <h4 class="footer-subtitle">
+                Resources
+            </h4>
+
+            <a href="dashboard.html">
+                My Dashboard
+            </a>
+
+            <a href="how-it-works.html">
+                How It Works
+            </a>
+
+            <a href="post-task.html">
+                Post a Task
+            </a>
+
+            <a href="404page.html">
+                404 Page
+            </a>
+
+            <a href="coming-soon.html">
+                Coming Soon
+            </a>
+
+        </div>
+
+
+        <div class="footer-col">
+
+            <h4 class="footer-subtitle">
+                Contact Us
+            </h4>
+
+            <p>
+                Email: hello@tasklocal.com
+            </p>
+
+            <p>
+                Phone: +91 0000000000
+            </p>
+
+            <p>
+                Location: India
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+        <div class="footer-container footer-bottom-content">
+
+            <p>
+                © 2026 TaskLocal. All rights reserved.
+            </p>
+
+            <div class="footer-links">
+
+                <a href="terms&conditions.html">
+                    Terms & Conditions
+                </a>
+
+                <a href="privacy-policy.html">
+                    Privacy Policy
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<script>
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    const loginBtn =
+        document.getElementById("loginBtn");
+
+    if (loginBtn) {
+
+        loginBtn.addEventListener("click", () => {
+
+            window.location.href = "login.html";
+
+        });
+
+    }
+
+
+    const mobileLoginBtn =
+        document.getElementById("mobileLoginBtn");
+
+    if (mobileLoginBtn) {
+
+        mobileLoginBtn.addEventListener("click", () => {
+
+            window.location.href = "login.html";
+
+        });
+
+    }
+
+
+    const links =
+        document.querySelectorAll(".nav-link");
+
+    const currentPage =
+        window.location.pathname.split("/").pop()
+        || "index.html";
+
+
+    links.forEach(link => {
+
+        const href =
+            link.getAttribute("href");
+
+        if (!href) return;
+
+        const page =
+            href.split("/").pop();
+
+        if (page === currentPage) {
+
+            link.classList.add("active");
+
+        }
+
+    });
+
+
+    const homePages = [
+        "index.html",
+        "home-1.html",
+        "home-2.html"
+    ];
+
+
+    if (homePages.includes(currentPage)) {
+
+        const homeLink =
+            document.querySelector(
+                '.nav-link[href="index.html"]'
+            );
+
+        if (homeLink) {
+
+            homeLink.classList.add("active");
+
+        }
+
+    }
+
+
+    const themeToggle =
+        document.getElementById("themeToggle");
+
+
+    if (
+        localStorage.getItem("tasklocal-theme")
+        === "dark"
+    ) {
+
+        document.body.classList.add("dark");
+
+    }
+
+
+    function updateThemeIcon() {
+
+        if (!themeToggle) return;
+
+        themeToggle.innerHTML =
+            document.body.classList.contains("dark")
+                ? '<i data-lucide="sun"></i>'
+                : '<i data-lucide="moon"></i>';
+
+        lucide.createIcons();
+
+    }
+
+
+    updateThemeIcon();
+
+
+    if (themeToggle) {
+
+        themeToggle.addEventListener("click", () => {
+
+            document.body.classList.toggle("dark");
+
+            if (
+                document.body.classList.contains("dark")
+            ) {
+
+                localStorage.setItem(
+                    "tasklocal-theme",
+                    "dark"
+                );
+
+            } else {
+
+                localStorage.setItem(
+                    "tasklocal-theme",
+                    "light"
+                );
+
+            }
+
+            updateThemeIcon();
+
+        });
+
+    }
+
+
+    const rtlToggle =
+        document.getElementById("rtlToggle");
+
+
+    const savedDir =
+        localStorage.getItem("tasklocal-direction")
+        || "ltr";
+
+
+    document.documentElement.setAttribute(
+        "dir",
+        savedDir
+    );
+
+
+    if (rtlToggle) {
+
+        rtlToggle.textContent =
+            savedDir === "rtl"
+                ? "LTR"
+                : "RTL";
+
+
+        rtlToggle.addEventListener("click", () => {
+
+            const currentDir =
+                document.documentElement
+                    .getAttribute("dir");
+
+
+            if (currentDir === "rtl") {
+
+                document.documentElement
+                    .setAttribute("dir", "ltr");
+
+                localStorage.setItem(
+                    "tasklocal-direction",
+                    "ltr"
+                );
+
+                rtlToggle.textContent = "RTL";
+
+            } else {
+
+                document.documentElement
+                    .setAttribute("dir", "rtl");
+
+                localStorage.setItem(
+                    "tasklocal-direction",
+                    "rtl"
+                );
+
+                rtlToggle.textContent = "LTR";
+
+            }
+
+        });
+
+    }
+
+
+    const menuToggle = document.getElementById("menuToggle");
+    const navMenu = document.getElementById("navMenu");
+
+    if (menuToggle && navMenu) {
+        menuToggle.addEventListener("click", () => {
+            navMenu.classList.toggle("active");
+        });
+
+        document.addEventListener("click", (e) => {
+            if (!navMenu.contains(e.target) && !menuToggle.contains(e.target)) {
+                navMenu.classList.remove("active");
+                document.querySelectorAll(".dropdown-menu").forEach(menu => {
+                    menu.classList.remove("show");
+                });
+            }
+        });
+    }
+
+    document
+        .querySelectorAll(".dropdown")
+        .forEach(drop => {
+
+            const toggle =
+                drop.querySelector(".nav-item");
+
+            const menu =
+                drop.querySelector(".dropdown-menu");
+
+
+            if (toggle && menu) {
+
+                toggle.addEventListener(
+                    "click",
+                    (e) => {
+
+                        if (window.innerWidth <= 1025) {
+
+                            e.preventDefault();
+
+                            menu.classList.toggle("show");
+
+                        }
+
+                    }
+                );
+
+            }
+
+        });
+
+
+    const homepageRedirect =
+        document.getElementById(
+            "homepage-redirect"
+        );
+
+
+    if (homepageRedirect) {
+
+        homepageRedirect.addEventListener(
+            "click",
+            () => {
+
+                window.location.href =
+                    "index.html";
+
+            }
+        );
+
+    }
+
+
+    lucide.createIcons();
+
+});
+
+</script>
+
+</body>
+</html>
